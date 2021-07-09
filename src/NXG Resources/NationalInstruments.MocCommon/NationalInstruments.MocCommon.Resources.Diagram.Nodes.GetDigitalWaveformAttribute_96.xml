@@ -1,0 +1,1 @@
+﻿<NineGridDictionary>  <ColorTable/>  <Items>    <NineGridPathList Height="40" Width="40">      <Paths>        <NineGridPath Color="#b2000000" Data="F1 M9,21v-6.624L5,17l5.032-10L15,17l-4-2.624V21H9z M35,8h-1h-4h-1v23h-4V8h-1h-4h-1v23h-4V21h-1v11h1   h4h1V9h4v23h1h4h1V9h4v12h1V8z"/>      </Paths>    </NineGridPathList>  </Items></NineGridDictionary>

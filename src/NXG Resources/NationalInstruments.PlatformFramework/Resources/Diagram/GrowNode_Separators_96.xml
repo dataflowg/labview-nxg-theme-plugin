@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList HorizontalAlignment="Stretch" Slicing="3,0,3,0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Color="NodeBorder" Width="14" Height="4" X="1" Y="0" Data="M0,0 0,4 1.875,2 M12,0 12,4 10.125,2 z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

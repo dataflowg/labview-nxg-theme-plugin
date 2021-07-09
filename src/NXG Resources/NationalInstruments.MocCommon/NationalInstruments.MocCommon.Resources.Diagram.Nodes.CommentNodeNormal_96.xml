@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Slicing="2,2,15,12" Stretch="Fill" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Width="20" Height="15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath StartX="1" StartY="1" Width="20" Height="15" Color="#55B2B2B2" Data="F1 M11,16L1,16L1,1L21,1L21,6 L11,16z" />
+        <NineGridPath StartX="0" StartY="0" Width="20" Height="15" Color="CommentNodeBackgroundColor" Data="F1 M0.5,14.5L0.5,0.5L19.5,0.5L19.5,4.793L9.793,14.5 L0.5,14.5z" />
+        <NineGridPath StartX="0" StartY="0" Width="20" Height="15" Color="CommentNodeBorderColor" Data="F1 M19,1v3.586L9.586,14H1V1H19 M20,0H0v15h10L20,5V0L20,0z" />
+        <NineGridPath StartX="10" StartY="5" Width="10" Height="10" Color="CommentNodeBackgroundColor" Data="F1 M10.5,5.5L18.793,5.5L10.5,13.793 L10.5,5.5z" />
+        <NineGridPath StartX="10" StartY="5" Width="10" Height="10" Color="CommentNodeBorderColor" Data="F1 M17.586,6L11,12.586V6H17.586 M20,5H10v10L20,5L20,5z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

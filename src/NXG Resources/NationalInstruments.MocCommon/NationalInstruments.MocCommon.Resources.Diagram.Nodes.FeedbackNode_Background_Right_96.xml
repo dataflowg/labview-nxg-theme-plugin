@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <NineGridPath Width="30" Height="20" Color="NodeBorder" Data="F1 M23,20 L 0,20 L 7.156,10 L 0,0 L 23,0 L 30,10  L23,20z" />
+        <NineGridPath Width="30" Height="20" Color="NodeBackground" Data="F1 M22.292,19 L 2,19 L 8.594,10 L 2,1 L 22.292,1 L 28.625,10  L22.292,19z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="25.0002" Height="15.0002" Clip="F1 M 0,0L 25.0002,0L 25.0002,15.0002L 0,15.0002L 0,0">
+	<Path x:Name="Path" Width="25.0002" Height="15.0002" Canvas.Left="0" Canvas.Top="-6.10352e-005" Stretch="Fill" Fill="#FFA6A68D" Data="F1 M 20,-6.10352e-005L 25.0002,7.50061L 20,15.0001L 0,14.9999L 5.00021,7.50061L 0,-6.10352e-005L 20,-6.10352e-005 Z "/>
+	<Path x:Name="Path_0" Width="21.9002" Height="13" Canvas.Left="1.89999" Canvas.Top="1.00006" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 19.5002,1.00006L 23.8002,7.50055L 19.5002,14.0001L 1.89999,13.9999L 6.20016,7.50055L 1.89999,1.00006L 19.5002,1.00006 Z "/>
+	<Path x:Name="Path_1" Width="18.8997" Height="11.0003" Canvas.Left="3.70041" Canvas.Top="2.00079" Stretch="Fill" Fill="#FFFFFFD7" Data="F1 M 18.9733,2.00079L 22.6001,7.50085L 18.9733,13.0006L 3.70041,13.0011L 7.42722,7.50092L 3.70041,2.00128L 18.9733,2.00079 Z "/>
+	<Path x:Name="Path_2" Width="18.8997" Height="11.0003" Canvas.Left="3.70041" Canvas.Top="2.00079" Stretch="Fill" Data="F1 M 18.9733,2.00079L 22.6001,7.50085L 18.9733,13.0006L 3.70041,13.0011L 7.42722,7.50092L 3.70041,2.00128L 18.9733,2.00079 Z ">
+		<Path.Fill>
+			<LinearGradientBrush StartPoint="0.440083,-0.00181991" EndPoint="0.440083,0.2709">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#80FFFFFF" Offset="0"/>
+					<GradientStop Color="#00FFFFFF" Offset="1"/>
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</Path.Fill>
+	</Path>
+	<Path x:Name="Path_3" Width="18.8997" Height="11.0003" Canvas.Left="3.70041" Canvas.Top="2.00079" Stretch="Fill" Data="F1 M 18.9733,2.00079L 22.6001,7.50085L 18.9733,13.0006L 3.70041,13.0011L 7.42722,7.50092L 3.70041,2.00128L 18.9733,2.00079 Z ">
+		<Path.Fill>
+			<LinearGradientBrush StartPoint="0.0340381,12.9361" EndPoint="0.166698,12.9361">
+				<LinearGradientBrush.RelativeTransform>
+					<TransformGroup>
+						<SkewTransform CenterX="0" CenterY="0" AngleX="0" AngleY="0"/>
+						<RotateTransform CenterX="0" CenterY="0" Angle="242.268"/>
+					</TransformGroup>
+				</LinearGradientBrush.RelativeTransform>
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#0D000000" Offset="0"/>
+					<GradientStop Color="#07000000" Offset="0.1875"/>
+					<GradientStop Color="#00000000" Offset="1"/>
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</Path.Fill>
+	</Path>
+</Canvas>
+-->

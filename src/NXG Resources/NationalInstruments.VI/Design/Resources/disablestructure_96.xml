@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridPathList>
+  <Paths>
+    <NineGridPath Width="40" Height="40" Color="GrayNodeOuterBorder" Data="F1 M25,2H15V0h10V2z M30,0v2 M25,38H15v2h10V38z M2,25V15H0v10H2z M40,25V15h-2v10H40z M2,10
+  c0-4.418,3.582-8,8-8V0C4.477,0,0,4.477,0,10H2z M40,10c0-5.523-4.477-10-10-10v2c4.418,0,8,3.582,8,8H40z M38,30
+  c0,4.418-3.582,8-8,8v2c5.523,0,10-4.477,10-10H38z M0,30c0,5.523,4.477,10,10,10v-2c-4.418,0-8-3.582-8-8H0z" />
+    <NineGridPath Width="40" Height="40" Color="GrayNodeInnerBorder" Data="F1 M30,2h-5V0h5V2z M10,2h5V0h-5V2z M30,38h-5v2h5V38z M10,40h5v-2h-5V40z M2,10H0v5h2V10z
+   M2,25H0l0,5h2V25z M40,25h-2v5h2V25z M40,10h-2v5h2V10z" />
+  </Paths>
+</NineGridPathList>

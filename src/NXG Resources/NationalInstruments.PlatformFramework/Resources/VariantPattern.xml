@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <Items>
+    <NineGridPathList Key="H_0" Width="4" Height="2">
+      <Paths>
+        <NineGridPath Width="4" Height="2" Color="#7fAD1CB6" Data="F1 M0,0 h4v2h-4v-2z" />
+        <NineGridPath Width="4" Height="2" Color="#FFAD1CB6" Data="F1 M0,0 h2v2h-2v-2z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_0" Width="2" Height="4">
+      <Paths>
+        <NineGridPath Width="2" Height="4" Color="#7fAD1CB6" Data="F1 M0,0 h2v4h-2v-4z" />
+        <NineGridPath Width="2" Height="4" Color="#FFAD1CB6" Data="F1 M0,2 h2v2h-2v-2z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="H_1" Width="2" Height="3">
+      <Paths>
+        <NineGridPath Width="2" Height="3" Color="#FFAD1CB6" Data="F1 M0,0 h2v1h-2v-1z" />
+        <NineGridPath Width="2" Height="3" Color="#FFAD1CB6" Data="F1 M0,2 h2v1h-2v-1z" />
+        <NineGridPath Width="2" Height="3" Color="#7fAD1CB6" Data="F1 M0,1 h2v1h-2v-1z" />
+        <NineGridPath Width="2" Height="3" Color="#FFAD1CB6" Data="F1 M0,1 h1v1h-1v-1z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_1" Width="3" Height="2">
+      <Paths>
+        <NineGridPath Width="3" Height="2" Color="#FFAD1CB6" Data="F1 M0,0 h1v2h-1v-2z" />
+        <NineGridPath Width="3" Height="2" Color="#FFAD1CB6" Data="F1 M2,0 h1v2h-1v-2z" />
+        <NineGridPath Width="3" Height="2" Color="#7fAD1CB6" Data="F1 M1,0 h1v2h-1v-2z" />
+        <NineGridPath Width="3" Height="2" Color="#FFAD1CB6" Data="F1 M1,1 h1v1h-1v-1z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="H_2" Width="4" Height="4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M0,0 h4v1h-4v-1z" />
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M0,3 h4v1h-4v-1z" />
+        <NineGridPath Width="4" Height="4" Color="#7fAD1CB6" Data="F1 M0,1 h4v2h-4v-2z" />
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M0,1 h2v2h-2v-2z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_2" Width="4" Height="4" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M0,0 h1v4h-1v-4z" />
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M3,0 h1v4h-1v-4z" />
+        <NineGridPath Width="4" Height="4" Color="#7fAD1CB6" Data="F1 M1,0 h2v4h-2v-4z" />
+        <NineGridPath Width="4" Height="4" Color="#FFAD1CB6" Data="F1 M1,2 h2v2h-2v-2z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="H_3" Width="6" Height="5" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="6" Height="5" Color="#FFAD1CB6" Data="F1 M0,0 h6v1h-6v-1z" />
+        <NineGridPath Width="6" Height="5" Color="#FFAD1CB6" Data="F1 M0,4 h6v1h-6v-1z" />
+        <NineGridPath Width="6" Height="5" Color="#7fAD1CB6" Data="F1 M0,1 h6v3h-6v-3z" />
+        <NineGridPath Width="6" Height="5" Color="#FFAD1CB6" Data="F1 M0,1 h3v3h-3v-3z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_3" Width="5" Height="6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="5" Height="6" Color="#FFAD1CB6" Data="F1 M0,0 h1v6h-1v-6z" />
+        <NineGridPath Width="5" Height="6" Color="#FFAD1CB6" Data="F1 M4,0 h1v6h-1v-6z" />
+        <NineGridPath Width="5" Height="6" Color="#7fAD1CB6" Data="F1 M1,0 h3v6h-3v-6z" />
+        <NineGridPath Width="5" Height="6" Color="#FFAD1CB6" Data="F1 M1,3 h3v3h-3v-3z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="H_4" Width="8" Height="6" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="8" Height="6" Color="#FFAD1CB6" Data="F1 M0,0 h8v1h-8v-1z" />
+        <NineGridPath Width="8" Height="6" Color="#FFAD1CB6" Data="F1 M0,5 h8v1h-8v-1z" />
+        <NineGridPath Width="8" Height="6" Color="#7fAD1CB6" Data="F1 M0,1 h8v4h-8v-4z" />
+        <NineGridPath Width="8" Height="6" Color="#FFAD1CB6" Data="F1 M0,1 h4v4h-4v-4z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_4" Width="6" Height="8" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath Width="6" Height="8" Color="#FFAD1CB6" Data="F1 M0,0 h1v8h-1v-8z" />
+        <NineGridPath Width="6" Height="8" Color="#FFAD1CB6" Data="F1 M5,0 h1v8h-1v-8z" />
+        <NineGridPath Width="6" Height="8" Color="#7fAD1CB6" Data="F1 M1,0 h4v8h-4v-8z" />
+        <NineGridPath Width="6" Height="8" Color="#FFAD1CB6" Data="F1 M1,4 h4v4h-4v-4z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

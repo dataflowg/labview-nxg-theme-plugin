@@ -1,0 +1,2433 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework" xmlns:palette="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework" xmlns:viDesign="clr-namespace:NationalInstruments.VI.Design;assembly=NationalInstruments.VI" xmlns:coreConverters="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core" xmlns:viDesigner="clr-namespace:NationalInstruments.VI.Design;assembly=NationalInstruments.VI" xmlns:core="clr-namespace:NationalInstruments.Core;assembly=NationalInstruments.Core" xmlns:testPanel="clr-namespace:NationalInstruments.VI.Design.TestPanel;assembly=NationalInstruments.VI" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:Microsoft_Windows_Themes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:ni="http://schemas.ni.com/controls/2009/xaml/presentation" xmlns:shell="clr-namespace:NationalInstruments.Controls.Shell;assembly=NationalInstruments.PlatformFramework" xmlns:l10n="clr-namespace:NationalInstruments.Core;assembly=NationalInstruments.Core">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/Themes/common.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<palette:QualifiedNameConverter
+		x:Key="QualifiedNameConverter" />
+	<palette:TypeToBrushConverter
+		x:Key="TypeToBrush" />
+	<palette:TerminalDirectionToVisibilityConverter
+		x:Key="TerminalDirectionToVisibility" />
+	<coreConverters:BooleanToVisibilityConverter
+		x:Key="BooleanToVisibility" />
+	<SolidColorBrush
+		Color="{StaticResource NIHighlight}"
+		x:Key="VIControlHighlight" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF666666"
+		x:Key="ComboArrowColor" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FFF2F2F2"
+		x:Key="ComboNormalBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FFC0C4C7"
+		x:Key="ComboNormalBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="SelectorTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NodeBorder}"
+		x:Key="NodeBorderVI" />
+	<Style
+		TargetType="{x:Type viDesign:DataflowDiagramCanvas}"
+		BasedOn="{StaticResource DiagramCanvasStyle}"
+		x:Key="{x:Type viDesign:DataflowDiagramCanvas}" />
+	<Style
+		TargetType="{x:Type viDesign:DataflowDiagramControl}"
+		x:Key="{x:Type viDesign:DataflowDiagramControl}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type viDesign:DataflowDiagramControl}">
+					<Grid
+						Name="PART_LayoutRoot">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<s:String
+									x:Key="ControlName">Block Diagram</s:String>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<palette:DockedPaletteControl
+							Name="PART_DockedPaletteControl" />
+						<palette:DesignerEditControl
+							Name="PART_designer"
+							Grid.Column="1"
+							DockedPaletteControl="{Binding ElementName=PART_DockedPaletteControl}">
+							<viDesigner:DataflowDiagramCanvas
+								Name="PART_diagram" />
+						</palette:DesignerEditControl>
+						<StackPanel
+							Name="PART_FindReplaceControlHost"
+							Margin="0,0,18,0"
+							HorizontalAlignment="Right" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type viDesign:VIDiagramControl}"
+		x:Key="{x:Type viDesign:VIDiagramControl}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type viDesign:VIDiagramControl}">
+					<Grid
+						Name="PART_LayoutRoot">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<s:String
+									x:Key="ControlName">Block Diagram</s:String>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+						</Grid.ColumnDefinitions>
+						<palette:DockedPaletteControl
+							Name="PART_DockedPaletteControl"
+							Grid.Row="0" />
+						<palette:DesignerEditControl
+							Name="PART_designer"
+							Grid.Column="1"
+							DockedPaletteControl="{Binding ElementName=PART_DockedPaletteControl}">
+							<viDesigner:DataflowDiagramCanvas
+								Name="PART_diagram" />
+						</palette:DesignerEditControl>
+						<StackPanel
+							Name="PART_FindReplaceControlHost"
+							Margin="0,0,18,0"
+							Grid.Column="1"
+							HorizontalAlignment="Right" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type testPanel:TestPanelDiagramControl}"
+		x:Key="{x:Type testPanel:TestPanelDiagramControl}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type testPanel:TestPanelDiagramControl}">
+					<Grid>
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<s:String
+									x:Key="ControlName">Block Diagram</s:String>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<palette:DesignerEditControl
+							Name="PART_designer"
+							Margin="0,22,0,0">
+							<viDesigner:DataflowDiagramCanvas
+								Name="PART_diagram" />
+						</palette:DesignerEditControl>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<LinearGradientBrush
+		EndPoint="0,20"
+		MappingMode="Absolute"
+		StartPoint="0,0"
+		x:Key="TextBoxBorder">
+		<GradientStop
+			Color="#ABADB3"
+			Offset="0.05" />
+		<GradientStop
+			Color="#E2E3EA"
+			Offset="0.07" />
+		<GradientStop
+			Color="#E3E9EF"
+			Offset="1" />
+	</LinearGradientBrush>
+	<Style
+		TargetType="{x:Type viDesign:UnplacedItemsTip}"
+		x:Key="{x:Type viDesign:UnplacedItemsTip}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type viDesign:UnplacedItemsTip}">
+					<FrameworkTemplate.Resources>
+						<ResourceDictionary>
+							<SolidColorBrush
+								po:Freeze="True"
+								x:Key="BorderBrush"
+								Color="{StaticResource NIGrayCool36}" />
+							<SolidColorBrush
+								po:Freeze="True"
+								x:Key="BackgroundBrush"
+								Color="{StaticResource NITrueWhite}" />
+							<Style
+								TargetType="{x:Type Button}"
+								BasedOn="{StaticResource DialogButtonStyle}"
+								x:Key="{x:Type Button}" />
+							<Style
+								TargetType="{x:Type TextBlock}"
+								BasedOn="{StaticResource TextBlockLargeIdeFonts}"
+								x:Key="{x:Type TextBlock}" />
+							<palette:PointToCollectionConverter
+								x:Key="PointToCollectionConverter" />
+						</ResourceDictionary>
+					</FrameworkTemplate.Resources>
+					<Grid>
+						<Polygon
+							SnapsToDevicePixels="True"
+							Fill="{StaticResource BackgroundBrush}"
+							Stroke="{StaticResource BorderBrush}"
+							Points="{Binding FramePolyPoints, Converter={StaticResource PointToCollectionConverter}}" />
+						<StackPanel
+							Margin="21,7,15,6">
+							<TextBlock
+								HorizontalAlignment="Center"
+								Margin="0,0,0,12"
+								Foreground="{StaticResource NIBlackBrush}"
+								Text="{Binding Text}" />
+							<shell:ShellButton
+								Name="PART_DismissButton"
+								HorizontalAlignment="Center"
+								Content="{Binding ButtonText}" />
+						</StackPanel>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ComboBoxItem}"
+		x:Key="CaseStructureComboBoxItemStyle">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="{Binding HorizontalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="{Binding VerticalContentAlignment, RelativeSource={RelativeSource AncestorType={x:Type ItemsControl}}}" />
+		<Setter
+			Property="Margin"
+			Value="0,-1,0,0" />
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ComboBoxItem}">
+					<Border
+						Name="Bd"
+						BorderBrush="#00FFFFFF"
+						BorderThickness="1"
+						Padding="1"
+						SnapsToDevicePixels="True">
+						<ContentPresenter
+							Name="content"
+							TextBlock.Foreground="{DynamicResource SystemColors.ControlTextBrushKey}"
+							HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+							VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ListBoxItem.IsSelected"
+							Value="True">
+							<Setter
+								TargetName="Bd"
+								Value="{DynamicResource SystemColors.HighlightBrushKey}"
+								Property="BorderBrush" />
+							<Setter
+								TargetName="Bd"
+								Value="{DynamicResource SystemColors.HighlightBrushKey}"
+								Property="Background" />
+							<Setter
+								TargetName="content"
+								Value="{DynamicResource SystemColors.HighlightBrushKey}"
+								Property="Background" />
+							<Setter
+								TargetName="content"
+								Value="{DynamicResource SystemColors.HighlightTextBrushKey}"
+								Property="Foreground" />
+						</Trigger>
+						<Trigger
+							Property="ComboBoxItem.IsHighlighted"
+							Value="True">
+							<Setter
+								TargetName="Bd"
+								Value="{DynamicResource SystemColors.HighlightBrushKey}"
+								Property="BorderBrush" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ToggleButton}"
+		x:Key="CaseStructureComboBoxReadonlyToggleButton">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="ButtonBase.ClickMode"
+			Value="Press" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<Border
+						Name="PART_comboBorder"
+						BorderThickness="{Binding BorderThickness, RelativeSource={RelativeSource TemplatedParent}}"
+						BorderBrush="{Binding ComboBoxOuterBorderBrush}">
+						<Border
+							Name="PART_InnerComboBorder"
+							BorderThickness="1"
+							BorderBrush="{Binding ComboBoxInnerBorderBrush}">
+							<Grid
+								Name="PART_comboBackground"
+								Background="{Binding ComboBoxBackgroundBrush}">
+								<Grid
+									HorizontalAlignment="Right"
+									Margin="0,0,1,0"
+									Width="18">
+									<Path
+										Name="PART_arrow"
+										Data="M2,4 L8,4 L5,9"
+										Height="7"
+										Stretch="Fill"
+										Width="9"
+										Margin="4,0,5,0"
+										Fill="{StaticResource ComboArrowColor}" />
+								</Grid>
+							</Grid>
+						</Border>
+					</Border>
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="true"
+							Binding="{Binding Path=(viDesign:StackedStructureControl.IsInvalid), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}}">
+							<Setter
+								TargetName="PART_comboBorder"
+								Property="BorderBrush"
+								Value="#FFFF0000" />
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding ElementName=PART_SelectorGrid, Path=IsMouseOver}">
+							<Setter
+								TargetName="PART_comboBackground"
+								Property="Background"
+								Value="#FFFFFFFF" />
+							<Setter
+								TargetName="PART_comboBorder"
+								Property="BorderBrush"
+								Value="{Binding SelectorTypeBrush}" />
+							<Setter
+								TargetName="PART_InnerComboBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</DataTrigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="true"
+									Binding="{Binding Path=IsChecked, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="true"
+									Binding="{Binding Path=(viDesign:StackedStructureControl.IsInvalid), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}}" />
+							</MultiDataTrigger.Conditions>
+							<Setter
+								TargetName="PART_comboBorder"
+								Property="BorderBrush"
+								Value="#FFFF0000" />
+						</MultiDataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ToggleButton}"
+		x:Key="CaseStructureComboBoxToggleButton">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="ButtonBase.ClickMode"
+			Value="Press" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<Rectangle
+							Name="ComboContentRect"
+							Fill="#FF8E959C" />
+						<Rectangle
+							Name="rectangle1"
+							Fill="#FFC0C4C7"
+							Height="1"
+							VerticalAlignment="Top" />
+						<Rectangle
+							Name="rectangle"
+							Fill="#FF565B61"
+							VerticalAlignment="Bottom"
+							Height="1" />
+						<Grid
+							HorizontalAlignment="Right"
+							Width="16">
+							<Path
+								Name="PART_arrow"
+								Data="M2,4 L8,4 L5,9"
+								Fill="#FFFFFFFF"
+								Height="7"
+								Stretch="Fill"
+								Width="9"
+								Margin="4,0,5,0" />
+						</Grid>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding ElementName=SelectorGrid, Path=IsMouseOver}">
+							<Setter
+								TargetName="rectangle"
+								Property="Fill"
+								Value="#FFC0C4C7" />
+							<Setter
+								TargetName="ComboContentRect"
+								Property="Fill"
+								Value="#FFFFFFFF" />
+							<Setter
+								TargetName="PART_arrow"
+								Property="Fill"
+								Value="{Binding SelectorTypeBrush}" />
+						</DataTrigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="true">
+							<Setter
+								TargetName="rectangle"
+								Property="Visibility"
+								Value="Hidden" />
+							<Setter
+								TargetName="rectangle1"
+								Property="Visibility"
+								Value="Hidden" />
+							<Setter
+								TargetName="ComboContentRect"
+								Property="Fill"
+								Value="{Binding SelectorTypeBrush}" />
+							<Setter
+								TargetName="PART_arrow"
+								Property="Fill"
+								Value="#FFFFFFFF" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False" />
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		BasedOn="{StaticResource IdeFonts}"
+		TargetType="{x:Type TextBox}"
+		x:Key="CaseStructureComboBoxEditableTextBox">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="UIElement.AllowDrop"
+			Value="True" />
+		<Setter
+			Property="MinWidth"
+			Value="0" />
+		<Setter
+			Property="MinHeight"
+			Value="0" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="VerticalFirst" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type TextBox}">
+					<ScrollViewer
+						Name="PART_ContentHost"
+						Background="#00FFFFFF"
+						Focusable="False"
+						HorizontalScrollBarVisibility="Hidden"
+						VerticalScrollBarVisibility="Hidden" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<ControlTemplate
+		TargetType="{x:Type ComboBox}"
+		x:Key="ComboBoxEditableTemplate">
+		<Grid
+			Name="Placement"
+			SnapsToDevicePixels="True">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="*" />
+				<ColumnDefinition
+					MinWidth="{DynamicResource SystemParameters.VerticalScrollBarWidthKey}"
+					Width="0" />
+			</Grid.ColumnDefinitions>
+			<Popup
+				Name="PART_Popup"
+				AllowsTransparency="True"
+				Grid.ColumnSpan="2"
+				PopupAnimation="{DynamicResource SystemParameters.ComboBoxPopupAnimationKey}"
+				Placement="Bottom"
+				IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+				<Microsoft_Windows_Themes:SystemDropShadowChrome
+					Name="Shdw"
+					Color="Transparent"
+					MaxHeight="{TemplateBinding MaxDropDownHeight}"
+					MinWidth="{Binding ActualWidth, ElementName=Placement}">
+					<Border
+						Name="DropDownBorder"
+						BorderThickness="1">
+						<ScrollViewer
+							Name="DropDownScrollViewer">
+							<Grid
+								RenderOptions.ClearTypeHint="Enabled">
+								<Canvas
+									HorizontalAlignment="Left"
+									Height="0"
+									VerticalAlignment="Top"
+									Width="0">
+									<Rectangle
+										Name="OpaqueRect"
+										Fill="{Binding Background, ElementName=DropDownBorder}"
+										Height="{Binding ActualHeight, ElementName=DropDownBorder}"
+										Width="{Binding ActualWidth, ElementName=DropDownBorder}" />
+								</Canvas>
+								<ItemsPresenter
+									Name="ItemsPresenter"
+									KeyboardNavigation.DirectionalNavigation="Contained"
+									SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							</Grid>
+						</ScrollViewer>
+					</Border>
+				</Microsoft_Windows_Themes:SystemDropShadowChrome>
+			</Popup>
+			<Microsoft_Windows_Themes:ListBoxChrome
+				Name="Border"
+				BorderBrush="{TemplateBinding BorderBrush}"
+				BorderThickness="{TemplateBinding BorderThickness}"
+				Grid.ColumnSpan="2"
+				RenderMouseOver="{TemplateBinding IsMouseOver}"
+				RenderFocused="{TemplateBinding IsKeyboardFocusWithin}" />
+			<TextBox
+				Name="PART_EditableTextBox"
+				HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+				Margin="{TemplateBinding Padding}"
+				VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+				Style="{StaticResource CaseStructureComboBoxEditableTextBox}"
+				IsReadOnly="{Binding IsReadOnly, RelativeSource={RelativeSource TemplatedParent}}" />
+			<ToggleButton
+				Grid.Column="1"
+				Style="{StaticResource CaseStructureComboBoxToggleButton}"
+				IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+		</Grid>
+		<ControlTemplate.Triggers>
+			<Trigger
+				Property="UIElement.IsKeyboardFocusWithin"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="#FF000000" />
+			</Trigger>
+			<Trigger
+				Property="ComboBox.IsDropDownOpen"
+				Value="True">
+				<Setter
+					TargetName="Border"
+					Property="Microsoft_Windows_Themes:ListBoxChrome.RenderFocused"
+					Value="True" />
+			</Trigger>
+			<Trigger
+				Property="ItemsControl.HasItems"
+				Value="False">
+				<Setter
+					TargetName="DropDownBorder"
+					Property="Height"
+					Value="95" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False" />
+			<Trigger
+				Property="ItemsControl.IsGrouping"
+				Value="True">
+				<Setter
+					Property="CanContentScroll"
+					Value="False" />
+			</Trigger>
+			<Trigger
+				SourceName="PART_Popup"
+				Property="Popup.HasDropShadow"
+				Value="True">
+				<Setter
+					TargetName="Shdw"
+					Property="Margin"
+					Value="0,0,5,5" />
+				<Setter
+					TargetName="Shdw"
+					Property="Microsoft_Windows_Themes:SystemDropShadowChrome.Color"
+					Value="#71000000" />
+			</Trigger>
+			<Trigger
+				SourceName="DropDownScrollViewer"
+				Property="CanContentScroll"
+				Value="False">
+				<Setter
+					TargetName="OpaqueRect"
+					Property="Canvas.Top"
+					Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}" />
+				<Setter
+					TargetName="OpaqueRect"
+					Property="Canvas.Left"
+					Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="AddCaseButtonStyle">
+		<Setter
+			Property="Background"
+			Value="{StaticResource NITrueWhiteBrush}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="Margin"
+			Value="5,13,5,5" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Border
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="1"
+						Background="{TemplateBinding Background}">
+						<TextBlock
+							FontSize="15"
+							FontWeight="Bold"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Center"
+							Text="{TemplateBinding Content}"
+							MinHeight="22"
+							Focusable="False" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								Property="Background"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ComboBox}"
+		x:Key="CaseStructureComboBoxStyle">
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="HorizontalScrollBarVisibility"
+			Value="Auto" />
+		<Setter
+			Property="VerticalScrollBarVisibility"
+			Value="Auto" />
+		<Setter
+			Property="Padding"
+			Value="4,3" />
+		<Setter
+			Property="CanContentScroll"
+			Value="True" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="Both" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="ItemContainerStyle"
+			Value="{StaticResource CaseStructureComboBoxItemStyle}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ComboBox}">
+					<Grid
+						Name="MainGrid"
+						SnapsToDevicePixels="True">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								MinWidth="{DynamicResource SystemParameters.VerticalScrollBarWidthKey}"
+								Width="0" />
+						</Grid.ColumnDefinitions>
+						<Popup
+							Name="PART_Popup"
+							AllowsTransparency="True"
+							Grid.ColumnSpan="2"
+							VerticalOffset="1"
+							PopupAnimation="{DynamicResource SystemParameters.ComboBoxPopupAnimationKey}"
+							Placement="Bottom"
+							IsOpen="{Binding IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+							<Microsoft_Windows_Themes:SystemDropShadowChrome
+								Name="Shdw"
+								Color="Transparent"
+								MaxHeight="{TemplateBinding MaxDropDownHeight}"
+								MinWidth="{Binding ActualWidth, ElementName=MainGrid}">
+								<Border
+									Name="DropDownBorder"
+									BorderThickness="1"
+									Background="#FFFFFFFF"
+									BorderBrush="{Binding SelectorTypeBrush}">
+									<Grid>
+										<Grid.RowDefinitions>
+											<RowDefinition
+												Height="*" />
+											<RowDefinition
+												Height="Auto" />
+										</Grid.RowDefinitions>
+										<FrameworkElement.Resources>
+											<ResourceDictionary>
+												<coreConverters:NotNullToVisibilityConverter
+													x:Key="NotNullToVisibility" />
+											</ResourceDictionary>
+										</FrameworkElement.Resources>
+										<ScrollViewer
+											Name="DropDownScrollViewer"
+											CanContentScroll="False"
+											Grid.Row="0">
+											<Grid
+												Name="DropDownGrid"
+												Margin="2,3,2,2"
+												RenderOptions.ClearTypeHint="Enabled">
+												<Canvas
+													HorizontalAlignment="Left"
+													Height="0"
+													VerticalAlignment="Top"
+													Width="0">
+													<Rectangle
+														Name="OpaqueRect"
+														Fill="{Binding Background, ElementName=DropDownBorder}"
+														Height="{Binding ActualHeight, ElementName=DropDownBorder}"
+														Width="{Binding ActualWidth, ElementName=DropDownBorder}" />
+												</Canvas>
+												<ItemsPresenter
+													Name="ItemsPresenter"
+													HorizontalAlignment="Stretch"
+													KeyboardNavigation.DirectionalNavigation="Contained"
+													SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+											</Grid>
+										</ScrollViewer>
+										<Button
+											Name="AddCaseButton"
+											Content="+"
+											Grid.Row="1"
+											Style="{StaticResource AddCaseButtonStyle}"
+											Visibility="{Binding Path=DataContext.AddCaseButtonCommand, FallbackValue=Collapsed, Converter={StaticResource NotNullToVisibility}, RelativeSource={RelativeSource TemplatedParent}}"
+											Command="{Binding Path=DataContext.AddCaseButtonCommand, RelativeSource={RelativeSource TemplatedParent}}"
+											ToolTip="{core:Localizer Key=EventStructureEditor_AddCaseCommandName, AssemblyName=NationalInstruments.VI, ResourcesClassName=NationalInstruments.VI.Resources.LocalizedStrings}" />
+									</Grid>
+								</Border>
+							</Microsoft_Windows_Themes:SystemDropShadowChrome>
+						</Popup>
+						<ToggleButton
+							Name="ComboToggleButton"
+							Grid.ColumnSpan="2"
+							Style="{StaticResource CaseStructureComboBoxReadonlyToggleButton}"
+							BorderThickness="{Binding BorderThickness, RelativeSource={RelativeSource TemplatedParent}}"
+							IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+						<ContentPresenter
+							ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+							ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+							Content="{TemplateBinding SelectionBoxItem}"
+							ContentStringFormat="{TemplateBinding SelectionBoxItemStringFormat}"
+							HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							IsHitTestVisible="False"
+							Margin="{TemplateBinding Padding}"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+							Visibility="Hidden"
+							VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							SourceName="PART_Popup"
+							Property="Popup.HasDropShadow"
+							Value="True">
+							<Setter
+								TargetName="Shdw"
+								Property="Margin"
+								Value="0,0,5,5" />
+							<Setter
+								TargetName="Shdw"
+								Property="Microsoft_Windows_Themes:SystemDropShadowChrome.Color"
+								Value="#71000000" />
+						</Trigger>
+						<Trigger
+							Property="ItemsControl.HasItems"
+							Value="False">
+							<Setter
+								TargetName="DropDownBorder"
+								Property="Height"
+								Value="95" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False" />
+						<Trigger
+							Property="ItemsControl.IsGrouping"
+							Value="True">
+							<Setter
+								Property="CanContentScroll"
+								Value="False" />
+						</Trigger>
+						<Trigger
+							SourceName="DropDownScrollViewer"
+							Property="CanContentScroll"
+							Value="False">
+							<Setter
+								TargetName="OpaqueRect"
+								Property="Canvas.Top"
+								Value="{Binding VerticalOffset, ElementName=DropDownScrollViewer}" />
+							<Setter
+								TargetName="OpaqueRect"
+								Property="Canvas.Left"
+								Value="{Binding HorizontalOffset, ElementName=DropDownScrollViewer}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="ComboBox.IsEditable"
+				Value="True">
+				<Setter
+					Property="IsTabStop"
+					Value="False" />
+				<Setter
+					Property="Padding"
+					Value="3" />
+				<Setter
+					Property="Template"
+					Value="{StaticResource ComboBoxEditableTemplate}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type ButtonBase}"
+		x:Key="StackStructureSelector">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="core:RenderHelpers.ColorResolver"
+			Value="{Binding DefaultSelectorColorTable}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ButtonBase}">
+					<l10n:NineGrid
+						Name="Background"
+						DataSource="{Binding Path=(ni:CommonRenderProperties.BackgroundImage), RelativeSource={RelativeSource TemplatedParent}}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="core:RenderHelpers.ColorResolver"
+					Value="{Binding MouseOverSelectorColorTable}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="core:RenderHelpers.ColorResolver"
+					Value="{Binding MouseDownSelectorColorTable}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type ni:BooleanButton}"
+		BasedOn="{StaticResource StackStructureSelector}"
+		x:Key="StructureSelectorPrevious">
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Column"
+			Value="0" />
+		<Setter
+			Property="Height"
+			Value="17" />
+		<Setter
+			Property="Width"
+			Value="15" />
+		<Setter
+			Property="Margin"
+			Value="0,0,-1,0" />
+		<Setter
+			Property="ni:CommonRenderProperties.BackgroundImage"
+			Value="{core:StaticNineGridDataSource ImagePath=/NationalInstruments.VI;component/Resources/CaseStructurePreviousFrame_96.xml}" />
+	</Style>
+	<Style
+		TargetType="{x:Type ni:BooleanButton}"
+		BasedOn="{StaticResource StackStructureSelector}"
+		x:Key="StructureSelectorNext">
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Column"
+			Value="2" />
+		<Setter
+			Property="Height"
+			Value="17" />
+		<Setter
+			Property="Width"
+			Value="15" />
+		<Setter
+			Property="Margin"
+			Value="-1,0,0,0" />
+		<Setter
+			Property="ni:CommonRenderProperties.BackgroundImage"
+			Value="{core:StaticNineGridDataSource ImagePath=/NationalInstruments.VI;component/Resources/CaseStructureNextFrame_96.xml}" />
+	</Style>
+	<Style
+		TargetType="{x:Type viDesign:StackedStructureControl}"
+		x:Key="{x:Type viDesign:StackedStructureControl}">
+		<Setter
+			Property="Width"
+			Value="{Binding Width}" />
+		<Setter
+			Property="Height"
+			Value="{Binding Height}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type viDesign:StackedStructureControl}">
+					<Grid
+						Name="LayoutRoot">
+						<FrameworkElement.ContextMenu>
+							<ContextMenu
+								Visibility="Collapsed" />
+						</FrameworkElement.ContextMenu>
+						<palette:DiagramCanvas
+							Name="Diagram"
+							Background="#A0FFFFFF"
+							DataContext="{Binding Path=SelectedDiagram}"
+							Margin="{Binding Margin}" />
+						<Border
+							Name="PART_Frame"
+							BorderBrush="#00000000"
+							CornerRadius="{Binding OverlayCornerRadius, Mode=OneTime}"
+							BorderThickness="{Binding OverlayThickness, Mode=OneTime}"
+							Background="{x:Null}" />
+						<palette:DiagramGrid
+							Name="PART_UserSelector"
+							Height="17"
+							Margin="0,0,0,0"
+							Background="#FFFFFFFF"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Top"
+							Opacity="{Binding CaseSelectorOpacity}">
+							<FrameworkElement.ContextMenu>
+								<ContextMenu
+									Visibility="Collapsed" />
+							</FrameworkElement.ContextMenu>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="Auto" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<ni:BooleanButton
+								Name="PART_Previous"
+								Style="{StaticResource StructureSelectorPrevious}" />
+							<ni:BooleanButton
+								Name="PART_Next"
+								Style="{StaticResource StructureSelectorNext}" />
+							<Grid
+								Name="PART_SelectorGrid"
+								Column="1">
+								<ComboBox
+									Name="PART_ComboBox"
+									Background="#00FFFFFF"
+									Style="{StaticResource CaseStructureComboBoxStyle}"
+									ItemsSource="{Binding Path=NestedDiagrams}"
+									SelectedItem="{Binding Path=SelectedDiagram, Mode=TwoWay}">
+									<FrameworkElement.Resources>
+										<ResourceDictionary>
+											<SolidColorBrush
+												Color="{Binding SelectorTypeBrush.Color}"
+												x:Key="{x:Static SystemColors.HighlightBrushKey}" />
+											<SolidColorBrush
+												Color="{StaticResource NITrueWhite}"
+												x:Key="{x:Static SystemColors.HighlightTextColorKey}" />
+											<SolidColorBrush
+												Color="{StaticResource NIBlack}"
+												x:Key="{x:Static SystemColors.ControlTextBrushKey}" />
+										</ResourceDictionary>
+									</FrameworkElement.Resources>
+									<ItemsControl.ItemTemplate>
+										<DataTemplate>
+											<TextBlock
+												Name="Text"
+												Padding="0,0,1,0"
+												FontFamily="{DynamicResource DiagramFont}"
+												HorizontalAlignment="Stretch"
+												VerticalAlignment="Center"
+												FontSize="{StaticResource DiagramFontSize}"
+												Text="{Binding Path=Pattern}"
+												TextAlignment="{Binding DataContext.CaseLabelAlignment, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}}" />
+										</DataTemplate>
+									</ItemsControl.ItemTemplate>
+								</ComboBox>
+								<TextBlock
+									Name="PART_SelectorText"
+									Margin="2,-1,18,0"
+									FontFamily="{DynamicResource DiagramFont}"
+									HorizontalAlignment="Stretch"
+									MinHeight="13"
+									MinWidth="30"
+									VerticalAlignment="Center"
+									Foreground="{StaticResource SelectorTextBrush}"
+									FontSize="{StaticResource DiagramFontSize}"
+									TextAlignment="{Binding Path=CaseLabelAlignment}" />
+							</Grid>
+						</palette:DiagramGrid>
+						<palette:DiagramCanvas
+							IsHitTestVisible="True"
+							DataContext="{Binding Path=BorderNodeDiagram}"
+							Background="{x:Null}"
+							Opacity="{Binding DataContext.Opacity, ElementName=LayoutRoot}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type viDesign:StackedStructureControl}"
+		x:Key="{ComponentResourceKey ResourceId=StackedStructureWithFlyoutControlStyle, TypeInTargetAssembly={x:Type viDesign:StackedStructureControl}}">
+		<Setter
+			Property="Width"
+			Value="{Binding Width}" />
+		<Setter
+			Property="Height"
+			Value="{Binding Height}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type viDesign:StackedStructureControl}">
+					<Grid
+						Name="LayoutRoot">
+						<FrameworkElement.ContextMenu>
+							<ContextMenu
+								Visibility="Collapsed" />
+						</FrameworkElement.ContextMenu>
+						<palette:DiagramCanvas
+							Name="Diagram"
+							Background="#A0FFFFFF"
+							DataContext="{Binding Path=SelectedDiagram}"
+							Margin="{Binding Margin}" />
+						<Border
+							Name="PART_Frame"
+							BorderBrush="#00000000"
+							CornerRadius="{Binding OverlayCornerRadius, Mode=OneTime}"
+							BorderThickness="{Binding OverlayThickness, Mode=OneTime}"
+							Background="{x:Null}" />
+						<palette:DiagramGrid
+							Name="PART_UserSelector"
+							Height="17"
+							Margin="0,0,0,0"
+							Background="#FFFFFFFF"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Top"
+							Opacity="{Binding CaseSelectorOpacity}">
+							<FrameworkElement.ContextMenu>
+								<ContextMenu
+									Visibility="Collapsed" />
+							</FrameworkElement.ContextMenu>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="Auto" />
+								<ColumnDefinition
+									Width="38" />
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<ni:BooleanButton
+								Name="PART_Previous"
+								Grid.Column="0"
+								Style="{StaticResource StructureSelectorPrevious}"
+								BorderBrush="{StaticResource NodeBorderVI}" />
+							<ni:BooleanButton
+								Name="PART_Next"
+								Grid.Column="3"
+								Style="{StaticResource StructureSelectorNext}"
+								BorderBrush="{StaticResource NodeBorderVI}" />
+							<Border
+								Name="PART_CommonBorder"
+								Grid.Column="1"
+								BorderThickness="0 0 1 0"
+								Background="#00FFFFFF"
+								BorderBrush="{StaticResource NodeBorderVI}">
+								<Grid
+									Name="PART_SelectorGrid"
+									Column="1">
+									<ComboBox
+										Name="PART_ComboBox"
+										BorderThickness="1 1 0 1"
+										Style="{StaticResource CaseStructureComboBoxStyle}"
+										ItemsSource="{Binding Path=NestedDiagrams}"
+										SelectedItem="{Binding Path=SelectedDiagram, Mode=TwoWay}">
+										<FrameworkElement.Resources>
+											<ResourceDictionary>
+												<SolidColorBrush
+													Color="{Binding SelectorTypeBrush.Color}"
+													x:Key="{x:Static SystemColors.HighlightBrushKey}" />
+												<SolidColorBrush
+													Color="{StaticResource NITrueWhite}"
+													x:Key="{x:Static SystemColors.HighlightTextColorKey}" />
+												<SolidColorBrush
+													Color="{StaticResource NIBlack}"
+													x:Key="{x:Static SystemColors.ControlTextBrushKey}" />
+											</ResourceDictionary>
+										</FrameworkElement.Resources>
+										<ItemsControl.ItemTemplate>
+											<DataTemplate>
+												<TextBlock
+													Name="Text"
+													Padding="0,0,1,0"
+													FontFamily="{DynamicResource DiagramFont}"
+													HorizontalAlignment="Stretch"
+													VerticalAlignment="Center"
+													FontSize="{StaticResource DiagramFontSize}"
+													Text="{Binding Path=Pattern}"
+													TextAlignment="{Binding DataContext.CaseLabelAlignment, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}}" />
+											</DataTemplate>
+										</ItemsControl.ItemTemplate>
+									</ComboBox>
+									<TextBlock
+										Name="PART_SelectedDiagramIndex"
+										Margin="5,-1,18,0"
+										FontFamily="{DynamicResource DiagramFont}"
+										HorizontalAlignment="Stretch"
+										MinHeight="13"
+										MinWidth="30"
+										VerticalAlignment="Center"
+										IsHitTestVisible="False"
+										Foreground="{StaticResource SelectorTextBrush}"
+										FontSize="{StaticResource DiagramFontSize}"
+										TextAlignment="{Binding Path=CaseLabelAlignment}" />
+								</Grid>
+							</Border>
+							<Grid
+								Name="PART_SelectorTextGrid"
+								Column="2"
+								Background="{StaticResource GrayNodeFillBrush}">
+								<FrameworkElement.ToolTip>
+									<TextBlock
+										Name="PART_TooltipText"
+										FontFamily="{DynamicResource DiagramFont}"
+										FontSize="{StaticResource DiagramFontSize}" />
+								</FrameworkElement.ToolTip>
+								<Border
+									Name="PART_SelectorTextGrid_Border"
+									BorderThickness="0 1 1 1"
+									BorderBrush="{StaticResource NodeBorderVI}">
+									<Border
+										Name="PART_SelectorTextGrid_InnerBoarder"
+										BorderThickness="1"
+										BorderBrush="{StaticResource GrayNodeInnerBorderBrush}">
+										<TextBlock
+											Name="PART_SelectorText"
+											Margin="2,-1,0,0"
+											FontFamily="{DynamicResource DiagramFont}"
+											HorizontalAlignment="Stretch"
+											MinHeight="13"
+											MinWidth="30"
+											VerticalAlignment="Center"
+											TextTrimming="CharacterEllipsis"
+											Foreground="{StaticResource NIBlackBrush}"
+											FontSize="{StaticResource DiagramFontSize}"
+											TextAlignment="{Binding Path=CaseLabelAlignment}" />
+									</Border>
+								</Border>
+							</Grid>
+						</palette:DiagramGrid>
+						<palette:DiagramCanvas
+							IsHitTestVisible="True"
+							DataContext="{Binding Path=BorderNodeDiagram}"
+							Background="{x:Null}"
+							Opacity="{Binding DataContext.Opacity, ElementName=LayoutRoot}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="True"
+									Binding="{Binding ElementName=PART_SelectorTextGrid, Path=IsMouseOver}" />
+								<Condition
+									Value="true"
+									Binding="{Binding Path=(viDesign:EventStructureControl.AllowConfiguration), ElementName=PART_SelectorTextGrid}" />
+							</MultiDataTrigger.Conditions>
+							<Setter
+								TargetName="PART_SelectorTextGrid"
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="PART_SelectorText"
+								Property="Foreground"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="PART_SelectorTextGrid_Border"
+								Property="BorderBrush"
+								Value="{Binding SelectorTypeBrush}" />
+							<Setter
+								TargetName="PART_CommonBorder"
+								Property="BorderBrush"
+								Value="{Binding SelectorTypeBrush}" />
+							<Setter
+								TargetName="PART_SelectorTextGrid_InnerBoarder"
+								Property="BorderBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</MultiDataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding ElementName=PART_SelectorGrid, Path=IsMouseOver}">
+							<Setter
+								TargetName="PART_CommonBorder"
+								Property="BorderBrush"
+								Value="{Binding SelectorTypeBrush}" />
+						</DataTrigger>
+						<DataTrigger
+							Value="true"
+							Binding="{Binding Path=(viDesign:StackedStructureControl.IsInvalid), ElementName=PART_SelectorTextGrid}">
+							<Setter
+								TargetName="PART_SelectorTextGrid_Border"
+								Property="BorderThickness"
+								Value="1" />
+							<Setter
+								TargetName="PART_SelectorTextGrid_Border"
+								Property="BorderBrush"
+								Value="#FFFF0000" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<SolidColorBrush
+		Color="#919598"
+		x:Key="DataViewerGraphLineBrush" />
+	<SolidColorBrush
+		Color="#94979B"
+		x:Key="DataViewerTableHeaderLine" />
+	<SolidColorBrush
+		Color="#F2F5F7"
+		x:Key="DataViewerTableHeaderBorder" />
+	<SolidColorBrush
+		Color="#F2F5F7"
+		x:Key="DataViewerTableHeaderBackground" />
+	<SolidColorBrush
+		Color="#94979B"
+		x:Key="DataViewerTableBorder" />
+	<SolidColorBrush
+		Color="#D3D7D9"
+		x:Key="DataViewerTableHorizontalGridLines" />
+	<SolidColorBrush
+		Color="#D3D7D9"
+		x:Key="DataViewerTableVerticalGridLines" />
+	<SolidColorBrush
+		Color="#F4F9FC"
+		x:Key="DataViewerTableRowBackground" />
+	<SolidColorBrush
+		Color="#EBF0F5"
+		x:Key="DataViewerTableAlternatingRowBackground" />
+	<Style
+		TargetType="{x:Type GridSplitter}"
+		x:Key="DataViewerSplitterBar">
+		<Setter
+			Property="Width"
+			Value="5" />
+		<Setter
+			Property="RowSpan"
+			Value="3" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Left" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource DataViewerTableVerticalGridLines}" />
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridColumnHeader}"
+		x:Key="DataViewerTableColumnHeader">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource DataViewerTableHeaderBackground}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource DataViewerTableHeaderBorder}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="ContentTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<TextBlock
+						TextTrimming="CharacterEllipsis"
+						Text="{Binding}"
+						FontSize="{Binding ElementName=TableGrid, Path=FontSize}" />
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridColumnHeader}">
+					<Grid
+						SnapsToDevicePixels="True">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Border
+							BorderThickness="0,0,0,1"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{StaticResource DataViewerTableHeaderLine}">
+							<Border
+								BorderBrush="#FFFFFFFF"
+								BorderThickness="0,1,0,1"
+								Margin="0,0,0,0"
+								Background="{TemplateBinding Background}">
+								<Border
+									Name="InnerHeaderBorder"
+									BorderBrush="{TemplateBinding BorderBrush}"
+									BorderThickness="0"
+									Margin="0,0,0,0"
+									Padding="{TemplateBinding Padding}">
+									<ContentPresenter
+										Name="HeaderContent"
+										HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+										Margin="3,0,3,0"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+								</Border>
+							</Border>
+						</Border>
+						<Border
+							Grid.Column="1"
+							BorderThickness="0,0,1,0"
+							Margin="0,3,0,2"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{StaticResource DataViewerTableHeaderLine}" />
+						<Path
+							Name="SortArrow"
+							Visibility="Collapsed"
+							Grid.Column="1"
+							Margin="0,0,8,0"
+							Data="M0,0 L1,0 L0.5,1"
+							Stretch="Fill"
+							RenderTransformOrigin="0.5,0.4"
+							Width="8"
+							Height="6"
+							VerticalAlignment="Center"
+							Fill="{StaticResource DataViewerTableHeaderLine}" />
+						<Thumb
+							Name="PART_RightHeaderGripper"
+							Grid.Column="1"
+							HorizontalAlignment="Right"
+							Cursor="SizeWE">
+							<FrameworkElement.Style>
+								<Style
+									TargetType="{x:Type Thumb}">
+									<Setter
+										Property="Width"
+										Value="2" />
+									<Setter
+										Property="Template">
+										<Setter.Value>
+											<ControlTemplate
+												TargetType="{x:Type Thumb}">
+												<Border
+													Background="#00FFFFFF" />
+											</ControlTemplate>
+										</Setter.Value>
+									</Setter>
+								</Style>
+							</FrameworkElement.Style>
+						</Thumb>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="DataGridColumnHeader.SortDirection"
+							Value="Ascending">
+							<Setter
+								TargetName="SortArrow"
+								Property="Visibility"
+								Value="Visible" />
+							<Setter
+								TargetName="SortArrow"
+								Property="RenderTransform">
+								<Setter.Value>
+									<RotateTransform
+										Angle="180" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger
+							Property="DataGridColumnHeader.SortDirection"
+							Value="Descending">
+							<Setter
+								TargetName="SortArrow"
+								Property="Visibility"
+								Value="Visible" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+								Property="Foreground" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridRowHeader}"
+		x:Key="DataViewerTableRowHeader">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource DataViewerTableHeaderBackground}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource DataViewerTableHeaderBorder}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="Padding"
+			Value="2,0,2,0" />
+		<Setter
+			Property="MinWidth"
+			Value="30" />
+		<Setter
+			Property="ContentTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<TextBlock
+						TextTrimming="CharacterEllipsis"
+						Text="{Binding}"
+						FontSize="{Binding ElementName=TableGrid, Path=FontSize}" />
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridRowHeader}">
+					<Grid
+						SnapsToDevicePixels="True">
+						<Border
+							BorderThickness="0,0,1,0"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{StaticResource DataViewerTableHeaderLine}">
+							<Border
+								BorderBrush="#FFFFFFFF"
+								BorderThickness="1,0,1,0"
+								Margin="0,0,0,0"
+								Background="{TemplateBinding Background}">
+								<Border
+									BorderThickness="0,0,0,1"
+									Margin="2,0,2,0"
+									Background="{TemplateBinding Background}"
+									BorderBrush="{StaticResource DataViewerTableHeaderLine}">
+									<Border
+										Name="InnerHeaderBorder"
+										BorderBrush="{TemplateBinding BorderBrush}"
+										BorderThickness="1"
+										Margin="0,0,0,0"
+										Padding="{TemplateBinding Padding}">
+										<ContentPresenter
+											Name="HeaderContent"
+											HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+											Margin="3,0,3,0"
+											RecognizesAccessKey="True"
+											SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+											VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+									</Border>
+								</Border>
+							</Border>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridCell}"
+		x:Key="DataViewerTableCell">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridCell}">
+					<Grid>
+						<ContentPresenter
+							Margin="4,0,4,0"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Left" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="DataGridCell.IsSelected"
+							Value="True">
+							<Setter
+								Property="BorderBrush"
+								Value="#00FFFFFF" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource Text}" />
+							<Setter
+								Property="Background"
+								Value="{StaticResource SelectedRowBackground}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								Property="BorderBrush"
+								Value="#00FFFFFF" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource Text}" />
+							<Setter
+								Property="Background"
+								Value="{StaticResource ButtonHoverBackgroundBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGrid}"
+		x:Key="DataViewerTable">
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource DataViewerTableBorder}" />
+		<Setter
+			Property="DataGrid.HorizontalGridLinesBrush"
+			Value="{StaticResource DataViewerTableHorizontalGridLines}" />
+		<Setter
+			Property="DataGrid.VerticalGridLinesBrush"
+			Value="{StaticResource DataViewerTableVerticalGridLines}" />
+		<Setter
+			Property="DataGrid.RowBackground"
+			Value="{StaticResource DataViewerTableRowBackground}" />
+		<Setter
+			Property="DataGrid.AlternatingRowBackground"
+			Value="{StaticResource DataViewerTableAlternatingRowBackground}" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIBackgroundBrush}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="DataGrid.HeadersVisibility"
+			Value="All" />
+		<Setter
+			Property="DataGrid.AutoGenerateColumns"
+			Value="True" />
+		<Setter
+			Property="DataGrid.CanUserResizeColumns"
+			Value="True" />
+		<Setter
+			Property="DataGrid.CanUserSortColumns"
+			Value="False" />
+		<Setter
+			Property="DataGrid.CanUserReorderColumns"
+			Value="False" />
+		<Setter
+			Property="DataGrid.GridLinesVisibility"
+			Value="Horizontal" />
+		<Setter
+			Property="DataGrid.MinRowHeight"
+			Value="18" />
+		<Setter
+			Property="DataGrid.MinColumnWidth"
+			Value="50" />
+		<Setter
+			Property="DataGrid.IsReadOnly"
+			Value="True" />
+		<Setter
+			Property="DataGrid.CanUserAddRows"
+			Value="False" />
+		<Setter
+			Property="DataGrid.CanUserDeleteRows"
+			Value="False" />
+		<Setter
+			Property="DataGrid.ColumnHeaderStyle"
+			Value="{StaticResource DataViewerTableColumnHeader}" />
+		<Setter
+			Property="DataGrid.RowHeaderStyle"
+			Value="{StaticResource DataViewerTableRowHeader}" />
+		<Setter
+			Property="DataGrid.CellStyle"
+			Value="{StaticResource DataViewerTableCell}" />
+	</Style>
+	<s:Double
+		x:Key="PropertyItemFontSize">11</s:Double>
+	<ControlTemplate
+		TargetType="{x:Type MenuItem}"
+		x:Key="PropertyNodeFilterTopLevelHeaderTemplateKey">
+		<Grid
+			SnapsToDevicePixels="True"
+			Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource AncestorType={x:Type Menu}}}"
+			Height="{Binding Path=ActualHeight, RelativeSource={RelativeSource AncestorType={x:Type Menu}}}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition
+					Width="16" />
+			</Grid.ColumnDefinitions>
+			<Border
+				Name="Border"
+				Grid.ColumnSpan="2"
+				CornerRadius="0"
+				BorderBrush="#00FFFFFF"
+				BorderThickness="1"
+				Background="{StaticResource NITrueWhiteBrush}" />
+			<ContentPresenter
+				Name="ContentPresenter"
+				Grid.Column="0"
+				Margin="15, 0, 0, 0"
+				HorizontalAlignment="Left"
+				VerticalAlignment="Center"
+				ContentSource="Header"
+				RecognizesAccessKey="True" />
+			<Path
+				Name="Arrow"
+				Grid.Column="1"
+				Data="F1 M0,0 L6,0 L3,4 L0,0"
+				Width="6"
+				Height="4"
+				Stretch="Fill"
+				HorizontalAlignment="Center"
+				VerticalAlignment="Center"
+				Fill="{StaticResource NIBlackBrush}" />
+			<Popup
+				Name="Popup"
+				Placement="Bottom"
+				IsOpen="{TemplateBinding IsSubmenuOpen}"
+				AllowsTransparency="True"
+				Focusable="False"
+				PopupAnimation="Slide">
+				<Grid
+					Name="DropDown"
+					MinWidth="{TemplateBinding ActualWidth}">
+					<Border
+						Name="DropDownBorder"
+						BorderThickness="1, 0, 1, 1"
+						Background="{StaticResource NITrueWhiteBrush}"
+						BorderBrush="{StaticResource NIGrayCool81Brush}">
+						<ScrollViewer
+							HorizontalScrollBarVisibility="Hidden"
+							VerticalScrollBarVisibility="Hidden">
+							<StackPanel
+								IsItemsHost="True"
+								KeyboardNavigation.DirectionalNavigation="Contained" />
+						</ScrollViewer>
+					</Border>
+				</Grid>
+			</Popup>
+		</Grid>
+		<ControlTemplate.Triggers>
+			<Trigger
+				Property="MenuItem.IsSuspendingPopupAnimation"
+				Value="True">
+				<Setter
+					TargetName="Popup"
+					Property="PopupAnimation"
+					Value="None" />
+			</Trigger>
+			<Trigger
+				Property="MenuItem.IsSubmenuOpen"
+				Value="True">
+				<Setter
+					TargetName="ContentPresenter"
+					Property="Foreground"
+					Value="{StaticResource NITrueWhiteBrush}" />
+				<Setter
+					TargetName="Border"
+					Property="BorderBrush"
+					Value="{StaticResource NIHighlightBrush}" />
+				<Setter
+					TargetName="Border"
+					Property="BorderThickness"
+					Value="1, 1, 1, 0" />
+				<Setter
+					TargetName="Border"
+					Property="Background"
+					Value="{StaticResource NIHighlightBrush}" />
+				<Setter
+					TargetName="Arrow"
+					Property="Fill"
+					Value="{StaticResource NITrueWhiteBrush}" />
+			</Trigger>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					TargetName="Border"
+					Property="BorderBrush"
+					Value="{StaticResource NIHighlightBrush}" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<ControlTemplate
+		TargetType="{x:Type MenuItem}"
+		x:Key="PropertyNodeFilterTopLevelItemTemplateKey">
+		<Border
+			Name="Border"
+			SnapsToDevicePixels="True"
+			BorderThickness="1"
+			BorderBrush="{StaticResource NITrueWhiteBrush}">
+			<ContentPresenter
+				Margin="13, 0, 13, 0"
+				ContentSource="Header"
+				RecognizesAccessKey="True" />
+		</Border>
+		<ControlTemplate.Triggers>
+			<Trigger
+				Property="MenuItem.IsHighlighted"
+				Value="True">
+				<Setter
+					TargetName="Border"
+					Property="BorderBrush"
+					Value="{StaticResource NIHighlightBrush}" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<ControlTemplate
+		TargetType="{x:Type MenuItem}"
+		x:Key="PropertyNodeFilterSubMenuItemTemplateKey">
+		<Border
+			Name="Border"
+			SnapsToDevicePixels="True"
+			BorderThickness="1"
+			BorderBrush="{StaticResource NITrueWhiteBrush}">
+			<ContentPresenter
+				Margin="13, 0, 13, 0"
+				ContentSource="Header"
+				RecognizesAccessKey="True" />
+		</Border>
+		<ControlTemplate.Triggers>
+			<Trigger
+				Property="MenuItem.IsHighlighted"
+				Value="True">
+				<Setter
+					TargetName="Border"
+					Property="BorderBrush"
+					Value="{StaticResource NIHighlightBrush}" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<ControlTemplate
+		TargetType="{x:Type MenuItem}"
+		x:Key="PropertyNodeFilterSubMenuHeaderTemplateKey">
+		<Border
+			Name="Border"
+			SnapsToDevicePixels="True"
+			BorderThickness="1"
+			BorderBrush="{StaticResource NITrueWhiteBrush}">
+			<Grid>
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition
+						Width="*" />
+					<ColumnDefinition
+						Width="13" />
+				</Grid.ColumnDefinitions>
+				<ContentPresenter
+					Name="HeaderHost"
+					Grid.Column="0"
+					Margin="13, 0, 0, 0"
+					ContentSource="Header"
+					RecognizesAccessKey="True" />
+				<Path
+					Grid.Column="1"
+					HorizontalAlignment="Center"
+					VerticalAlignment="Center"
+					Data="M0,0 L0,7 L4,3.5"
+					Fill="{StaticResource NIBlackBrush}" />
+				<Popup
+					Name="Popup"
+					Placement="Right"
+					IsOpen="{TemplateBinding IsSubmenuOpen}"
+					AllowsTransparency="True"
+					Focusable="False"
+					PopupAnimation="Fade">
+					<Border
+						Name="SubmenuBorder"
+						BorderThickness="1"
+						Background="{StaticResource NITrueWhiteBrush}"
+						BorderBrush="{StaticResource NIGrayCool81Brush}">
+						<StackPanel
+							IsItemsHost="True"
+							KeyboardNavigation.DirectionalNavigation="Cycle" />
+					</Border>
+				</Popup>
+			</Grid>
+		</Border>
+		<ControlTemplate.Triggers>
+			<Trigger
+				Property="MenuItem.IsHighlighted"
+				Value="True">
+				<Setter
+					TargetName="Border"
+					Property="BorderBrush"
+					Value="{StaticResource NIHighlightBrush}" />
+			</Trigger>
+		</ControlTemplate.Triggers>
+	</ControlTemplate>
+	<Style
+		TargetType="{x:Type MenuItem}"
+		x:Key="PropertyNodeFilterMenuItem">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="MenuItem.Command"
+			Value="{Binding Command}" />
+		<Setter
+			Property="MenuItem.CommandParameter"
+			Value="{Binding}" />
+		<Setter
+			Property="viDesign:MouseOverBehavior.MouseOverCommand"
+			Value="{Binding MouseOverCommand}" />
+		<Setter
+			Property="MenuItem.IsSubmenuOpen"
+			Value="{Binding IsSubmenuOpen, Mode=OneWayToSource}" />
+		<Style.Triggers>
+			<Trigger
+				Property="MenuItem.Role"
+				Value="TopLevelHeader">
+				<Setter
+					Property="Template"
+					Value="{StaticResource PropertyNodeFilterTopLevelHeaderTemplateKey}" />
+				<Setter
+					Property="Grid.IsSharedSizeScope"
+					Value="True" />
+			</Trigger>
+			<Trigger
+				Property="MenuItem.Role"
+				Value="TopLevelItem">
+				<Setter
+					Property="Template"
+					Value="{StaticResource PropertyNodeFilterTopLevelItemTemplateKey}" />
+			</Trigger>
+			<Trigger
+				Property="MenuItem.Role"
+				Value="SubmenuHeader">
+				<Setter
+					Property="Template"
+					Value="{StaticResource PropertyNodeFilterSubMenuHeaderTemplateKey}" />
+			</Trigger>
+			<Trigger
+				Property="MenuItem.Role"
+				Value="SubmenuItem">
+				<Setter
+					Property="Template"
+					Value="{StaticResource PropertyNodeFilterSubMenuItemTemplateKey}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type Menu}"
+		x:Key="PropertyNodeFilterMenu">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="ItemContainerStyle"
+			Value="{StaticResource PropertyNodeFilterMenuItem}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="ItemTemplate">
+			<Setter.Value>
+				<HierarchicalDataTemplate
+					ItemsSource="{Binding Path=MenuItems}">
+					<TextBlock
+						FontFamily="{DynamicResource DiagramFont}"
+						TextWrapping="NoWrap"
+						TextTrimming="CharacterEllipsis"
+						FontSize="{StaticResource PropertyItemFontSize}"
+						Text="{Binding Text}" />
+				</HierarchicalDataTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ToggleButton}"
+		x:Key="ActivePropertyComboBoxToggleButton">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="viDesign:MouseOverBehavior.MouseOverCommand"
+			Value="{Binding MouseOverActivePropertyCommand}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="15" />
+							<ColumnDefinition />
+							<ColumnDefinition
+								Width="16" />
+						</Grid.ColumnDefinitions>
+						<Border
+							Name="Border"
+							Grid.ColumnSpan="3"
+							CornerRadius="0"
+							BorderBrush="#00FFFFFF"
+							BorderThickness="1"
+							Background="{StaticResource NITrueWhiteBrush}" />
+						<Path
+							Name="SubItemDataTypeArrow"
+							Grid.Column="0"
+							Data="F1 M0,10 L1.433,5 L0,0 L7,5 L0,10"
+							Width="7"
+							Height="10"
+							Stretch="Fill"
+							HorizontalAlignment="Left"
+							VerticalAlignment="Center"
+							Margin="3, 0, 0, 0"
+							Fill="{Binding SubItemDataTypeBrush}" />
+						<Path
+							Name="Arrow"
+							Grid.Column="2"
+							Data="F1 M0,0 L6,0 L3,4 L0,0"
+							Width="6"
+							Height="4"
+							Stretch="Fill"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Fill="{StaticResource NIBlackBrush}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="Border"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="true">
+							<Setter
+								TargetName="Border"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="Border"
+								Property="BorderThickness"
+								Value="1, 1, 1, 0" />
+							<Setter
+								TargetName="Border"
+								Property="Background"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="SubItemDataTypeArrow"
+								Property="Fill"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="Arrow"
+								Property="Fill"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding HasSubItemTerminal}">
+							<Setter
+								TargetName="SubItemDataTypeArrow"
+								Property="Visibility"
+								Value="Collapsed" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ComboBoxItem}"
+		x:Key="ActivePropertyMode">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ComboBoxItem}">
+					<Border
+						Name="Border"
+						SnapsToDevicePixels="True"
+						BorderThickness="1"
+						BorderBrush="#00FFFFFF"
+						viDesigner:MouseOverBehavior.MouseOverCommand="{Binding MouseOverCommand}">
+						<shell:ShellRadioButton
+							VerticalAlignment="Stretch"
+							FontFamily="{DynamicResource DiagramFont}"
+							IsHitTestVisible="True"
+							Focusable="False"
+							FontSize="{StaticResource PropertyItemFontSize}"
+							IsChecked="{Binding Path=IsSelected, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}">
+							<ContentControl.Content>
+								<TextBlock
+									Text="{Binding Text}" />
+							</ContentControl.Content>
+						</shell:ShellRadioButton>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="Border"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<DataTrigger
+				Value="False"
+				Binding="{Binding IsEnabled}">
+				<Setter
+					Property="Visibility"
+					Value="Collapsed" />
+			</DataTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type ListViewItem}"
+		x:Key="ActivePropertySubItem">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="ListBoxItem.IsSelected"
+			Value="{Binding IsSelected}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ListViewItem}">
+					<Border
+						Name="Border"
+						SnapsToDevicePixels="True"
+						BorderThickness="1"
+						BorderBrush="#00FFFFFF"
+						viDesigner:MouseOverBehavior.MouseOverCommand="{Binding MouseOverCommand}">
+						<CheckBox
+							VerticalAlignment="Stretch"
+							FontFamily="{DynamicResource DiagramFont}"
+							Margin="-1"
+							IsHitTestVisible="True"
+							Focusable="False"
+							FontSize="{StaticResource PropertyItemFontSize}"
+							Content="{Binding SubItem}"
+							IsChecked="{Binding Path=IsSelected, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="Border"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<DataTemplate
+		x:Key="ActivePropertySelectionBoxTemplate">
+		<TextBlock
+			FontFamily="{DynamicResource DiagramFont}"
+			FontSize="{StaticResource PropertyItemFontSize}"
+			Text="{Binding SelectionBoxText}" />
+	</DataTemplate>
+	<viDesigner:ActivePropertyComboBoxItemTemplateSelector
+		SelectionBoxItemTemplate="{StaticResource ActivePropertySelectionBoxTemplate}"
+		x:Key="ActivePropertyComboBoxItemTemplateSelector" />
+	<Style
+		TargetType="{x:Type ComboBox}"
+		x:Key="ActivePropertyComboBox">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="HorizontalScrollBarVisibility"
+			Value="Disabled" />
+		<Setter
+			Property="VerticalScrollBarVisibility"
+			Value="Disabled" />
+		<Setter
+			Property="CanContentScroll"
+			Value="False" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="ItemContainerStyle"
+			Value="{StaticResource ActivePropertyMode}" />
+		<Setter
+			Property="ItemTemplateSelector"
+			Value="{StaticResource ActivePropertyComboBoxItemTemplateSelector}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ComboBox}">
+					<Grid>
+						<ToggleButton
+							Name="ToggleButton"
+							Focusable="False"
+							ClickMode="Press"
+							Style="{StaticResource ActivePropertyComboBoxToggleButton}"
+							IsChecked="{Binding Path=IsDropDownOpen, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}" />
+						<ContentPresenter
+							Name="ContentSite"
+							IsHitTestVisible="False"
+							Content="{TemplateBinding SelectionBoxItem}"
+							ContentTemplate="{TemplateBinding SelectionBoxItemTemplate}"
+							ContentTemplateSelector="{TemplateBinding ItemTemplateSelector}"
+							Margin="15,0,16,0"
+							VerticalAlignment="Center"
+							HorizontalAlignment="Left" />
+						<Popup
+							Name="Popup"
+							Placement="Bottom"
+							VerticalOffset="-1"
+							AllowsTransparency="True"
+							Focusable="False"
+							PopupAnimation="Slide"
+							IsOpen="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource TemplatedParent}}">
+							<Border
+								Name="DropDownBorder"
+								BorderThickness="1, 0, 1, 1"
+								SnapsToDevicePixels="True"
+								MinWidth="{TemplateBinding ActualWidth}"
+								MaxHeight="{TemplateBinding MaxDropDownHeight}"
+								Background="{StaticResource NITrueWhiteBrush}"
+								BorderBrush="{StaticResource NIGrayCool81Brush}">
+								<Grid>
+									<Grid.RowDefinitions>
+										<RowDefinition
+											Height="Auto" />
+										<RowDefinition
+											Height="1" />
+										<RowDefinition
+											Height="*" />
+									</Grid.RowDefinitions>
+									<ScrollViewer
+										Grid.Row="0"
+										SnapsToDevicePixels="True">
+										<StackPanel
+											IsItemsHost="True"
+											KeyboardNavigation.DirectionalNavigation="Contained" />
+									</ScrollViewer>
+									<Rectangle
+										Grid.Row="1"
+										Fill="{StaticResource NIGrayCool81Brush}" />
+									<ListView
+										Name="KnownSubItemList"
+										Grid.Row="2"
+										BorderThickness="0, 1, 0, 0"
+										SelectionMode="Multiple"
+										ScrollViewer.CanContentScroll="True"
+										ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+										ScrollViewer.VerticalScrollBarVisibility="Auto"
+										ItemContainerStyle="{StaticResource ActivePropertySubItem}"
+										IsEnabled="{Binding IsSubItemSelectionEnabled}"
+										ItemsSource="{Binding SubItems}" />
+								</Grid>
+							</Border>
+						</Popup>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ItemsControl.HasItems"
+							Value="False">
+							<Setter
+								TargetName="DropDownBorder"
+								Property="MinHeight"
+								Value="95" />
+						</Trigger>
+						<Trigger
+							SourceName="ToggleButton"
+							Property="ToggleButton.IsChecked"
+							Value="true">
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding CanSelectSubItems}">
+							<Setter
+								TargetName="KnownSubItemList"
+								Property="Visibility"
+								Value="Collapsed" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ContentControl}"
+		x:Key="PropertyNodeFilterAdornerStyle">
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<Border
+						BorderThickness="1"
+						BorderBrush="{StaticResource NIGrayCool81Brush}">
+						<Grid>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Name="FilterMenuRow"
+									Height="*" />
+								<RowDefinition
+									Name="SeparatorRow"
+									Height="1" />
+								<RowDefinition
+									Name="ActivePropertyComboBoxRow"
+									Height="*" />
+							</Grid.RowDefinitions>
+							<Rectangle
+								Grid.Row="1"
+								Fill="{StaticResource NIGrayCool81Brush}" />
+							<Menu
+								Name="FilterMenu"
+								Grid.Row="0"
+								Margin="-1"
+								HorizontalAlignment="Stretch"
+								Style="{StaticResource PropertyNodeFilterMenu}"
+								ItemsSource="{Binding FilterMenuItems}" />
+							<ComboBox
+								Name="ActivePropertyComboBox"
+								Grid.Row="2"
+								Margin="-1"
+								HorizontalAlignment="Stretch"
+								Style="{StaticResource ActivePropertyComboBox}"
+								ItemsSource="{Binding ActivePropertyModes}"
+								SelectedItem="{Binding SelectedActivePropertyMode}"
+								IsDropDownOpen="{Binding IsActivePropertyDropDownOpen}"
+								IsEnabled="{Binding CanConfigureSubItems}" />
+						</Grid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding ShowFilterConfiguration}">
+							<Setter
+								TargetName="SeparatorRow"
+								Property="Height"
+								Value="0" />
+							<Setter
+								TargetName="FilterMenuRow"
+								Property="Height"
+								Value="0" />
+							<Setter
+								TargetName="FilterMenu"
+								Property="Visibility"
+								Value="Collapsed" />
+						</DataTrigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding ShowSubItemConfiguration}">
+							<Setter
+								TargetName="SeparatorRow"
+								Property="Height"
+								Value="0" />
+							<Setter
+								TargetName="ActivePropertyComboBoxRow"
+								Property="Height"
+								Value="0" />
+							<Setter
+								TargetName="ActivePropertyComboBox"
+								Property="Visibility"
+								Value="Collapsed" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

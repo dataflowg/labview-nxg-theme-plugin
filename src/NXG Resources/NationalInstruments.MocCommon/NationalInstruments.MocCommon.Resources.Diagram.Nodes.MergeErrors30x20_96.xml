@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="NodeForeground50" Data="M 23.1493,2.99996L 22.9965,10.0008L 21.9935,10.0008L 21.8284,2.99996L 23.1493,2.99996 Z M 23.0304,12.0319L 22.0052,12.0319L 22.0052,11.0067L 23.0304,11.0067L 23.0304,12.0319 Z M 20.6015,6.08809L 16.2656,4.48087L 17.5055,3.01563L 20.6015,6.08809 Z M 20.09,7.00148L 17.1796,8.50706L 17.026,7.00517L 20.09,7.00148 Z " />
+        <NineGridPath X="0" Y="0" Color="NodeForeground100" Data="M 8.87186,17.0208L 8.87231,9.43445L 6.30755,11.0175L 9.53126,5.99995L 12.6974,11.0175L 10.1577,9.46016C 10.1433,11.0164 10.0577,12.0798 10.6364,12.6828C 11.215,13.2858 13.2247,14.6657 13.2247,14.6657L 12.4455,15.6327L 10.1495,13.9702L 10.1498,17.0208L 8.87186,17.0208 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!--TODO : TA303730 : Delete this file when removing the feature toggle VerticalGrowNodeCollapsibleToSingleInput-->

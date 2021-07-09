@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Width="40" Height="25" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Width="40" Height="25.0001" Color="NodeBorder" Data="F1 M 40,0L 40,21C 40,23.2092 38.2091,25 36,25L 4.00003,25C 1.79089,25 3.05176e-005,23.2092 3.05176e-005,21L 3.05176e-005,0L 40,0 Z" />
+        <NineGridPath X="0" Y="0" Width="38.0001" Height="24.0001" Color="GrayNodeFill" Data="F1 M 39,0L 39.0001,21C 39.0001,22.6568 37.657,24.0001 36.0001,24.0001L 4.00015,24.0001C 2.34329,24.0001 1.00015,22.6568 1.00015,21L 0.999969,0L 39,0 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="40" Height="45" Clip="F1 M 0,0L 40,0L 40,45L 0,45L 0,0">
+	<Path x:Name="Path" Width="40" Height="25.0001" Canvas.Left="3.05176e-005" Canvas.Top="19.9999" Stretch="Fill" Fill="#FFA6A6A6" Data="F1 M 40,19.9999L 40,41C 40,43.2092 38.2091,45 36,45L 4.00003,45C 1.79089,45 3.05176e-005,43.2092 3.05176e-005,41L 3.05176e-005,20.0453L 40,19.9999 Z "/>
+	<Path x:Name="Path_0" Width="38.0001" Height="24.0001" Canvas.Left="0.999969" Canvas.Top="19.9999" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 39,19.9999L 39.0001,41C 39.0001,42.6568 37.657,44.0001 36.0001,44.0001L 4.00015,44.0001C 2.34329,44.0001 1.00015,42.6568 1.00015,41L 0.999969,19.9999L 39,19.9999 Z "/>
+	<Path x:Name="Path_1" Width="36.0001" Height="23.0004" Canvas.Left="1.99991" Canvas.Top="20.0001" Stretch="Fill" Fill="#FFE6E6E6" Data="F1 M 38,20.0001L 37.9999,41.0005C 37.9999,42.105 37.1045,43.0005 35.9999,43.0005L 3.99991,43.0005C 2.89536,43.0005 1.99991,42.105 1.99991,41.0005L 1.99997,20.0001L 38,20.0001 Z "/>	
+	</Path>
+</Canvas>
+-->

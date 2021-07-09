@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <Items>
+  	<NineGridPathList Key="H_0" Height="2" Width="3.99999999999909">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M4,2H0V0h4V2z"/>
+        <NineGridPath Color="Primary" Data="F1 M4,1L3,2H0l2-2h1L2,1H4z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="V_0" Height="3.99999999999909" Width="2">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M2,0v4H0V0H2z"/>
+        <NineGridPath Color="Primary" Data="F1 M1,0l1,1v3L0,2V1l1,1V0z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="H_1" Height="3" Width="3.99999999999909">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M4,3H0V0h4V3z"/>
+        <NineGridPath Color="Primary" Data="F1 M4,1L2,3H0l1-1H0l2-2h1L2,1H4z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="V_1" Height="3.99999999999909" Width="3">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M3,0v4H0V0H3z"/>
+        <NineGridPath Color="Primary" Data="F1 M1,0l2,2v2L2,3v1L0,2V1l1,1V0z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="H_2" Height="4" Width="6">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M6,4H0V0h6V4z"/>
+        <NineGridPath Color="Primary" Data="F1 M5.667,1l-3,3H0l2.002-2.002l-1.324-0.01L2.667,0H4L3,1H5.667z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="V_2" Height="6" Width="4">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M4,0v6H0V0H4z"/>
+        <NineGridPath Color="Primary" Data="F1 M1,0.333l3,3V6L1.998,3.998l-0.01,1.324L0,3.333V2l1,1V0.333z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="H_3" Height="5" Width="7.00000000000091">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M7,5H0V0h7V5z"/>
+        <NineGridPath Color="Primary" Data="F1 M7,1.995L3.667,5H0.333L2.34,2.993L0.661,3.006L3.667,0h1.667l-1.99,1.99L7,1.995z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="V_3" Height="7" Width="5">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M5,0v7H0V0H5z"/>
+        <NineGridPath Color="Primary" Data="F1 M1.995,0L5,3.333v3.333L2.993,4.66l0.013,1.679L0,3.333V1.667l1.99,1.99L1.995,0z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="H_4" Height="6" Width="7.99999999999909">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M8,6H0V0h8V6z"/>
+        <NineGridPath Color="Primary" Data="F1 M8,2L4,6H0l2-2H0l4-4h2L4,2H8z"/>
+      </Paths>
+    </NineGridPathList>
+
+    <NineGridPathList Key="V_4" Height="7.99999999999909" Width="6">
+      <Paths>
+        <NineGridPath Color="Secondary" Data="F1 M6,0v8H0V0H6z"/>
+        <NineGridPath Color="Primary" Data="F1 M2,0l4,4v4L4,6v2L0,4V2l2,2V0z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <!--ColorTable>
+    <Color Key="SVGID_1_" Type="Linear" StartX="0.5" StartY="-2.34627125429785e-7" EndX="0.5" EndY="1.00000025699188">
+      <Stops>
+        <Stop Color="#FFE7E9EA" Offset="0"/>
+        <Stop Color="#FFE5E8E9" Offset="0.1174"/>
+        <Stop Color="#FFDADFE2" Offset="1"/>
+      </Stops>
+    </Color>
+  </ColorTable-->
+  <Items>
+    <NineGridPathList Key="Image">
+      <Paths>
+        <NineGridPath StartX="0" StartY="0" Width="74" Height="40" Color="#FFFFFFFF" Data="F1 M74,40H0V0h74V40z" />
+        <NineGridPath StartX="62.0093078613281" StartY="4.00930750370026" Width="7.98138427734375" Height="31.9813842773438" Color="SVGID_1_" Data="F1 M69.991,11.991h-7.981V4.009h7.981V11.991z M69.991,16.009h-7.981v7.981h7.981V16.009z   M69.991,28.009h-7.981v7.981h7.981V28.009z" />
+        <NineGridPath StartX="0" StartY="0" Width="74" Height="40" Color="#FF9CA1A5" Data="F1 M73,1v38H1V1H73 M74,0H0v40h74V0L74,0z M70,4v8h-8V4H70 M71,3H61v10h10V3L71,3z M70,16v8h-8v-8H70   M71,15H61v10h10V15L71,15z M70,28v8h-8v-8H70 M71,27H61v10h10V27L71,27z M3,3v22h56V3H3z M31,14.533L56.561,24H5.439L31,14.533z   M5.439,4h51.121L31,13.467L5.439,4z M58,4.533v18.934L32.439,14L58,4.533z M29.561,14L4,23.467V4.533L29.561,14z M23,27h-2H3v10h18  h2h36V27H23z M4,36v-8h17v8H4z M58,36H23v-8h35V36z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

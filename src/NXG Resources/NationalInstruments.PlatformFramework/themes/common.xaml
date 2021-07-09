@@ -1,0 +1,160 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:ni="clr-namespace:NationalInstruments;assembly=NationalInstruments.PlatformFramework" xmlns:smDesign="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework" xmlns:fuseControls="clr-namespace:NationalInstruments.FuseControls;assembly=NationalInstruments.FuseControlsImplementation" xmlns:shellControls="clr-namespace:NationalInstruments.Controls.Shell;assembly=NationalInstruments.PlatformFramework" xmlns:coreControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core" xmlns:microsoftWindowsThemes="clr-namespace:Microsoft.Windows.Themes;assembly=PresentationFramework.Aero" xmlns:niControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls" xmlns:niConvertersControls="clr-namespace:NationalInstruments.Controls.Converters;assembly=NationalInstruments.Controls" xmlns:bControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls.Booleans" xmlns:core="clr-namespace:NationalInstruments.Core;assembly=NationalInstruments.Core" xmlns:niPrimitives="http://schemas.ni.com/controls/2009/xaml/presentation/primitives" xmlns:design="clr-namespace:NationalInstruments.Restricted.Design;assembly=NationalInstruments.PlatformFramework">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.Core;component/Themes/Common.xaml" />
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/Themes/TextAndFonts.xaml" />
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.Controls.SkinProviders.MocControls;component/IDESkins/ControlStyles.IDE.WPF.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<BooleanToVisibilityConverter
+		x:Key="BooleanToVisibilityConverter" />
+	<niConvertersControls:ColorTableColorResolverConverter
+		x:Key="ColorTableConverter" />
+	<niConvertersControls:DynamicColorTableColorResolverConverter
+		x:Key="DynamicColorTableConverter" />
+	<niConvertersControls:ColorResolverToBrushConverter
+		x:Key="ColorResolverToBrushConverter" />
+	<coreControls:TextTrimToVisibilityConverter
+		x:Key="TextTrimToVisibilityConverter" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FFFFFF"
+		x:Key="Text" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="Text2" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="PaneBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="PaneFill" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="PaneTopRowBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="PaneTopRowHighlight" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="LightRowFill" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="DarkRowFill" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="DataGridCellBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="PaneBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="SelectedCellBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="SelectedRowBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="SelectedRowBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="HoverCellBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="HoverRowBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="HoverRowBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ScrollBarInteractionForegroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ScrollBarMouseOverBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ScrollBarHighlightBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ScrollBarThumbBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ScrollBarThumbBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="NormalBackground" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="NormalBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="HoverBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#80FFFFFF"
+		x:Key="DisabledOverlay" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="DisabledBorder" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonNormalBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonNormalBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonNormalTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonHoverBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonHoverBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonHoverTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonPressedBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonPressedBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF00FF"
+		x:Key="ButtonPressedTextBrush" />
+</ResourceDictionary>

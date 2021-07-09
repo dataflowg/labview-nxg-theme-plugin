@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Width="15" Height="14.9999" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="#FFB03131" Data="F1 M 3,0L 12,0C 13.6569,0 15,1.34326 15,3L 15,12C 15,13.6567 13.6569,15 12,15L 3,15C 1.34315,15 0,13.6567 0,12L 0,3C 0,1.34326 1.34315,0 3,0 Z " />
+        <NineGridPath X="0" Y="0" Color="GrayNodeInnerBorder" Data="F1 M 3,1L 12,1C 13.1046,1 14,1.89551 14,3L 14,12C 14,13.1045 13.1046,14 12,14L 3,14C 1.89543,14 1,13.1045 1,12L 1,3C 1,1.89551 1.89543,1 3,1 Z " />
+        <NineGridPath X="0" Y="0" Color="GrayNodeInnerBorder" Data="F1 M 3,2L 12,2C 12.5523,2 13,2.44775 13,3L 13,12C 13,12.5522 12.5523,13 12,13L 3,13C 2.44772,13 2,12.5522 2,12L 2,3C 2,2.44775 2.44772,2 3,2 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFB03131" Data="F1 M12,5.7 L 9.3,3 L 5.7,3 L 3,5.7 L 3,9.3 L 5.7,12 L 9.3,12 L 12,9.3 L 12,5.7 " />
+        <NineGridPath X="0" Y="0" Color="#FFB03131" Data="F1 M11,6.1 L 8.9,4 L 6.1,4 L 4,6.1 L 4,8.9 L 6.1,11 L 8.9,11 L 11,8.9 L 11,6.1 " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="15" Height="14.9999" Clip="F1 M 0,0L 15,0L 15,14.9999L 0,14.9999L 0,0">
+	<Path x:Name="Path" Width="15" Height="15" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" Fill="#FF999999" Data="F1 M 3,0L 12,0C 13.6569,0 15,1.34326 15,3L 15,12C 15,13.6567 13.6569,15 12,15L 3,15C 1.34315,15 0,13.6567 0,12L 0,3C 0,1.34326 1.34315,0 3,0 Z "/>
+	<Path x:Name="Path_0" Width="13" Height="13" Canvas.Left="1" Canvas.Top="1" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 3,1L 12,1C 13.1046,1 14,1.89551 14,3L 14,12C 14,13.1045 13.1046,14 12,14L 3,14C 1.89543,14 1,13.1045 1,12L 1,3C 1,1.89551 1.89543,1 3,1 Z "/>
+	<Path x:Name="Path_1" Width="11" Height="11" Canvas.Left="2" Canvas.Top="2" Stretch="Fill" Fill="#FFEDEDED" Data="F1 M 3,2L 12,2C 12.5523,2 13,2.44775 13,3L 13,12C 13,12.5522 12.5523,13 12,13L 3,13C 2.44772,13 2,12.5522 2,12L 2,3C 2,2.44775 2.44772,2 3,2 Z "/>
+	<Path x:Name="Path_2" Width="9.00001" Height="9" Canvas.Left="2.99999" Canvas.Top="3" Stretch="Fill" Fill="#FF862020" Data="F1 M 12,5.69995L 9.3,3L 5.7,3L 2.99999,5.69995L 3,9.30005L 5.7,12L 9.3,12L 12,9.30005L 12,5.69995 Z "/>
+	<Path x:Name="Path_3" Width="7.00001" Height="7" Canvas.Left="3.99999" Canvas.Top="4" Stretch="Fill" Fill="#FFB03131" Data="F1 M 11,6.1001L 8.90001,4L 6.1,4L 3.99999,6.1001L 4,8.8999L 6.1,11L 8.9,11L 11,8.8999L 11,6.1001 Z "/>
+</Canvas>
+-->

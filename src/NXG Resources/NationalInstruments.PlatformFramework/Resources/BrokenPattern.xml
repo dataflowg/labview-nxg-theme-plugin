@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <Items>
+    <NineGridPathList Key="H_0" Width="8" Height="1">
+      <Paths>
+        <NineGridPath Width="8" Height="1" Color="#FF4D5359" Data="F1 M0,0 h4v1h-4v-1z" />
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_0" Width="1" Height="8">
+      <Paths>
+        <NineGridPath Width="1" Height="8" Color="#FF4D5359" Data="F1 M0,4 h1v4h-1v-4z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

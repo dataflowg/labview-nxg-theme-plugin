@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="NodeForeground100" Data="M 19,9L 25,9L 25,12L 19,12L 19,9 Z M 26,9.00001L 32,9.00001L 32,12L 26,12L 26,9.00001 Z M 19,13L 25,13L 25,16L 19,16L 19,13 Z M 26,13L 32,13L 32,16L 26,16L 26,13 Z M 19,17L 25,17L 25,20L 19,20L 19,17 Z M 26,17L 32,17L 32,20L 26,20L 26,17 Z M 19,21L 25,21L 25,24L 19,24L 19,21 Z M 26,21L 32,21L 32,24L 26,24L 26,21 Z M 14.2681,8.80555L 16.9787,9.52276L 14.2673,10.2373L 15.3675,12.3517L 13.2543,11.249L 12.5371,13.9597L 11.8226,11.2482L 9.70815,12.3484L 10.8108,10.2353L 8.03773,9.51805L 10.8116,8.80354L 9.71145,6.68909L 11.8246,7.79179L 12.5418,5.08112L 13.2563,7.79259L 15.3708,6.69247L 14.2681,8.80555 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="InitializeArray__96" Width="40" Height="30" Clip="F1 M 0,0L 40,0L 40,30L 0,30L 0,0">
+	<Canvas x:Name="InitializeArray_96" Width="40" Height="30" Canvas.Left="0" Canvas.Top="0">
+		<Path x:Name="Starburst" Width="23.9623" Height="18.9189" Canvas.Left="8.03773" Canvas.Top="5.08112" Stretch="Fill" Fill="#FF595959" Data="M 19,9L 25,9L 25,12L 19,12L 19,9 Z M 26,9.00001L 32,9.00001L 32,12L 26,12L 26,9.00001 Z M 19,13L 25,13L 25,16L 19,16L 19,13 Z M 26,13L 32,13L 32,16L 26,16L 26,13 Z M 19,17L 25,17L 25,20L 19,20L 19,17 Z M 26,17L 32,17L 32,20L 26,20L 26,17 Z M 19,21L 25,21L 25,24L 19,24L 19,21 Z M 26,21L 32,21L 32,24L 26,24L 26,21 Z M 14.2681,8.80555L 16.9787,9.52276L 14.2673,10.2373L 15.3675,12.3517L 13.2543,11.249L 12.5371,13.9597L 11.8226,11.2482L 9.70815,12.3484L 10.8108,10.2353L 8.03773,9.51805L 10.8116,8.80354L 9.71145,6.68909L 11.8246,7.79179L 12.5418,5.08112L 13.2563,7.79259L 15.3708,6.69247L 14.2681,8.80555 Z "/>
+	</Canvas>
+</Canvas>
+-->

@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- This is an auto generated file exported from the Adobe Illustrator.
+     Do not make changes directly to this file as they will be lost -->
+<ColorTableDictionary>
+  <ColorThemes>
+    <ColorTableList ThemeName="Default">
+      <Colors>
+        <Color Key="brush01" Type="Solid" Color="#FF4386B9"/>
+        <Color Key="brush02" Type="Solid" Color="#FFB3CDE2"/>
+        <Color Key="brush03" Type="Solid" Color="#FFC7CCD0"/>
+        <Color Key="brush04" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="brush05" Type="Solid" Color="#FF2B3033"/>
+        <Color Key="brush06" Type="Solid" Color="#FFEBEBEB"/>
+        <Color Key="brush07" Type="Solid" Color="#FFA9ACAF"/>
+        <Color Key="brush08" StartX="0.5" StartY="0" EndX="0.5" EndY="1">
+          <Stops>
+            <Stop Color="#FFE9EBEC" Offset="0.0035"/>
+            <Stop Color="#FFD9DEE1" Offset="1"/>
+          </Stops>
+        </Color>
+        <Color Key="brush09" Type="Solid" Color="#FF065FA3"/>
+        <Color Key="brush10" Type="Solid" Color="#FF4386B9"/>
+        <Color Key="brush11" Type="Solid" Color="#FF82A3D1"/>
+        <Color Key="brush12" Type="Solid" Color="#FFDCE5EC"/>
+        <Color Key="brush13" Type="Solid" Color="#FF000000"/>
+        <Color Key="brush14" Type="Solid" Color="#FF2B3033"/>
+        <Color Key="brush15" Type="Solid" Color="#FF4D5359"/>
+        <Color Key="brush16" Type="Solid" Color="#FF696E73"/>
+        <Color Key="brush17" Type="Solid" Color="#FF777B80"/>
+        <Color Key="brush18" Type="Solid" Color="#FF82878C"/>
+        <Color Key="brush19" Type="Solid" Color="#FFB1B4B6"/>
+        <Color Key="brush20" Type="Solid" Color="#FFD9DEE1"/>
+        <Color Key="brush21" Type="Solid" Color="#FFDDE2E6"/>
+        <Color Key="brush22" Type="Solid" Color="#FFE0E0E0"/>
+        <Color Key="brush23" Type="Solid" Color="#FFE9EBEC"/>
+        <Color Key="brush24" Type="Solid" Color="#FFEBF0F5"/>
+        <Color Key="brush25" Type="Solid" Color="#FFF7F7F7"/>
+        <Color Key="brush26" Type="Solid" Color="#FFF9FAFC"/>
+        <Color Key="brush27" Type="Solid" Color="#FFC42126"/>
+        <Color Key="brush28" Type="Solid" Color="#FFFF8900"/>
+        <Color Key="brush29" Type="Solid" Color="#FF20B25B"/>
+        <Color Key="brush30" Type="Solid" Color="#FF006A93"/>
+        <Color Key="brush31" Type="Solid" Color="#00FFFFFF"/>
+        <Color Key="text_dynamic" Type="Solid" Color="#FF2B3033"/>
+        <Color Key="background_trans_dynamic" Type="Solid" Color="#00FFFFFF"/>
+        <Color Key="fill_trans_dynamic" Type="Solid" Color="#00FFFFFF"/>
+        <Color Key="background_trans_mouseOver" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="background_trans_pressed" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="background_trans_indicator" Type="Solid" Color="#FFE8EBED"/>
+        <Color Key="fill_trans_mouseOver" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="fill_trans_pressed" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="fill_trans_indicator" Type="Solid" Color="#FFE8EBED"/>
+        <Color Key="border_dynamic" Type="Solid" Color="#FFA8ABAE"/>
+        <Color Key="background_dynamic" StartX="0.5" StartY="0" EndX="0.5" EndY="1">
+          <Stops>
+            <Stop Color="#FFEBE9EC" Offset="0.0035"/>
+            <Stop Color="#FFDADFE2" Offset="1"/>
+          </Stops>
+        </Color>
+        <Color Key="fill_dynamic" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="background_error" StartX="0.5" StartY="0" EndX="0.5" EndY="1">
+          <Stops>
+            <Stop Color="#FFEBE9EC" Offset="0.0035"/>
+            <Stop Color="#FFDADFE2" Offset="1"/>
+          </Stops>
+        </Color>
+        <Color Key="background_warning" StartX="0.5" StartY="0" EndX="0.5" EndY="1">
+          <Stops>
+            <Stop Color="#FFEBE9EC" Offset="0.0035"/>
+            <Stop Color="#FFDADFE2" Offset="1"/>
+          </Stops>
+        </Color>
+        <Color Key="background_mouseOverError" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="background_mouseOverWarning" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="border_error" Type="Solid" Color="#FFB51F2F"/>
+        <Color Key="border_warning" Type="Solid" Color="#FFFF8900"/>
+        <Color Key="border_mouseOverError" Type="Solid" Color="#FFB51F2F"/>
+        <Color Key="border_mouseOverWarning" Type="Solid" Color="#FFFF8900"/>
+        <Color Key="true_dynamic" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="indeterminateColor" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="indeterminateLinear" StartX="0" StartY="0.5" EndX="1" EndY="0.5">
+          <Stops>
+            <Stop Color="#00FFFFFF" Offset="0"/>
+            <Stop Color="#FFFFFFFF" Offset="0.5"/>
+            <Stop Color="#00FFFFFF" Offset="1"/>
+          </Stops>
+        </Color>
+        <Color Key="indeterminateRadial" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="hitTest" Type="Solid" Color="#00FFFFFF"/>
+        <Color Key="text_mouseOver" Type="Solid" Color="#FF2B3033"/>
+        <Color Key="text_pressed" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="text_indicator" Type="Solid" Color="#FF2B3033"/>
+        <Color Key="border_mouseOver" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="border_pressed" Type="Solid" Color="#FF2A5273"/>
+        <Color Key="border_indicator" Type="Solid" Color="#FFA8ABAE"/>
+        <Color Key="background_mouseOver" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="background_pressed" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="background_indicator" Type="Solid" Color="#FFE8EBED"/>
+        <Color Key="fill_mouseOver" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="fill_pressed" Type="Solid" Color="#FFFFFFFF"/>
+        <Color Key="fill_indicator" Type="Solid" Color="#FFE8EBED"/>
+        <Color Key="true_mouseOver" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="true_pressed" Type="Solid" Color="#FF4384B7"/>
+        <Color Key="true_indicator" Type="Solid" Color="#FFFFFFFF"/>
+      </Colors>
+    </ColorTableList>
+  </ColorThemes>
+</ColorTableDictionary>

@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Key="MoveHandle" Height="10" Width="6">
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="NIHighlight" Data="M0,0 L6,0 L6,2 L0,2 z" />
+        <NineGridPath X="0" Y="4" Color="NIHighlight" Data="M0,0 L6,0 L6,2 L0,2 z" />
+        <NineGridPath X="0" Y="8" Color="NIHighlight" Data="M0,0 L6,0 L6,2 L0,2 z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!--Converted from: 
+<?xml version="1.0" encoding="utf-8"?>
+ <Canvas>
+  <Path Data="M0,0 L10,0 L10,2 L0,2 z" Fill="NIHighlightBrush" Height="2" Stretch="Fill" Width="10"/>
+  <Path Data="M0,0 L10,0 L10,2 L0,2 z" Fill="NIHighlightBrush" Height="2" Margin="0,4,0,0" Stretch="Fill" Width="10"/>
+  <Path Data="M0,0 L10,0 L10,2 L0,2 z" Fill="NIHighlightBrush" Height="2" Margin="0,8,0,0" Stretch="Fill" Width="10"/>
+ </Canvas>
+-->

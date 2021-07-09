@@ -1,0 +1,51 @@
+<shell:DocumentEditControl
+	x:Class="NationalInstruments.Design.PaletteEditor" xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:dockedPalette="clr-namespace:NationalInstruments.Design" xmlns:shell="clr-namespace:NationalInstruments.Shell" xmlns:shellControls="clr-namespace:NationalInstruments.Controls.Shell">
+	<Grid
+		Name="PART_LayoutRoot"
+		Background="{StaticResource NICoolWhiteBrush}">
+		<Grid.ColumnDefinitions>
+			<ColumnDefinition
+				Width="Auto" />
+			<ColumnDefinition
+				Width="*" />
+		</Grid.ColumnDefinitions>
+		<dockedPalette:DockedPaletteControl
+			Name="_dockedPaletteControl" />
+		<dockedPalette:DesignerEditControl
+			Name="_designer"
+			Grid.Column="1"
+			DockedPaletteControl="{Binding ElementName=_dockedPaletteControl}">
+			<shellControls:ShellTreeView
+				Name="_tree"
+				SelectedItemChanged="HandleTreeSelectedItemChanged"
+				Margin="2,0,0,0"
+				BorderThickness="0"
+				ItemsSource="{Binding RootItems}">
+				<ItemsControl.ItemTemplate>
+					<HierarchicalDataTemplate
+						ItemsSource="{Binding Children}">
+						<!--Unknown connection ID: 5-->
+						<Grid
+							HorizontalAlignment="Stretch"
+							Background="#00FFFFFF">
+							<StackPanel
+								Height="22"
+								Orientation="Horizontal">
+								<Image
+									Height="16"
+									VerticalAlignment="Center"
+									Stretch="Uniform"
+									Source="{Binding ImageSource}" />
+								<dockedPalette:TextEditableTextBlock
+									Margin="6,0,0,0"
+									HorizontalAlignment="Left"
+									VerticalAlignment="Center"
+									Text="{Binding Display, Mode=TwoWay}" />
+							</StackPanel>
+						</Grid>
+					</HierarchicalDataTemplate>
+				</ItemsControl.ItemTemplate>
+			</shellControls:ShellTreeView>
+		</dockedPalette:DesignerEditControl>
+	</Grid>
+</shell:DocumentEditControl>

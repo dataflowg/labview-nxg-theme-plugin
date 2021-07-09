@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable/>
+  <Items>
+    <NineGridPathList Height="15" Width="30">
+      <Paths>
+        <!--Outer border-->
+        <NineGridPath Color="IntegerNumericTypeColor" Data="F1 M26,15H4c-2.209,0-4-1.791-4-4V4c0-2.209,1.791-4,4-4h22c2.209,0,4,1.791,4,4v7  C30,13.209,28.209,15,26,15z"/>
+        <!--Text background-->
+        <NineGridPath Color="GrayNodeInnerBorder" Data="F1 M25,14H12V1h13V14z"/>
+        <!--Enum arrow icon (left/right arrows) to left of text box-->
+		<NineGridPath Color="GrayNodeInnerBorder" Data="F1 M5,5v5L2,7.5L5,5z M7,5v5l3-2.5L7,5z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

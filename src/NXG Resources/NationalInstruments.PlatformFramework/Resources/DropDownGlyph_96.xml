@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="#FF000000" Data="M 1 1 L 8 1 L 4.5 5 Z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!--Converted from: 
+
+<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+        <Path x:Name="Arrow" Data="M 1 1 L 8 1 L 4.5 5 Z" Fill="#FF000000" Height="7" Width="9"/>
+</Canvas>-->

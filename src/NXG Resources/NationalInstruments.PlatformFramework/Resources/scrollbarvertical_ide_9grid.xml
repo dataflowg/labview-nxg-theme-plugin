@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This is an auto generated file exported from the Adobe Illustrator.
+     Do not make changes directly to this file as they will be lost -->
+<ControlDesign DesignWidth="15" DesignHeight="50">
+  <Items>
+    <NineGridDictionary Key="BackgroundImageVertical">
+      <Items>
+        <NineGridPathList Width="15" Height="50" Guidelines="Left,Top,Right,Bottom" Margin="0,0,0,0">
+          <Paths>
+            <NineGridPath Width="15" Height="50" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L0,50 L15,50 L15,0 L15,0 z" />
+          </Paths>
+          <Tags>
+            <NineGridTag Name="Shape" Value="Rectangle" />
+          </Tags>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowDownVertical_default">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L15,0 L15,13 L0,13 L0,13 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L13,0 L13,11 L0,11 L0,11 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowColor" Data="F1 M 4.5,7 L0,0 L9,0 L9,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowDownVertical_mouseOver">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L15,0 L15,13 L0,13 L0,13 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L13,0 L13,11 L0,11 L0,11 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowMouseOverColor" Data="F1 M 4.5,7 L0,0 L9,0 L9,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowDownVertical_down">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L15,0 L15,13 L0,13 L0,13 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 0,0 L13,0 L13,11 L0,11 L0,11 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowMouseDownColor" Data="F1 M 4.5,7 L0,0 L9,0 L9,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ThumbVertical_default">
+      <Items>
+        <NineGridPathList Width="9" Height="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+          <Paths>
+            <NineGridPath Width="9" Height="6" Color="ScrollbarThumbColor" Data="F1 M 9,6 L0,6 L0,0 L9,0 L9,0 z" />
+            <NineGridPath Margin="1,1,1,1" Width="7" Height="4" Color="ScrollbarThumbColor" Data="F1 M 7,4 L0,4 L0,0 L7,0 L7,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ThumbVertical_mouseOver">
+      <Items>
+        <NineGridPathList Width="9" Height="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+          <Paths>
+            <NineGridPath Width="9" Height="6" Color="ScrollbarThumbMouseOverColor" Data="F1 M 9,6 L0,6 L0,0 L9,0 L9,0 z" />
+            <NineGridPath Margin="1,1,1,1" Width="7" Height="4" Color="ScrollbarThumbMouseOverColor" Data="F1 M 7,4 L0,4 L0,0 L7,0 L7,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ThumbVertical_down">
+      <Items>
+        <NineGridPathList Width="9" Height="6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
+          <Paths>
+            <NineGridPath Width="9" Height="6" Color="ScrollbarThumbMouseDownColor" Data="F1 M 9,6 L0,6 L0,0 L9,0 L9,0 z" />
+            <NineGridPath Margin="1,1,1,1" Width="7" Height="4" Color="ScrollbarThumbMouseDownColor" Data="F1 M 7,4 L0,4 L0,0 L7,0 L7,0 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowUpVertical_default">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 15,13 L0,13 L0,0 L15,0 L15,0 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 13,11 L0,11 L0,0 L13,0 L13,0 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowColor" Data="F1 M 4.5,0 L9,7 L0,7 L0,7 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowUpVertical_mouseOver">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 15,13 L0,13 L0,0 L15,0 L15,0 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 13,11 L0,11 L0,0 L13,0 L13,0 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowMouseOverColor" Data="F1 M 4.5,0 L9,7 L0,7 L0,7 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+    <NineGridDictionary Key="ArrowUpVertical_down">
+      <Items>
+        <NineGridPathList Width="15" Height="13" HorizontalAlignment="Center" VerticalAlignment="Center">
+          <Paths>
+            <NineGridPath Width="15" Height="13" Color="ScrollbarBackgroundColor" Data="F1 M 15,13 L0,13 L0,0 L15,0 L15,0 z" />
+            <NineGridPath X="1" Y="1" Width="14" Height="12" Color="ScrollbarBackgroundColor" Data="F1 M 13,11 L0,11 L0,0 L13,0 L13,0 z" />
+            <NineGridPath X="3" Y="3" Width="12" Height="10" Color="ScrollbarArrowMouseDownColor" Data="F1 M 4.5,0 L9,7 L0,7 L0,7 z" />
+          </Paths>
+        </NineGridPathList>
+      </Items>
+    </NineGridDictionary>
+  </Items>
+  <HorizontalGuidelines>
+    <Guideline Id="Right" Percentage="1"/>
+    <Guideline Id="Left"/>
+  </HorizontalGuidelines>
+  <VerticalGuidelines>
+    <Guideline Id="Bottom" Percentage="1"/>
+    <Guideline Id="Top"/>
+  </VerticalGuidelines>
+</ControlDesign>

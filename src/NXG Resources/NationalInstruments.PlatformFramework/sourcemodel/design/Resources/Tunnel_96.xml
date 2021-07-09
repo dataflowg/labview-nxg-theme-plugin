@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <!--Common tunnel background. Used for tunnel inputs, last value output, and background to shift register (despite there being a separate shift reg background resource elsewhere. Color is unused here, except when no type connected, most visible when block diagram first loading.-->
+        <NineGridPath Width="13" Height="10" Color="#FF595959" Data="F1 M3,2h7c0.552,0,1,0.448,1,1v4c0,0.552-0.448,1-1,1H3C2.448,8,2,7.552,2,7V3C2,2.448,2.448,2,3,2" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

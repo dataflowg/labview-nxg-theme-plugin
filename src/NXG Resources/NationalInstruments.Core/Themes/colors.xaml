@@ -1,0 +1,475 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:system="clr-namespace:System;assembly=mscorlib">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.Core;component/Themes/colors.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<Color
+		x:Key="NIBlue">#065FA3</Color>
+	<Color
+		x:Key="NIHighlight">#4386B9</Color>
+	<Color
+		x:Key="NIBlueMediumAccent">#4386B9</Color>
+	<Color
+		x:Key="NIBlueAccent">#82A3D1</Color>
+	<Color
+		x:Key="NIHighlightText">#B3CDE2</Color>
+	<Color
+		x:Key="NIHighlightSelected">#DCE5EC</Color>
+	<Color
+		x:Key="NITrueBlack">#000000</Color>
+	<Color
+		x:Key="NIBlack">#FFFFFF</Color>
+	<Color
+		x:Key="NIGrayCool36">#4D5359</Color>
+	<Color
+		x:Key="NIMediumGray">#575757</Color>
+	<Color
+		x:Key="NIIconGray">#696E73</Color>
+	<Color
+		x:Key="NIGray">#777B80</Color>
+	<Color
+		x:Key="NIDropDownGray">#82878C</Color>
+	<Color
+		x:Key="NIGrayNeutral68">#A9ACAF</Color>
+	<Color
+		x:Key="NIBackDropGray">#B1B4B6</Color>
+	<Color
+		x:Key="NIGrayCool81">#C7CCD0</Color>
+	<Color
+		x:Key="NIGrayCool88">#D9DEE1</Color>
+	<Color
+		x:Key="NIGrayCool90">#DDE2E6</Color>
+	<Color
+		x:Key="NIBlueGray">#637A8D</Color>
+	<Color
+		x:Key="NIBackground">#E0E0E0</Color>
+	<Color
+		x:Key="NIWhite">#EBEBEB</Color>
+	<Color
+		x:Key="NIGrayCool92">#202020</Color>
+	<Color
+		x:Key="NIWhiteBlue">#EBF0F5</Color>
+	<Color
+		x:Key="NIGrayCool94">#EEF0EF</Color>
+	<Color
+		x:Key="NICoolWhite">#202020</Color>
+	<Color
+		x:Key="NICoolBlue98">#F9FAFC</Color>
+	<Color
+		x:Key="NITrueWhite">#FFFFFF</Color>
+	<Color
+		x:Key="NIError">#C42126</Color>
+	<Color
+		x:Key="NIWarning">#FF8900</Color>
+	<Color
+		x:Key="NISuccess">#20B25B</Color>
+	<Color
+		x:Key="NIProbe">#006A93</Color>
+	<Color
+		x:Key="CategoryHeaderBackground">#0C000000</Color>
+	<Color
+		x:Key="NIGuideline">#FC9500</Color>
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlue}"
+		x:Key="NIBlueBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="NIHighlightBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlueMediumAccent}"
+		x:Key="NIBlueMediumAccentBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlueAccent}"
+		x:Key="NIBlueAccentBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlightText}"
+		x:Key="NIHighlightTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlightSelected}"
+		x:Key="NIHighlightSelectedBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueBlack}"
+		x:Key="NITrueBlackBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="NIBlackBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool36}"
+		x:Key="NIGrayCool36Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIMediumGray}"
+		x:Key="NIMediumGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIIconGray}"
+		x:Key="NIIconGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="NIGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="NIDropDownGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayNeutral68}"
+		x:Key="NIGrayNeutral68Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBackDropGray}"
+		x:Key="NIBackDropGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool81}"
+		x:Key="NIGrayCool81Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool88}"
+		x:Key="NIGrayCool88Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool90}"
+		x:Key="NIGrayCool90Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlueGray}"
+		x:Key="NIBlueGrayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBackground}"
+		x:Key="NIBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhite}"
+		x:Key="NIWhiteBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool92}"
+		x:Key="NIGrayCool92Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool94}"
+		x:Key="NIGrayCool94Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhiteBlue}"
+		x:Key="NIWhiteBlueBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NICoolWhite}"
+		x:Key="NICoolWhiteBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NICoolBlue98}"
+		x:Key="NICoolBlue98Brush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="NITrueWhiteBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIError}"
+		x:Key="NIErrorBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWarning}"
+		x:Key="NIWarningBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NISuccess}"
+		x:Key="NISuccessBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIProbe}"
+		x:Key="NIProbeBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGuideline}"
+		x:Key="NIGuidelineBrush" />
+	<LinearGradientBrush
+		EndPoint="0.5,1"
+		StartPoint="0.5,0"
+		x:Key="NIButtonFillBrush">
+		<GradientStop
+			Offset="0"
+			Color="{StaticResource NIGrayCool92}" />
+		<GradientStop
+			Offset=".4"
+			Color="{StaticResource NIGrayCool88}" />
+	</LinearGradientBrush>
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="IsHighlightedStroke1" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#50FFFFFF"
+		x:Key="IsHighlightedStroke2" />
+	<Color
+		x:Key="CustomDebugBrush">#00FF00</Color>
+	<Color
+		x:Key="ShadowColor">#71000000</Color>
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#0000FF"
+		x:Key="TrueBlue" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="Text" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="ForegroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="MouseOverBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="PressedBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="IsKeyboardFocusedStroke" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="DisabledForegroundBrush1" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="SeparatorBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhiteBlue}"
+		x:Key="ResizeGripBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="ResizeGripForegroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#F0FFFFFF"
+		x:Key="PopupOverlayBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhite}"
+		x:Key="SeparatorTextBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBackDropGray}"
+		x:Key="SeparatorVerticalBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#11FFFFFF"
+		x:Key="SeparatorVerticalHighlightBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="MenuItemPressedFill" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="DropDownMenuPopupBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="DropDownMenuPopupBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhite}"
+		x:Key="DropDownMenuPopupItemImageBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="DropDownMenuPopupItemBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="DropDownMenuPopupItemBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="DropDownMenuPopupItemTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="DropDownMenuPopupItemHoverBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="DropDownMenuPopupItemHoverBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="DropDownMenuPopupItemHoverTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="DropDownMenuPopupItemPressedBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="DropDownMenuPopupItemPressedBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="DropDownMenuPopupItemPressedBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="DropDownMenuPopupItemPressedTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="SubMenuBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="BackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="BorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGrayCool36}"
+		x:Key="ApplicationBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIDropDownGray}"
+		x:Key="InactiveApplicationBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource CategoryHeaderBackground}"
+		x:Key="CategoryHeaderBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="HoveredItemBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="#FF5DCBFF"
+		x:Key="BluePlotLineBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="YellowPlotLineBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="PressedFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlightText}"
+		x:Key="SelectionBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="TextboxSelectedBackgroundFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlightSelected}"
+		x:Key="ButtonSelectedBackgroundFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="MouseOverBackgroundFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="PressedBackgroundFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NICoolWhite}"
+		x:Key="ToolWindowBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBackDropGray}"
+		x:Key="StrokeBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="PressedStrokeBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIHighlight}"
+		x:Key="HighlightBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NITrueWhite}"
+		x:Key="BackgroundHoverBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlack}"
+		x:Key="DefaultTextBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIWhite}"
+		x:Key="DefaultBackgroundBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIGray}"
+		x:Key="DefaultStrokeBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NIBlueAccent}"
+		x:Key="FocusBorderBrush" />
+	<DropShadowEffect
+		po:Freeze="True"
+		Color="#000000"
+		Opacity="0.2"
+		Direction="270"
+		BlurRadius="6"
+		ShadowDepth="2"
+		x:Key="PopupDropShadowEffect" />
+	<DropShadowEffect
+		po:Freeze="True"
+		BlurRadius="4"
+		Opacity="0.8"
+		ShadowDepth="1"
+		x:Key="ContextMenuDropShadowEffect" />
+	<system:Double
+		x:Key="InactiveOpacity">0.5</system:Double>
+	<Color
+		x:Key="GrayNodeFill">#FFE5E5E5</Color>
+	<Color
+		x:Key="GrayNodeInnerBorder">#FFF2F2F2</Color>
+	<Color
+		x:Key="GrayNodeOuterBorder">#FF727272</Color>
+	<Color
+		x:Key="NodeGrayFillSecondary">#FFD4D4D4</Color>
+	<Color
+		x:Key="NodeBorder">#FF82763D</Color>
+	<Color
+		x:Key="ChunkDivider">#FFDFDCBF</Color>
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource GrayNodeFill}"
+		x:Key="GrayNodeFillBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource GrayNodeInnerBorder}"
+		x:Key="GrayNodeInnerBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource GrayNodeOuterBorder}"
+		x:Key="GrayNodeOuterBorderBrush" />
+	<SolidColorBrush
+		po:Freeze="True"
+		Color="{StaticResource NodeGrayFillSecondary}"
+		x:Key="NodeGrayFillSecondaryBrush" />
+</ResourceDictionary>

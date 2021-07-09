@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <!--Downward pointing shift register arrow on left of loop structure. Enlarged from original to be more visible.-->
+        <NineGridPath Width="13" Height="10" Color="GrayNodeInnerBorder" Data="F1 M 3,1 C 1.8959844,1 1.0000939,1.8958905 1.0000939,2.9999061 v 4.0003287 c 0,1.1040153 0.8958905,1.9999063 1.9999061,1.9999063 h 7.000188 c 1.104015,0 1.999906,-0.895891 1.999906,-1.9999063 V 2.9999061 C 12.000094,1.8958905 11.104203,1 10.000188,1 Z M 2.0000469,2.9999061 h 9.0000941 l -4.5000472,5.000282 z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

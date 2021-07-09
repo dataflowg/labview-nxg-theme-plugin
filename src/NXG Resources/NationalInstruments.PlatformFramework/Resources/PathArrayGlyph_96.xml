@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 0,1L 2,1L 2,2L 1,2L 1,6L 2,6L 2,7L 0,7L 0,1 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 22.0001,1L 22.0001,7L 20.0001,7L 20.0001,6L 21.0001,6L 21.0001,2L 20.0001,2L 20.0001,1L 22.0001,1 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 14.989,4L 13.0074,3L 13.0074,0L 9.00736,0L 9.00736,3L 7.00002,3.99982L 4.00002,3.99982L 4.00002,7.99982L 8.00002,7.99982L 8.00002,4.99982L 10.0074,4L 12.0074,4L 13.9891,5L 13.9891,7.99994L 17.989,7.99994L 17.989,4L 14.989,4 Z M 7.00002,6.99982L 5.0001,6.99982L 5.00002,4.99982L 7.00002,4.99982L 7.00002,6.99982 Z M 10.0074,3L 10.0074,1L 12.0074,1L 12.0074,3L 10.0074,3 Z M 16.989,7L 14.989,7L 14.989,5L 16.989,5L 16.989,7 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!--Converted from: 
+
+<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="22.0001" Height="8" Clip="F1 M 0,0L 22.0001,0L 22.0001,8L 0,8L 0,0">
+	<Canvas x:Name="array" Width="800.002" Height="600" Canvas.Left="0" Canvas.Top="0">
+		<Path x:Name="Path" Width="2" Height="6" Canvas.Left="0" Canvas.Top="1" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 0,1L 2,1L 2,2L 1,2L 1,6L 2,6L 2,7L 0,7L 0,1 Z "/>
+		<Path x:Name="Path_0" Width="2" Height="6" Canvas.Left="20.0001" Canvas.Top="1" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 22.0001,1L 22.0001,7L 20.0001,7L 20.0001,6L 21.0001,6L 21.0001,2L 20.0001,2L 20.0001,1L 22.0001,1 Z "/>
+		<Path x:Name="Path_1" Width="13.989" Height="7.99994" Canvas.Left="4.00002" Canvas.Top="0" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 14.989,4L 13.0074,3L 13.0074,0L 9.00736,0L 9.00736,3L 7.00002,3.99982L 4.00002,3.99982L 4.00002,7.99982L 8.00002,7.99982L 8.00002,4.99982L 10.0074,4L 12.0074,4L 13.9891,5L 13.9891,7.99994L 17.989,7.99994L 17.989,4L 14.989,4 Z M 7.00002,6.99982L 5.0001,6.99982L 5.00002,4.99982L 7.00002,4.99982L 7.00002,6.99982 Z M 10.0074,3L 10.0074,1L 12.0074,1L 12.0074,3L 10.0074,3 Z M 16.989,7L 14.989,7L 14.989,5L 16.989,5L 16.989,7 Z "/>
+	</Canvas>
+</Canvas>
+-->

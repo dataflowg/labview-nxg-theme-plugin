@@ -1,0 +1,2024 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<PaletteControls PaletteBaseName="Panel" xmlns:pf="http://www.ni.com/PlatformFramework" xmlns:vi="http://www.ni.com/LabVIEW.VI" xmlns:moc="http://www.ni.com/MocCommon" xmlns:pc="http://www.ni.com/PanelCommon">
+  <Category Display="Numerics" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesNumeric_40x40.xml" ToolTip="Numerics" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Numerics" Weight="0.2" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Numerics">
+    <ExcludeIfKeywords>
+      <Keyword>Fpga</Keyword>
+      <Keyword>Hls</Keyword>
+    </ExcludeIfKeywords>
+    <Leaf Display="Numeric Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralNumericControl_40x40.xml" ToolTip="Numeric Control" UniqueId="NumericTextControl" Weight="0.2" ElementId="NI.Controls.LabVIEW.Design:NumericTextControl">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Numeric" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <NumericText BaseName="[string]Numeric" Width="[float]72" Height="[float]24" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Numeric Indicator" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralNumericIndicator_40x40.xml" ToolTip="Numeric Indicator" UniqueId="NumericTextIndicator" Weight="0.2" ElementId="NI.Controls.LabVIEW.Design:NumericTextIndicator">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Numeric" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <NumericText BaseName="[string]Numeric" Width="[float]72" Height="[float]24" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" IsReadOnly="[bool]True" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Horizontal Slider" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralHorizontalSlider_40x40.xml" ToolTip="Horizontal Slider" UniqueId="HorizontalSlider" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SliderHorizontal">
+      <Synonyms>Horizontal pointer slide</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Slider" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Slider BaseName="[string]Slider" Orientation="[Orientation]Horizontal" MechanicalAction="[MechanicalAction]SwitchWhenReleased" Width="[float]152" Height="[float]40" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Vertical Slider" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralVerticalSlider_40x40.xml" ToolTip="Vertical Slider" UniqueId="VerticalSlider" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SliderVertical">
+      <Synonyms>Vertical pointer slide</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Slider" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Slider BaseName="[string]Slider" Orientation="[Orientation]Vertical" MechanicalAction="[MechanicalAction]SwitchWhenReleased" Width="[float]40" Height="[float]152" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Gauge" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralGauge_40x40.xml" ToolTip="Gauge Indicator" UniqueId="Gauge" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Gauge">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Gauge" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Gauge BaseName="[string]Gauge" Width="[float]172" Height="[float]172" MechanicalAction="[MechanicalAction]SwitchWhenReleased" InteractionMode="[NumericPointerInteractionModes]EditRange" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Meter" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralMeter_40x40.xml" ToolTip="Meter Indicator" UniqueId="Meter" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Meter">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Meter" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Meter BaseName="[string]Meter" Width="[float]180" Height="[float]120" MechanicalAction="[MechanicalAction]SwitchWhenReleased" InteractionMode="[NumericPointerInteractionModes]EditRange" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Knob" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralKnob_40x40.xml" ToolTip="Knob Control" UniqueId="Knob" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Knob">
+      <Synonyms>Dial</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Knob" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Knob BaseName="[string]Knob" Width="[float]125" Height="[float]125" MechanicalAction="[MechanicalAction]SwitchWhenReleased" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Tank" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTank_40x40.xml" ToolTip="Tank" UniqueId="Tank" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Tank">
+      <Synonyms>Fill slide</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Tank" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Tank BaseName="[string]Tank" Orientation="[Orientation]Vertical" Width="[float]72" Height="[float]152" MechanicalAction="[MechanicalAction]SwitchWhenReleased" InteractionMode="[NumericPointerInteractionModes]EditRange" xmlns:controls="http://schemas.ni.com/controls/2009/xaml/presentation" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Timestamp Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTimeStampControl_40x40.xml" ToolTip="Time Stamp Control" UniqueId="TimeStampControl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:TimeStampTextBoxControl">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Timestamp" DataType="Timestamp" AdaptToDiagramType="False">
+            <p.DefaultValue>60052752000;0;Utc</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Width="[float]216" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design"  Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Timestamp Indicator" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTimeStampIndicator_40x40.xml" ToolTip="Time Stamp Indicator" UniqueId="TimeStampIndicator" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:TimeStampTextBoxIndicator">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Timestamp" DataType="Timestamp" AdaptToDiagramType="False">
+            <p.DefaultValue>60052752000;0;Utc</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <TimeStampTextBox BaseName="[string]Timestamp" Height="[float]24" Width="[float]216" InteractionMode="[TimeStampTextBoxInteractionModes]ReadOnly" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" Maximum="[PrecisionDateTime]3001-01-01T00:00:00.0" Minimum="[PrecisionDateTime]1600-01-01T00:00:00.0" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Linear Progress Bar" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralProgressBar_40x40.xml" ToolTip="Progress Bar" UniqueId="ProgressBar" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVLinearProgressBar">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArrayHierarchy</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Linear Progress Bar" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVLinearProgressBar BaseName="[string]Linear Progress Bar" Width="[float]168" Height="[float]24" IsSegmented="[bool]False" Minimum="[double]0" Maximum="[double]100" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Radial Progress Bar" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRadialProgressBar_40x40.xml" ToolTip="Radial Progress Bar" UniqueId="RadialProgressBar" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVRadialProgressBar">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArrayHierarchy</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Radial Progress Bar" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVRadialProgressBar BaseName="[string]Radial Progress Bar" Height="[float]72" Width="[float]72" Minimum="[double]0" Maximum="[double]100" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Numeric Replacements" UniqueId="Numeric Replacements">
+    <RequiredKeywords>
+      <Keyword>Replacements</Keyword>
+    </RequiredKeywords>
+    <Link LinkedId="NI.Controls.LabVIEW.Design:NumericText" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:SliderHorizontal" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:SliderVertical" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:LVLinearProgressBar" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:LVRadialProgressBar" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:Gauge" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:Knob" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:Meter" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:Tank" />
+    <Link LinkedId="NI.Controls.LabVIEW.Design:TimeStampTextBoxControl" />
+  </Category>
+  <Category Display="Refnums" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesNumeric_40x40.xml" ToolTip="Refnum" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.RefnumReplacements" Weight="0.2" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.RefnumReplacements">
+    <ExcludeIfKeywords>
+      <Keyword>Fpga</Keyword>
+      <Keyword>Hls</Keyword>
+    </ExcludeIfKeywords>
+    <RequiredKeywords>
+      <Keyword>Replacements</Keyword>
+    </RequiredKeywords>
+    <Leaf Display="Reference Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralNumericControl_40x40.xml" ToolTip="Reference Control" UniqueId="OpaqueRefnumControl" Weight="0.2" ElementId="NI.Controls.LabVIEW.Design:OpaqueRefnumControl">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="OpaqueRefnum" DataType="Double" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <OpaqueRefnum BaseName="[string]OpaqueRefnum" Width="[float]24" Height="[float]24" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Name Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralNumericControl_40x40.xml" ToolTip="Reference Control" UniqueId="GenericNameControl" Weight="0.2" ElementId="NI.Controls.LabVIEW.Design:GenericNameControl">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Name" DataType="String" AdaptToDiagramType="True">
+            <p.DefaultValue></p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <IONameControl BaseName="[string]Name" Width="[float]136" Height="[float]24" SelectedResource="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" UdrClass="Placeholder" UdrNamespace="Placeholder" DataType="[Type]String" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Buttons" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesBoolean_40x40.xml" ToolTip="Buttons" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Booleans" Weight="0.3" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Booleans">
+    <Leaf Display="Text Button" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTextButton_40x40.xml" ToolTip="Text Button" UniqueId="OKButton" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Button">
+      <Synonyms>OK button;Cancel button</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Button" DataType="Boolean" AdaptToDiagramType="True" IsLatched="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Button BaseName="[string]TextButton" Shape="[ButtonShape]Square" Width="[float]72" Height="[float]24" Content="Button" Value="{DataItemBinding Id=1}" IsMomentary="[bool]False" IncludeInCapture="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Image Button" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralImageButton_40x40.xml" ToolTip="Image Button" UniqueId="ImageButton" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:ImageButton">
+      <Synonyms>Picture;Graphic</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Image Button" DataType="Boolean" AdaptToDiagramType="True" IsLatched="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Button BaseName="[string]Image Button" Shape="[ButtonShape]Square" Width="[float]72" Height="[float]72" Content="[UIModel]7" Value="{DataItemBinding Id=1}" IsMomentary="[bool]False" IncludeInCapture="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <pf:Image Stretch="[SMStretch]Uniform" BaseName="[string]Image" Id="7" IsHitTestVisible="[bool]False" />
+          </Button>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Toggle Images Button" CodeReadiness="Release" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/TwoStateImageButton_40x40.xml" ToolTip="Toggle Images Button" UniqueId="TwoStateImageButton" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:TwoStateImageButton">
+      <Synonyms>Picture;Graphic</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Toggle Images Button" DataType="Boolean" AdaptToDiagramType="True" IsLatched="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <TwoStateImageButton BaseName="[string]Toggle Images Button" Width="[float]72" Height="[float]72" FalseImage="[UIModel]7" TrueImage="[UIModel]8" Value="{DataItemBinding Id=1}" IsMomentary="[bool]False" IncludeInCapture="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <pf:Image Id="7" IsHitTestVisible="[bool]False" Source="pack://application:,,,/NationalInstruments.Controls.Design;component/Resources/FrontPanel/ImageButtonFalse_40x40.xml"/>
+            <pf:Image Id="8" IsHitTestVisible="[bool]False" Source="pack://application:,,,/NationalInstruments.Controls.Design;component/Resources/FrontPanel/ImageButtonTrue_40x40.xml"/>
+          </TwoStateImageButton>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Stop Button" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStopButton_40x40.xml" ToolTip="Stop Button" UniqueId="StopButton" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:StopButton">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <Button BaseName="[string]Stop" Content="[string]Stop" TrueForeground="[SMColor]#ffff0000" FalseForeground="[SMColor]#ffff0000" Foreground="[SMColor]#ffff0000" Width="[float]72" Height="[float]24" Id="21" IncludeInCapture="[bool]False" IsMomentary="[bool]False" Left="[float]500" Shape="[ButtonShape]Square" Top="[float]176" Value="{DataItemBinding Id=18}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem DataType="Boolean" Id="18" IsLatched="True" Name="Stop">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="60 135 40 15" DataItem="18" Id="20">
+            <pf:Terminal DataType="Boolean" Direction="Output" Hotspot="40 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Power Button" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralPowerButton_40x40.xml" ToolTip="Power Switch Control" UniqueId="SwitchPower" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SwitchPower">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Power Button" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Switch BaseName="[string]Power Button" Shape="[SwitchShape]Power" Width="[float]40" Height="[float]40" Value="{DataItemBinding Id=1}" IncludeInCapture="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Checkbox" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCheckbox_40x40.xml" ToolTip="Checkbox Control" UniqueId="CheckBox" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVCheckBox">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Checkbox" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVCheckBox BaseName="[string]Checkbox" Content="Off/On" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <!--Leaf Display="Radio Button" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRadioButton_40x40.xml" ToolTip="Radio Button Control" UniqueId="RadioButton" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVRadioButton">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Radio Button" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVRadioButton BaseName="[string]Radio Button" Content="RadioButton" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf-->
+    <Leaf Display="Vertical Slider Switch" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralSliderSwitch_40x40.xml" ToolTip="Slider Switch Control" UniqueId="SwitchSliderVertical" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SwitchSliderVertical">
+      <Synonyms>Vertical toggle switch;Vertical slide switch</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Switch" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Switch BaseName="[string]Switch" Shape="[SwitchShape]Slider" TrueContent="On" FalseContent="Off" Orientation="[Orientation]Vertical" Width="[float]40" Height="[float]72" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Horizontal Slider Switch" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralHorizontalSliderSwitch_40x40.xml" ToolTip="Horizontal Slider Switch Control" UniqueId="SwitchSliderHorizontal" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SwitchSliderHorizontal">
+      <Synonyms>Horizontal toggle switch;Horizontal slide switch</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Switch" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Switch BaseName="[string]Switch" Shape="[SwitchShape]Slider" TrueContent="On" FalseContent="Off" Orientation="[Orientation]Horizontal" Width="[float]72" Height="[float]24" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Round Switch" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRoundSwitch_40x40.xml" ToolTip="Round Switch Control" UniqueId="SwitchRound" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:SwitchRound">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Round Switch" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Switch BaseName="[string]Round Switch" Shape="[SwitchShape]Round" Width="[float]88" Height="[float]72" TrueContent="On" FalseContent="Off" Value="{DataItemBinding Id=1}" IncludeInCapture="[bool]False" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Round LED" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRoundLED_40x40.xml" ToolTip="Round LED Indicator" UniqueId="BoolCtrl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LEDRound">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Round LED" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LED BaseName="[string]Round LED" Shape="[LEDShape]Round" Width="[float]24" Height="[float]24" TrueContent="On" FalseContent="Off" IsReadOnly="[bool]true" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Square LED" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralSquareLED_40x40.xml" ToolTip="Square LED Indicator" UniqueId="SquareLED" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LEDSquare">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Square LED" DataType="Boolean" AdaptToDiagramType="True">
+            <p.DefaultValue>False</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LED BaseName="[string]Square LED" Shape="[LEDShape]Square" Width="[float]24" Height="[float]24" TrueContent="On" FalseContent="Off" IsReadOnly="[bool]true" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Text" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesStringPath_40x40.xml" ToolTip="Text" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.StringsAndText" Weight="0.4" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.StringsAndText">
+    <Leaf Display="String Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStringControl_40x40.xml" ToolTip="String Control" UniqueId="StringCtrl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:StringControl">
+      <Synonyms>Text box;Textbox</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="String" DataType="String" AdaptToDiagramType="True">
+            <p.DefaultValue>""</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <StringControl BaseName="[string]String" Width="[float]72" Height="[float]24" AcceptsReturn="[bool]True" Text="{DataItemBinding Id=1}" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="String Indicator" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStringIndicator_40x40.xml" ToolTip="String Indicator" UniqueId="StringInd" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:StringIndicator">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="String" DataType="String" AdaptToDiagramType="True">
+            <p.DefaultValue>""</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <StringControl BaseName="[string]String" Width="[float]72" Height="[float]24" AcceptsReturn="[bool]True" IsReadOnly="[bool]True" Text="{DataItemBinding Id=1}" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Path Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralPathControl_40x40.xml" ToolTip="Path Control" UniqueId="PathCtrl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:PathControl">
+      <Synonyms>File;File path control</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Path" DataType="Path" AdaptToDiagramType="True">
+            <p.DefaultValue>
+              <Path a="1" />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Path" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PathSelector BaseName="[string]Path" Path="{DataItemBinding Id=1}" BrowseDialogTitle="Open File" Width="[float]152" Height="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Path Indicator" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralPathIndicator_40x40.xml" ToolTip="Path Indicator" UniqueId="PathInd" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:PathIndicator">
+      <Synonyms>File path indicator</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Path" DataType="Path" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Path" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PathSelector BaseName="[string]Path" Path="{DataItemBinding Id=1}" InteractionMode="[PathSelectorInteractionModes]ReadOnly" Width="[float]152" Height="[float]24" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Masked Input Control" CodeReadiness="Release" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralMaskedInputControl_40x40.xml" ToolTip="Masked Control" UniqueId="MaskedInput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:MaskedInput">
+      <Synonyms>Text box;Textbox;Password</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Masked Input" DataType="String" AdaptToDiagramType="True">
+            <p.DefaultValue>""</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <MaskedInput BaseName="[string]Masked Input" Width="[float]72" Height="[float]24" MaskedValue="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Text" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/NeutralText_40x40.xml" ToolTip="Text" UniqueId="TextLabel" Weight="0.5" ElementId="NI.PlatformFramework:Text">
+      <Synonyms>Label;Annotation</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem>
+          <pf:Text BaseName="Text" Text="[string]Text" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Hyperlink Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Hyperlink_40x40.xml" ToolTip="Hyperlink Control" UniqueId="HyperlinkCtrl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVHyperlinkControl">
+      <Synonyms>URL</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Hyperlink Control" DataType="String" AdaptToDiagramType="True">
+            <p.DefaultValue>"Hyperlink"</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVHyperlinkControl BaseName="[string]Hyperlink Control" Foreground="[SMColor]#FF73A9D8" TargetUrl="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Binary Buffer" CodeReadiness="Prototype" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStringControl_40x40.xml" ToolTip="Byte Viewer Control" UniqueId="ByteViewerCtrl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:ByteViewer">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Binary Buffer" DataType="Byte[]" AdaptToDiagramType="True">
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ByteViewer BaseName="[string]Binary Buffer" Width="[float]300" Height="[float]100" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Graphs and Charts" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesChartsAndGraphs_40x40.xml" ToolTip="Charts &amp; Graphs" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Graphs" Weight="0.5" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Graphs">
+    <ExcludeIfKeywords>
+      <Keyword>Fpga</Keyword>
+      <Keyword>Hls</Keyword>
+      <Keyword>ReplaceInClusterHierarchy</Keyword>
+      <Keyword>ReplaceInArrayHierarchy</Keyword>
+    </ExcludeIfKeywords>
+    <Leaf Display="Graph" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralGraph_40x40.xml" ToolTip="Graph Indicator" UniqueId="Graph" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Graph">
+      <Synonyms>XY graph;Waveform graph</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Graph" DataType="Double[]" AdaptToDiagramType="True">
+            <p.DefaultValue>
+              <vi:Array Lengths="0" />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Graph Id="2" BaseName="[string]Graph" Width="[float]392" Height="[float]296" BorderThickness="[SMThickness]1" PreferIndexData="[bool]True" SuppressScaleLayout="[bool]False" DataSource="{DataItemBinding Id=1}" MetadataAlwaysOverridesPlotNames="[bool]true" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <Axis Orientation="[SMOrientation]Horizontal" Adjuster="[RangeAdjuster]FitLoosely" Range="[IRange]0, 100" ValueType="[Type]Double" Label="Time" Id="10" MajorDivisions="[UIModel]101">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="101" />
+            </Axis>
+            <Axis Orientation="[SMOrientation]Vertical" Adjuster="[RangeAdjuster]FitVisibleLoosely" Range="[IRange]0, 10" ValueType="[Type]Double" Label="Amplitude" Id="11" MajorDivisions="[UIModel]102">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:G6&gt;&gt;0.000E+0" Id="102" />
+            </Axis>
+            <Plot Label="Plot" HorizontalScale="[UIModel]10" VerticalScale="[UIModel]11" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF962428" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF008EE4" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFE2B683" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFB7AC1F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFAEDCEF" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFA08BB0" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF7F7F7F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF91685C" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+          </Graph>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PlotLegend Graph="[UIModel]2" Visible="[bool]true" Left="[float]399" Top="[float]0" Height="[float]28" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <CursorLegend Graph="[UIModel]2" Visible="[bool]false" Width="[float]251" Height="[float]102" Left="[float]5" Top="[float]325" DefaultCursorForeground="[SMSolidColorBrush]FF000000" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ScaleLegend Graph="[UIModel]2" Visible="[bool]false" Height="[float]50" Left="[float]399" Top="[float]194" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <GraphTools Graph="[UIModel]2" Visible="[bool]false" Left="[float]5" Top="[float]303" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Chart" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralChart_40x40.xml" ToolTip="Chart Indicator" UniqueId="Chart" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Chart">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Chart" DataType="Double" BufferSize="1024" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Chart Id="2" BaseName="[string]Chart" Width="[float]392" Height="[float]296" BorderThickness="[SMThickness]1" IsAntiAliased="[bool]False" PreferIndexData="[bool]True" SuppressScaleLayout="[bool]False" DataSource="{DataItemBinding Id=1}" MetadataAlwaysOverridesPlotNames="[bool]true" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <Axis Orientation="[SMOrientation]Horizontal" Adjuster="[RangeAdjuster]ContinuousChart" Range="[IRange]0, 100" ValueType="[Type]Double" Label="Time" Id="10" MajorDivisions="[UIModel]101" MajorGridLines="[UIModel]103">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="101" />
+              <GridLines Color="[SMColor]#00ffffff" Id="103"/>
+            </Axis>
+            <Axis Orientation="[SMOrientation]Vertical" Adjuster="[RangeAdjuster]FitVisibleLoosely" Range="[IRange]0, 10" ValueType="[Type]Double" Label="Amplitude" Id="11" MajorDivisions="[UIModel]102" MajorGridLines="[UIModel]104">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:G6&gt;&gt;0.000E+0" Id="102" />
+              <GridLines Color="[SMColor]#00ffffff" Id="104"/>
+            </Axis>
+            <Plot Label="Plot" HorizontalScale="[UIModel]10" VerticalScale="[UIModel]11" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF962428" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF008EE4" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFE2B683" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFB7AC1F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFAEDCEF" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFA08BB0" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF7F7F7F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF91685C" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+          </Chart>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PlotLegend Graph="[UIModel]2" Visible="[bool]true" Left="[float]399" Top="[float]0" Height="[float]28" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <CursorLegend Graph="[UIModel]2" Visible="[bool]false" Width="[float]251" Height="[float]102" Left="[float]5" Top="[float]325" DefaultCursorForeground="[SMSolidColorBrush]FF000000" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ScaleLegend Graph="[UIModel]2" Visible="[bool]false" Height="[float]50" Left="[float]399" Top="[float]194" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <GraphTools Graph="[UIModel]2" Visible="[bool]false" Left="[float]5" Top="[float]303" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Intensity Graph" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralIntensityGraph_40x40.xml" ToolTip="Intensity Graph Indicator" UniqueId="IntensityGraph" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:IntensityGraph">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Intensity Graph" DataType="Double[,]" AdaptToDiagramType="True">
+            <p.DefaultValue>
+              <vi:Array Lengths="0,0" />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <IntensityGraph Id="2" BaseName="[string]Intensity Graph" Width="[float]392" Height="[float]296" BorderThickness="[SMThickness]1" DataSource="{DataItemBinding Id=1}" MetadataAlwaysOverridesPlotNames="[bool]true" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <Axis Orientation="[SMOrientation]Horizontal" Adjuster="[RangeAdjuster]FitExactly" Range="[IRange]0, 100" ValueType="[Type]Double" Label="X" Id="10" MajorDivisions="[UIModel]100" MajorGridLines="[UIModel]103">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="100" />
+              <GridLines Color="[SMColor]#00ffffff" Id="103" />
+            </Axis>
+            <Axis Orientation="[SMOrientation]Vertical" Adjuster="[RangeAdjuster]FitExactly" Range="[IRange]0, 50" ValueType="[Type]Double" Label="Y" Id="11" MajorDivisions="[UIModel]101" MajorGridLines="[UIModel]104">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="101" />
+              <GridLines Color="[SMColor]#00ffffff" Id="104"/>
+            </Axis>
+            <ColorScale Id="12" LabelVisibility="[SMVisibility]Collapsed" Adjuster="[RangeAdjuster]None" Location="[RelativeLocation]Far" HighColor="[SMColor]#FFFFFFFF" LowColor="[SMColor]#FF000000" Markers="[SMLinearGradientBrush]{Start: 0 0}, {End: 1 1}, {Stops: {Stop: #FF000000 0}, {Stop: #FF0000FF 50}, {Stop: #FFFFFFFF 100}}" MajorDivisions="[UIModel]102">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="102" />
+            </ColorScale>
+          </IntensityGraph>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ScaleLegend Graph="[UIModel]2" Visible="[bool]false" Height="[float]74" Left="[float]399" Top="[float]194" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Polar Graph" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralPolarGraph_40x40.xml" ToolTip="Polar Graph Indicator" UniqueId="PolarGraph" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:PolarGraph">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Polar Graph" DataType="ComplexDouble[]" AdaptToDiagramType="True">
+            <p.DefaultValue>
+              <vi:Array Lengths="0" />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PolarGraph Id="2" BaseName="[string]Polar Graph" Width="[float]296" Height="[float]296" BorderThickness="[SMThickness]1" DataSource="{DataItemBinding Id=1}" MetadataAlwaysOverridesPlotNames="[bool]true" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <PolarAngularAxis Id="10" MajorDivisions="[UIModel]101">
+              <RangeLabeledDivisions Mode="[RangeDivisionsMode]Count: 13" Id="101" LabelPresenter="[string]General:0.##" />
+            </PolarAngularAxis>
+            <PolarRadiusAxis Id="11" MajorDivisions="[UIModel]102">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="102" />
+            </PolarRadiusAxis>
+            <PolarPlot Label="Plot" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF7B161A" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF008EE4" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFE2B683" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFB7AC1F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFAEDCEF" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Ellipse" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FFA08BB0" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Rectangle" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF7F7F7F" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Diamond" />
+            <PlotRenderer LineStroke="[SMSolidColorBrush]FF3C0726" BarBaseline="[FillBaseline]Zero" AreaBaseline="[FillBaseline]Zero" PointShape="[PointShape]Cross" />
+          </PolarGraph>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PlotLegend Graph="[UIModel]2" Visible="[bool]true" Left="[float]303" Top="[float]0" Height="[float]28" Width="[float]70" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <CursorLegend Graph="[UIModel]2" Visible="[bool]false" Width="[float]251" Height="[float]102" Left="[float]5" Top="[float]325" DefaultCursorForeground="[SMSolidColorBrush]FF000000" DefaultCursorValuePresenter="Group:General:θ={0}&gt;&gt;θ={0:F2};General:r={0}&gt;&gt;r={0:F2};" XHeaderName="[string]θ" YHeaderName="[string]r" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ScaleLegend Graph="[UIModel]2" Visible="[bool]false" Height="[float]50" Left="[float]303" Top="[float]194" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Digital Graph" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralDigitalGraph_40x40.xml" ToolTip="Digital Graph Indicator" UniqueId="DigitalGraph" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:DigitalGraph">
+      <Synonyms>Digital waveform graph</Synonyms>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Digital Graph" DataType="Boolean[]" AdaptToDiagramType="True">
+            <p.DefaultValue>
+              <vi:Array Lengths="0" />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <DigitalGraph Id="2" BaseName="[string]Digital Graph" Width="[float]392" Height="[float]296" BorderThickness="[SMThickness]1" DataSource="{DataItemBinding Id=1}" PreferIndexData="[bool]True" MetadataAlwaysOverridesPlotNames="[bool]true" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <Axis Orientation="[SMOrientation]Horizontal" Adjuster="[RangeAdjuster]FitLoosely" Range="[IRange]0, 100" ValueType="[Type]Double" Label="Time" Id="10" MajorDivisions="[UIModel]101">
+              <RangeLabeledDivisions LabelPresenter="LVRelativeSeconds:0" Id="101" />
+            </Axis>
+            <DigitalAxis Id="11" />
+            <DigitalPlot Label="Plot">
+              <DigitalSignalPlot Label="Signal" />
+            </DigitalPlot>
+          </DigitalGraph>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PlotLegend Graph="[UIModel]2" Visible="[bool]true" Left="[float]399" Top="[float]0" Height="[float]296" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <CursorLegend Graph="[UIModel]2" Visible="[bool]false" Width="[float]251" Height="[float]102" Left="[float]5" Top="[float]325" DefaultCursorForeground="[SMSolidColorBrush]FF000000" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ScaleLegend Graph="[UIModel]2" Visible="[bool]false" Width="[float]157" Height="[float]50" Left="[float]288" Top="[float]303" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <GraphTools Graph="[UIModel]2" Visible="[bool]false" Left="[float]5" Top="[float]303" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Arrays" ToolTip="Arrays" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Arrays" Weight="0.6" ImagePath="/NationalInstruments.PanelCommon;component/Resources/FrontPanel/NeutralCategoriesArray_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Arrays">
+    <Leaf Display="Numeric Array Input" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralArrayInput_40x40.xml" ToolTip="Numeric Array Input" UniqueId="NumericArrayInput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:NumericArrayInput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]8" BaseName="[string]Numeric Array Input" Columns="[int]1" Dimensions="[int]1" Height="[float]120" Id="3" IndexVisibility="[Visibility]Collapsed" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]4" Orientation="[SMOrientation]Vertical" Rows="[int]4" Value="{DataItemBinding Id=1}" Width="[float]104" Top="[float]20" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>0</p.DefaultElementValue>
+            <NumericText Height="[float]24" Id="8" Label="[UIModel]9" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" Width="[float]72">
+              <pc:Label Id="9" IsVisualChild="[bool]False" LabelOwner="[UIModel]8" Locked="[bool]True" Text="[string]Numeric" Visible="[bool]True" />
+            </NumericText>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="4" LabelOwner="[UIModel]3" Locked="[bool]True" Text="[string]Numeric Array Input" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Double[]" Id="1" Name="Numeric Array Input" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="1" Id="2">
+            <pf:Terminal DataType="Double[]" Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Numeric Array Output" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralArrayOutput_40x40.xml" ToolTip="Numeric Array Output" UniqueId="NumericArrayOutput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:NumericArrayOutput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]21" BaseName="[string]Numeric Array Output" Columns="[int]1" Dimensions="[int]1" Height="[float]120" Id="16" IndexVisibility="[Visibility]Collapsed" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]17" Left="[float]278" Orientation="[SMOrientation]Vertical" Rows="[int]4" Top="[float]182" Value="{DataItemBinding Id=14}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>0</p.DefaultElementValue>
+            <NumericText Height="[float]24" Id="21" IsReadOnly="[bool]True" Label="[UIModel]22" Left="[float]55" Top="[float]7" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" Width="[float]72">
+              <pc:Label Id="22" IsVisualChild="[bool]False" LabelOwner="[UIModel]21" Left="[float]55" Locked="[bool]True" Text="[string]Numeric" Top="[float]-13" Visible="[bool]True" xmlns="http://www.ni.com/LabVIEW.VI" />
+            </NumericText>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="17" LabelOwner="[UIModel]16" Left="[float]278" Locked="[bool]True" Text="[string]Numeric Array Output" Top="[float]162" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Double[]" Id="14" Name="Numeric Array Output" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="14" Id="15">
+            <pf:Terminal DataType="Double[]" Direction="Input" Hotspot="3 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="2D Numeric Array Input" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralArrayInput2D_40x40.xml" ToolTip="2D Numeric Array Input" UniqueId="2DNumericArrayInput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:2DNumericArrayInput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]64" BaseName="[string]2D Numeric Input" Columns="[int]3" Dimensions="[int]2" Height="[float]110" Id="63" IndexVisibility="[Visibility]Collapsed" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]66" Left="[float]976" Orientation="[SMOrientation]Vertical" Rows="[int]3" Top="[float]153" Value="{DataItemBinding Id=67}" Width="[float]200" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>0</p.DefaultElementValue>
+            <NumericText Height="[float]24" Id="64" Label="[UIModel]65" Left="[float]169" Top="[float]7" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" Width="[float]64">
+              <pc:Label Id="65" IsVisualChild="[bool]False" LabelOwner="[UIModel]64" Left="[float]169" Locked="[bool]True" Text="[string]Numeric" Top="[float]-13" Visible="[bool]True" />
+            </NumericText>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="66" LabelOwner="[UIModel]63" Left="[float]976" Locked="[bool]True" Text="[string]2D Numeric Input" Top="[float]133" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Double[,]" Id="67" Name="2D Numeric Input" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="67" Id="68">
+            <pf:Terminal DataType="Double[,]" Direction="Output" Hotspot="40 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="2D Numeric Array Output" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralArrayOutput2D_40x40.xml" ToolTip="2D Numeric Array Output" UniqueId="2DNumericArrayOutput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:2DNumericArrayOutput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]27" BaseName="[string]2D Numeric Output" Columns="[int]3" Dimensions="[int]2" Height="[float]110" Id="26" IndexVisibility="[Visibility]Collapsed" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" IsFixedSize="[bool]False" Label="[UIModel]29" Left="[float]982" Orientation="[SMOrientation]Vertical" Rows="[int]3" Top="[float]159" Value="{DataItemBinding Id=30}" Width="[float]200" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>0</p.DefaultElementValue>
+            <NumericText Height="[float]24" Id="27" IsReadOnly="[bool]True" Label="[UIModel]28" Left="[float]112" Top="[float]7" ValueType="[Type]Double" ValueFormatter="[string]LV:G6" Width="[float]64">
+              <pc:Label Id="28" IsVisualChild="[bool]False" LabelOwner="[UIModel]27" Left="[float]112" Locked="[bool]True" Text="[string]Numeric" Top="[float]-13" Visible="[bool]True" />
+            </NumericText>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="29" LabelOwner="[UIModel]26" Left="[float]982" Locked="[bool]True" Text="[string]2D Numeric Output" Top="[float]139" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Double[,]" Id="30" Name="2D Numeric Output" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="30" Id="31">
+            <pf:Terminal DataType="Double[,]" Direction="Input" Hotspot="3 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Boolean Array Input" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralBoolArrayInput_40x40.xml" ToolTip="Boolean Array Input" UniqueId="BooleanArrayInput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:BooleanArrayInput">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]49" BaseName="[string]Boolean Array Input" Columns="[int]4" Dimensions="[int]1" Height="[float]72" Id="39" IndexVisibility="[Visibility]Collapsed" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]40" Left="[float]358" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]401" Value="{DataItemBinding Id=37}" Width="[float]168" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>False</p.DefaultElementValue>
+            <Switch TrueContent="[string]On" FalseContent="[string]Off" Height="[float]40" Id="49" Label="[UIModel]50" Left="[float]55" Shape="[SwitchShape]Slider" Orientation="[SMOrientation]Vertical" Top="[float]7" Width="[float]40">
+              <pc:Label Id="50" IsVisualChild="[bool]False" LabelOwner="[UIModel]49" Left="[float]55" Locked="[bool]True" Text="[string]Switch" Top="[float]-13" Visible="[bool]True" />
+            </Switch>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="40" LabelOwner="[UIModel]39" Left="[float]358" Locked="[bool]True" Text="[string]Boolean Array Input" Top="[float]381" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Boolean[]" Id="37" Name="Boolean Array Input" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="37" Id="38">
+            <pf:Terminal DataType="Boolean[]" Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Boolean Array Output" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralBoolArrayOutput_40x40.xml" ToolTip="Boolean Array Output" UniqueId="BooleanArrayOutput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:BooleanArrayOutput">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]78" BaseName="[string]Boolean Array Output" Columns="[int]4" Dimensions="[int]1" Height="[float]56" Id="25" IndexVisibility="[Visibility]Collapsed" HorizontalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]26" Left="[float]566" Orientation="[SMOrientation]Horizontal" Rows="[int]1" Top="[float]210" Value="{DataItemBinding Id=23}" Width="[float]120" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>False</p.DefaultElementValue>
+            <LED ContentVisibility="[Visibility]Collapsed" FalseContent="[string]Off" Width="[float]24" Height="[float]24" Id="78" IsReadOnly="[bool]True" Label="[UIModel]79" Left="[float]92" Shape="[LEDShape]Round" Top="[float]7" TrueContent="[string]On">
+              <pc:Label Id="79" IsVisualChild="[bool]False" LabelOwner="[UIModel]78" Left="[float]92" Locked="[bool]True" Text="[string]Round LED" Top="[float]-13" Visible="[bool]True" />
+            </LED>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="26" LabelOwner="[UIModel]25" Left="[float]566" Locked="[bool]True" Text="[string]Boolean Array Output" Top="[float]190" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="Boolean[]" Id="23" Name="Boolean Array Output" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="23" Id="24">
+            <pf:Terminal DataType="Boolean[]" Direction="Input" Hotspot="3 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="String Array Input" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStringArrayInput_40x40.xml" ToolTip="String Array Input" UniqueId="StringArrayInput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:StringArrayInput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]54" BaseName="[string]String Array Input" Columns="[int]1" Dimensions="[int]1" Height="[float]120" Id="49" IndexVisibility="[Visibility]Collapsed" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]50" Left="[float]300" Orientation="[SMOrientation]Vertical" Rows="[int]4" Top="[float]229" Value="{DataItemBinding Id=47}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>""</p.DefaultElementValue>
+            <StringControl AcceptsReturn="[bool]True" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="54" Label="[UIModel]55" Left="[float]55" Top="[float]7" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72">
+              <pc:Label Id="55" IsVisualChild="[bool]False" LabelOwner="[UIModel]54" Left="[float]55" Locked="[bool]True" Text="[string]String" Top="[float]-13" Visible="[bool]True" />
+            </StringControl>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="50" LabelOwner="[UIModel]49" Left="[float]300" Locked="[bool]True" Text="[string]String Array Input" Top="[float]209" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="String[]" Id="47" Name="String Array Input" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="47" Id="48">
+            <pf:Terminal DataType="String[]" Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="String Array Output" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralStringArrayOutput_40x40.xml" ToolTip="String Array Output" UniqueId="StringArrayOutput" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:StringArrayOutput">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:ArrayViewer ArrayElement="[UIModel]92" BaseName="[string]String Array Output" Columns="[int]1" Dimensions="[int]1" Height="[float]120" Id="91" IndexVisibility="[Visibility]Collapsed" VerticalScrollBarVisibility="[ScrollBarVisibility]Visible" Label="[UIModel]94" Left="[float]663" Orientation="[SMOrientation]Vertical" Rows="[int]4" Top="[float]374" Value="{DataItemBinding Id=95}" Width="[float]104" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.DefaultElementValue>""</p.DefaultElementValue>
+            <StringControl AcceptsReturn="[bool]True" Height="[float]24" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" Id="92" IsReadOnly="[bool]True" Label="[UIModel]93" Left="[float]55" Top="[float]7" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" Width="[float]72">
+              <pc:Label Id="93" IsVisualChild="[bool]False" LabelOwner="[UIModel]92" Left="[float]55" Locked="[bool]True" Text="[string]String" Top="[float]-13" Visible="[bool]True" />
+            </StringControl>
+          </pc:ArrayViewer>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <pc:Label Id="94" LabelOwner="[UIModel]91" Left="[float]663" Locked="[bool]True" Text="[string]String Array Output" Top="[float]354" Visible="[bool]True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="String[]" Id="95" Name="String Array Output" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="95" Id="96">
+            <pf:Terminal DataType="String[]" Direction="Input" Hotspot="3 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Unconfigured Array" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralArray_40x40.xml" ToolTip="Unconfigured Array" UniqueId="ArrayControl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:ArrayControl">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Array" DataType="Void[]" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <pc:ArrayViewer BaseName="[string]Array" xmlns:fp="http://www.ni.com/Controls.LabVIEW.Design" Width="[float]136" Height="[float]72" Dimensions="[int]1" Rows="[int]1" Columns="[int]1" IndexVisibility="[Visibility]Visible" Value="{DataItemBinding Id=1}" Orientation="[Orientation]Horizontal" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Data Grid" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralDataGrid_40x40.xml" ToolTip="Data Grid" UniqueId="DataGrid" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVDataGrid">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInClusterHierarchy</Keyword>
+        <Keyword>ReplaceInArrayHierarchy</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem DataType="@1" Id="1" Name="Data Grid" AdaptToDiagramType="False" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal DataType="@1" Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem IsPrimary="False">
+          <pf:DataTypeReferenceTable>
+            <pf:p.TypeReference TypeId="1">
+              <pf:VariableArray>
+                <pf:DereferenceType>
+                  <pf:Composite Id="1" Name="" Cluster="">
+                    <pf:ClosedGenericParameters />
+                    <pf:GenericTypeDefinition>
+                      <Void />
+                    </pf:GenericTypeDefinition>
+                    <pf:BaseType>
+                      <Void />
+                    </pf:BaseType>
+                    <pf:Interfaces />
+                    <pf:Members>
+                      <pf:Field FieldAccessPolicy="ReadWrite" Name="A">
+                        <pf:DataType>
+                          <String />
+                        </pf:DataType>
+                      </pf:Field>
+                      <pf:Field FieldAccessPolicy="ReadWrite" Name="B">
+                        <DataType>
+                          <String />
+                        </DataType>
+                      </pf:Field>
+                      <pf:Field FieldAccessPolicy="ReadWrite" Name="C">
+                        <DataType>
+                          <String />
+                        </DataType>
+                      </pf:Field>
+                    </pf:Members>
+                  </pf:Composite>
+                </pf:DereferenceType>
+              </pf:VariableArray>
+            </pf:p.TypeReference>
+          </pf:DataTypeReferenceTable>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <LVDataGrid BaseName="[string]Data Grid" IsReadOnly="[bool]true" Height="[float]158" Width="[float]240" CanUserSortColumns="[bool]false" RowHeaderWidth="[double]NaN" ColumnSizeMode="[DataGridColumnSizeMode]StretchSingleColumn" Type="[Type]@1" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <LVDataGridColumn ColumnElement="[UIModel]21" Width="[DataViewerLength]1*" Header="[string]A" Id="19" IsReadOnly="[bool]true" Index="[int]0">
+              <StringControl Id="21" IsReadOnly="[bool]True" />
+            </LVDataGridColumn>
+            <LVDataGridColumn ColumnElement="[UIModel]22" Width="[DataViewerLength]50" Header="[string]B" Id="20" IsReadOnly="[bool]true" Index="[int]1">
+              <StringControl Id="22" IsReadOnly="[bool]True" />
+            </LVDataGridColumn>
+            <LVDataGridColumn ColumnElement="[UIModel]29" Width="[DataViewerLength]50" Header="[string]C" Id="28" IsReadOnly="[bool]true" Index="[int]2">
+              <StringControl Id="29" IsReadOnly="[bool]True" />
+            </LVDataGridColumn>
+          </LVDataGrid>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Table" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTable_40x40.xml" ToolTip="Table" UniqueId="Table" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVTable">
+      <Synonyms>Spreadsheet</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArrayHierarchy</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <Table BaseName="[string]Table" Height="[float]110" Id="63" Left="[float]976" Top="[float]153" Value="{DataItemBinding Id=67}" Width="[float]200" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <StringControl AcceptsReturn="[bool]False" VerticalScrollBarVisibility="[ScrollBarVisibility]Auto" HorizontalScrollBarVisibility="[ScrollBarVisibility]Hidden" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+          </Table>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem AdaptToDiagramType="True" DataType="String[,]" Id="67" Name="Table" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor Bounds="0 0 40 15" DataItem="67" Id="68">
+            <pf:Terminal DataType="String[,]" Direction="Input" Hotspot="40 5" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Tree" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTreeControl_40x40.xml" ToolTip="Tree" UniqueId="TreeIndicator" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:TreeControl">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArrayHierarchy</Keyword>
+        <Keyword>ReplaceInClusterHierarchy</Keyword>
+        <Keyword>NationalInstruments.MocCommon.Modeling.TypeDefinition</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <TreeControl BaseName="[string]Tree" Height="[float]400" Id="1" DataSource="{DataItemBinding Id=2}" DataSourceType="[Type]@1" AllowSelection="[bool]True" Width="[float]400" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner" IsPrimary="False">
+          <moc:DataItem DataType="@1" Id="2" Name="Tree" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <moc:DataAccessor DataItem="2" Id="3">
+            <pf:Terminal DataType="@1" Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="False">
+          <pf:DataTypeReferenceTable>
+            <pf:p.TypeReference TypeId="1">
+              <pf:VariableArray>
+                <pf:DereferenceType>
+                  <pf:Composite Name="" Cluster="">
+                    <pf:ClosedGenericParameters />
+                    <pf:GenericTypeDefinition>
+                      <Void />
+                    </pf:GenericTypeDefinition>
+                    <pf:BaseType>
+                      <Void />
+                    </pf:BaseType>
+                    <pf:Interfaces />
+                    <pf:Members>
+                      <pf:Field FieldAccessPolicy="ReadWrite" Name="location" DataType="String" />
+                      <pf:Field FieldAccessPolicy="ReadWrite" Name="data" DataType="String" />
+                    </pf:Members>
+                  </pf:Composite>
+                </pf:DereferenceType>
+              </pf:VariableArray>
+            </pf:p.TypeReference>
+          </pf:DataTypeReferenceTable>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Selectors" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesListboxAndRings_40x40.xml" ToolTip="Selectors" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.EnumsAndRings" Weight="0.7" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.EnumsAndRings">
+    <ExcludeIfKeywords>
+      <Keyword>Hls</Keyword>
+    </ExcludeIfKeywords>
+    <Leaf Display="Enum" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralEnumControl_40x40.xml" ToolTip="Enum" UniqueId="Enum" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:EnumSelector">
+      <pf:MergeScript xmlns="http://www.ni.com/PlatformFramework">
+        <MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Enum" DataType="@1" AdaptToDiagramType="False">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </MergeItem>
+        <MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </MergeItem>
+        <MergeItem Path=".">
+          <EnumSelector BaseName="[string]Enum" Width="[float]72" Height="[float]24" VisualMode="[SelectorVisualMode]RingStyle" IsTypeAheadEnabled="[bool]True" AllowUndefinedValueEntry="[bool]False" ValueType="[Type]UInt16" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <EnumSelectorInfo DisplayValue="" Id="26" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+          </EnumSelector>
+        </MergeItem>
+        <MergeItem>
+          <DataTypeReferenceTable>
+            <p.TypeReference TypeId="1">
+              <Enumeration Name="Enum">
+                <Members>
+                  <EnumerationMember Value="0" Name="" />
+                </Members>
+                <DataType>
+                  <UInt16 />
+                </DataType>
+              </Enumeration>
+            </p.TypeReference>
+          </DataTypeReferenceTable>
+        </MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Ring" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRingControl_40x40.xml" ToolTip="Text Ring" UniqueId="Ring" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:RingSelector">
+      <Synonyms>Text ring</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Text Ring" DataType="Int32" AdaptToDiagramType="False">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <RingSelector BaseName="[string]Text Ring" Width="[float]72" Height="[float]24" VisualMode="[SelectorVisualMode]RingStyle" IsTypeAheadEnabled="[bool]True" AllowUndefinedValueEntry="[bool]False" AllowNonSequentialValues="[bool]False" ValueType="[Type]Int32" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <RingSelectorInfo DisplayValue="" IsEnabled="[bool]True" Value="[int]0" ValueType="[Type]Int32" />
+          </RingSelector>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Combo Box" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralComboBox_40x40.xml" ToolTip="ComboBox" UniqueId="ComboBox" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:ComboboxControl">
+      <Synonyms>Drop-down list;Dropdown list;Drop down list;Choice list</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Combo Box" DataType="String" AdaptToDiagramType="False">
+            <p.DefaultValue>""</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <ComboboxSelector BaseName="[string]Combo Box" Width="[float]72" Height="[float]24" VisualMode="[SelectorVisualMode]ComboBoxStyle" IsTypeAheadEnabled="[bool]True" AllowUndefinedValueEntry="[bool]True" ValueType="[Type]String" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <ComboboxSelectorInfo DisplayValue="" Id="32" IsEnabled="[bool]True" Value="" ValueType="[Type]String" />
+          </ComboboxSelector>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Radio Button Group" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralRadioButton_40x40.xml" ToolTip="Radio Button Group" UniqueId="RadioButtonGroup" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:RadioButtonGroup">
+      <pf:MergeScript xmlns="http://www.ni.com/PlatformFramework">
+        <MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Radio Button Group" DataType="@1" AdaptToDiagramType="False">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </MergeItem>
+        <MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </MergeItem>
+        <MergeItem Path=".">
+          <RadioButtonGroup BaseName="[string]Radio Button Group" VisualMode="[SelectorVisualMode]RadioButtonStyle" ValueType="[Type]UInt16" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <RadioButtonGroupInfo DisplayValueOverride="Item 0" DisplayValue="Item 0" IsEnabled="[bool]True" Value="[ushort]0" ValueType="[Type]UInt16" />
+            <RadioButtonGroupInfo DisplayValueOverride="Item 1" DisplayValue="Item 1" IsEnabled="[bool]True" Value="[ushort]1" ValueType="[Type]UInt16" />
+          </RadioButtonGroup>
+        </MergeItem>
+        <MergeItem>
+          <DataTypeReferenceTable>
+            <p.TypeReference TypeId="1">
+              <Enumeration Name="Enum">
+                <Members>
+                  <EnumerationMember Value="0" Name="Item 0" />
+                  <EnumerationMember Value="1" Name="Item 1" />
+                </Members>
+                <DataType>
+                  <UInt16 />
+                </DataType>
+              </Enumeration>
+            </p.TypeReference>
+          </DataTypeReferenceTable>
+        </MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Listbox" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralListBoxControl_40x40.xml" ToolTip="Listbox" UniqueId="ListBox" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:ListBoxSelector">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <ListBoxSelector BaseName="[string]Listbox" Height="[float]160" Width="[float]120" ValueType="[Type]Int32" Value="{DataItemBinding Id=1}" SelectionMode="[SMListBoxSelectionMode]One" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Listbox" DataType="Int32" AdaptToDiagramType="True">
+            <p.DefaultValue>-1</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Color Selector" ToolTip="Color Selector" UniqueId="ColorSelector" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:LVColorBox" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/ColorBoxControl_40x40.xml">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Color" DataType="@1">
+            <p.DefaultValue>4278190080</p.DefaultValue>
+            <pc:p.TypeDefinitionTargets>
+              <TypeDefinitionTarget TargetName="NI::G Core::Color Picker::Color.gtype" />
+            </pc:p.TypeDefinitionTargets>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <Terminal DataType="@1" Direction="Output" Hotspot="40 5" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <LVColorBox BaseName="[string]Color" Width="[float]44" Height="[float]24" Brush="{DataItemBinding Id=1}" p4:ControlDefinitionChecksum="h0NiJFHLwcy+97C6qIRDe2KbknSwqEAbxAIl3T/9ODw=" xmlns:p4="http://www.ni.com/PanelCommon"  xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p4:p.TypeDefinitionTargets>
+              <p4:TypeDefinitionTarget TargetName="NI::G Core::Color Picker::Color.gtype::ControlDefinition" />
+            </p4:p.TypeDefinitionTargets>
+          </LVColorBox>
+        </pf:MergeItem>
+        <pf:MergeItem IsPrimary="False">
+          <pf:DataTypeReferenceTable>
+            <pf:p.TypeReference TypeId="1">
+              <Attributed>
+                <AttributedType>
+                  <Typedef TypedefName="Color.gtype" Encapsulated="True" UnderlyingType="UInt32" />
+                </AttributedType>
+                <AttributeValues>
+                  <AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Color Picker" />
+                </AttributeValues>
+              </Attributed>
+            </pf:p.TypeReference>
+          </pf:DataTypeReferenceTable>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Category Display="Named References" ImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Categories/FrontPanel/NeutralCategoriesNamedReference_40x40.xml" UniqueId="NI.MocCommon:PaletteCategory.NamedReferences" Weight="0.75" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.MocCommon:PaletteCategory.NamedReferences">
+    </Category>
+  </Category>
+  <Category Display="Clusters" ToolTip="Clusters" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Clusters" Weight="0.8" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesArrayAndCluster_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Clusters">
+    <Leaf Display="Empty Cluster" ImagePath="/NationalInstruments.PanelCommon;component/Resources/FrontPanel/NeutralCluster_40x40.xml" ToolTip=" Empty Cluster" UniqueId="Cluster" Weight="0.1" ElementId="NI.Controls.LabVIEW.Design:Cluster">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Cluster" DataType="@1" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <pc:Cluster />
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <pc:Cluster BaseName="[string]Cluster" Width="[float]104" Height="[float]88" BorderThickness="[SMThickness]1" Value="{DataItemBinding Id=1}" />
+        </pf:MergeItem>
+        <pf:MergeItem>
+          <pf:DataTypeReferenceTable>
+            <pf:p.TypeReference TypeId="1">
+              <pf:Composite Id="1" Name="" Cluster="">
+                <pf:GenericTypeDefinition>
+                  <pf:Void />
+                </pf:GenericTypeDefinition>
+                <pf:GenericParameters />
+                <pf:Members />
+              </pf:Composite>
+            </pf:p.TypeReference>
+          </pf:DataTypeReferenceTable>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Error In" ImagePath="/NationalInstruments.PanelCommon;component/Resources/FrontPanel/NeutralErrorIn_40x40.xml" ToolTip="Error In" UniqueId="ErrorControl" Weight="0.2" ElementId="NI.Controls.LabVIEW.Design:ErrorIn">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Error In" DataType="Error" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <Cluster>
+                <Field1>False</Field1>
+                <Field2>0</Field2>
+                <Field3>""</Field3>
+              </Cluster>
+            </p.DefaultValue>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+            </p.TypeDefinitionTargets>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <pc:Cluster BaseName="[string]Error In" Width="[float]176" Height="[float]176" BorderThickness="[SMThickness]1" Value="{DataItemBinding Id=1}" ClusterType="[Type]Error" pc:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=">
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+            </p.TypeDefinitionTargets>
+            <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]12" Id="84" Label="[UIModel]85" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]12" DisplayAsErrorStatus="True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="85" LabelOwner="[UIModel]84" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+            <NumericText Height="[float]24" Id="86" Label="[UIModel]87" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="87" LabelOwner="[UIModel]86" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+            <StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="88" Label="[UIModel]89" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="89" LabelOwner="[UIModel]88" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+          </pc:Cluster>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Error Out" ImagePath="/NationalInstruments.PanelCommon;component/Resources/FrontPanel/NeutralErrorOut_40x40.xml" ToolTip="Error Out" UniqueId="ErrorIndicator" Weight="0.3" ElementId="NI.Controls.LabVIEW.Design:ErrorOut">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Error Out" DataType="Error" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <Cluster>
+                <Field1>False</Field1>
+                <Field2>0</Field2>
+                <Field3>""</Field3>
+              </Cluster>
+            </p.DefaultValue>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype" />
+            </p.TypeDefinitionTargets>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <pc:Cluster BaseName="[string]Error Out" Width="[float]176" Height="[float]176" BorderThickness="[SMThickness]1" Value="{DataItemBinding Id=1}" ClusterType="[Type]Error" pc:ControlDefinitionChecksum="J+f/EiASvnzghyjtgi4nEE7z+0udh8Z1+KU2hWC1ppw=">
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Error::Error.gtype::ControlDefinition" />
+            </p.TypeDefinitionTargets>
+            <LVCheckBox Content="[string]" ContentVisibility="[Visibility]Collapsed" Height="[float]12" Id="104" IsReadOnly="[bool]True" Label="[UIModel]105" Left="[float]3" TabIndex="[int]0" Top="[float]24" Value="{ClusterBinding FieldName=status}" Width="[float]12" DisplayAsErrorStatus="True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="105" LabelOwner="[UIModel]104" Left="[float]3" Text="[string]status" Top="[float]4" Width="[float]32" />
+            <NumericText Height="[float]24" Id="106" IsReadOnly="[bool]True" Label="[UIModel]107" Left="[float]54" RadixVisibility="[SMVisibility]Visible" TabIndex="[int]1" Top="[float]24" Value="{ClusterBinding FieldName=code}" ValueFormatter="[string]LV:G6" ValueType="[Type]Int32" Width="[float]111" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="107" LabelOwner="[UIModel]106" Left="[float]54" Text="[string]code" Top="[float]4" Width="[float]26" />
+            <StringControl AcceptsReturn="[bool]True" Height="[float]95" Id="108" IsReadOnly="[bool]True" Label="[UIModel]109" Left="[float]3" TabIndex="[int]2" Text="{ClusterBinding FieldName=source}" Top="[float]70" Width="[float]162" WordWrap="[bool]True" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+            <pc:Label Height="[float]16" Id="109" LabelOwner="[UIModel]108" Left="[float]3" Text="[string]source" Top="[float]50" Width="[float]35" />
+          </pc:Cluster>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Waveform" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralWaveformControl_40x40.xml" ToolTip="Waveform" UniqueId="WaveformViewer" Weight="0.4" ElementId="NI.Controls.LabVIEW.Design:Waveform">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Waveform" DataType="Wfm(Double)" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <vi:Waveform>
+                <vi:Timestamp>Now</vi:Timestamp>
+                <vi:Interval>0.1</vi:Interval>
+                <vi:Data>
+                  <vi:Array Lengths="0" />
+                </vi:Data>
+              </vi:Waveform>
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <Waveform BaseName="[string]Waveform" xmlns="http://www.ni.com/Controls.LabVIEW.Design" Width="[float]280" Height="[float]136" WaveformDataType="[Type]Double" WaveformData="{DataItemBinding Id=1}" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Digital Waveform" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralDigitalWaveform_40x40.xml" ToolTip="DigitalWaveform" UniqueId="DigitalWaveform" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:DigitalWaveform">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Digital Waveform" DataType="DigitalWaveform" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <vi:Waveform>
+                <vi:Timestamp>Now</vi:Timestamp>
+                <vi:Interval>0.1</vi:Interval>
+                <vi:Data>
+                  <vi:Array Lengths="0" />
+                </vi:Data>
+              </vi:Waveform>
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <DigitalWaveform BaseName="[string]DigitalWaveform" xmlns="http://www.ni.com/Controls.LabVIEW.Design" Width="[float]280" Height="[float]136" DigitalData="{DataItemBinding Id=1}" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Digital Table" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralDigitalTable_40x40.xml" ToolTip="DigitalTable" UniqueId="DigitalTable" Weight="0.6" ElementId="NI.Controls.LabVIEW.Design:DigitalTable">
+      <Synonyms>Digital data</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Digital Table" DataType="DigitalTable" AdaptToDiagramType="False">
+            <p.DefaultValue>
+              <vi:Waveform>
+                <vi:Timestamp></vi:Timestamp>
+                <vi:Data>
+                  <vi:Array Lengths="0" />
+                </vi:Data>
+              </vi:Waveform>
+            </p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <DigitalTable BaseName="[string]DigitalTable" xmlns="http://www.ni.com/Controls.LabVIEW.Design" Width="[float]188" Height="[float]136" DigitalData="{DataItemBinding Id=1}" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Variant Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralVariantControl_40x40.xml" ToolTip="Variant Control" UniqueId="VariantCtrl" Weight="0.7" ElementId="NI.Controls.LabVIEW.Design:VariantControl">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Variant" DataType="Variant" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <VariantControl BaseName="[string]Variant" Width="[float]104" Height="[float]88" IsIndicator="[bool]False" VariantValue="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Variant Indicator" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralVariantIndicator_40x40.xml" ToolTip="Variant Indicator" UniqueId="VariantInd" Weight="0.8" ElementId="NI.Controls.LabVIEW.Design:VariantIndicator">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Variant" DataType="Variant" AdaptToDiagramType="True" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <VariantControl BaseName="[string]Variant" Width="[float]104" Height="[float]88" IsIndicator="[bool]True" VariantValue="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <Category Display="Layouts" ToolTip="Layouts" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Containers" Weight="0.9" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralCategoriesContainers_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Containers">
+    <Leaf Display="Tab Control" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/NeutralTabControl_40x40.xml" ToolTip="Tab Control" UniqueId="TabControl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:TabControl">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInCluster</Keyword>
+        <Keyword>ReplaceInArray</Keyword>
+        <Keyword>NationalInstruments.MocCommon.Modeling.TypeDefinition</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Tab" DataType="Int32" AdaptToDiagramType="True">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Output" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <fp:TabControl BaseName="[string]Tab" xmlns:fp="http://www.ni.com/Controls.LabVIEW.Design" SelectedIndex="{DataItemBinding Id=1}" Width="[float]200" Height="[float]200" IncludeInCapture="[bool]False">
+            <fp:TabItem Header="Tab 0">
+              <fp:LayoutPanel />
+            </fp:TabItem>
+            <fp:TabItem Header="Tab 1">
+              <fp:LayoutPanel />
+            </fp:TabItem>
+          </fp:TabControl>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Panel Container" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/SubPanelControl_40x40.xml" ToolTip="Panel Container Control" UniqueId="SubPanelControl" Weight="0.6" ElementId="NI.Controls.LabVIEW.Design:SubPanelControl">
+      <Synonyms>subpanel;sub panel</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+        <Keyword>RealTime</Keyword>
+        <Keyword>NationalInstruments.MocCommon.Modeling.TypeDefinition</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems" IsPrimary="False">
+          <ControlReference Bounds="0 0 120 20" SourceControl="::::::\1::" xmlns="http://www.ni.com/LabVIEW.VI" />
+        </pf:MergeItem>
+        <pf:MergeItem Path="." IsPrimary="True">
+          <SubPanel BaseName="[string]Panel Container" Width="[float]312" Height="[float]276" Id="1" xmlns="http://www.ni.com/Controls.LabVIEW.Design" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <!--        <Leaf Display="Grid" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Grid_32x32.png"ToolTip="Grid"
+UniqueId="Grid" Weight="0.5">      <sdk:MergeScript>        <wpf:Grid xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"Width="200"
+Height="200" Background="#80808080" designer:DesignerSurfaceProperties.SelectableChildren="true"><wpf:Grid.RowDefinitions>
+<wpf:RowDefinition Height="1*" />            <wpf:RowDefinition Height="1*" /></wpf:Grid.RowDefinitions>
+<wpf:Grid.ColumnDefinitions>            <wpf:ColumnDefinition Width="1*" /><wpf:ColumnDefinition Width="1*"
+
+ />          </wpf:Grid.ColumnDefinitions>        </wpf:Grid>      </sdk:MergeScript></Leaf>-->
+  </Category>
+  <Category Display="Decorations and Data Placeholders" ToolTip="Decorations and Data Placeholders" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.DecorationsAndDataPlaceholders" Weight="1.1" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/DecorationsAndDataPlaceholders_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.DecorationsAndDataPlaceholders">
+    <Category Display="Shapes" ToolTip="Shapes" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Shapes" Weight="1.1" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Shapes_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.Shapes">
+      <ExcludeIfKeywords>
+        <Keyword>ReplaceInArray</Keyword>
+      </ExcludeIfKeywords>
+      <Leaf Display="Pencil" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Pen_40x40.xml" ToolTip="Pencil" UniqueId="Pencil" Weight="0.5" ElementId="NI.PlatformFramework:Pencil">
+        <ExcludeIfKeywords>
+          <Keyword>Replace</Keyword>
+        </ExcludeIfKeywords>
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Path BaseName="[string]Path" PlacementHelper="ShapeBuilder" ShapeBuilder="Pencil" Stroke="[SMSolidColorBrush]FF000000" StrokeThickness="[float]1.0" Fill="[SMSolidColorBrush]00FFFFFF" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Pen" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/PolyBezier_40x40.xml" ToolTip="Pen" UniqueId="Pen" Weight="0.5" ElementId="NI.PlatformFramework:Pen">
+        <ExcludeIfKeywords>
+          <Keyword>Replace</Keyword>
+        </ExcludeIfKeywords>
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Path BaseName="[string]Path" PlacementHelper="ShapeBuilder" ShapeBuilder="Pen" Stroke="[SMSolidColorBrush]FF000000" StrokeThickness="[float]1.0" Fill="[SMSolidColorBrush]00FFFFFF" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Arc" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Arc_40x40.xml" ToolTip="Arc" UniqueId="Arc" Weight="0.5" ElementId="NI.PlatformFramework:Arc">
+        <ExcludeIfKeywords>
+          <Keyword>Replace</Keyword>
+        </ExcludeIfKeywords>
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:LVArc BaseName="[string]Arc" PlacementHelper="ShapeBuilder" ShapeBuilder="Arc" Stroke="[SMSolidColorBrush]FF000000" StrokeThickness="[float]1.0" Fill="[SMSolidColorBrush]00FFFFFF" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Rectangle" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Rectangle_40x40.xml" ToolTip="Rectangle" UniqueId="Rectangle" Weight="0.5" ElementId="NI.PlatformFramework:Rectangle">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Rectangle BaseName="[string]Rectangle" Width="[float]88" Height="[float]40" RadiusX="[float]0" RadiusY="[float]0" StrokeThickness="[float]1.0" Fill="[SMSolidColorBrush]FFE0E0E0" Stroke="[SMSolidColorBrush]FF000000" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Rounded Rectangle" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/RoundedRectangle_40x40.xml" ToolTip="Rounded Rectangle" UniqueId="RoundedRectangle" Weight="0.5" ElementId="NI.PlatformFramework:RoundedRectangle">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Rectangle BaseName="[string]Rectangle" Width="[float]88" Height="[float]40" RadiusX="[float]16.0" RadiusY="[float]16.0" StrokeThickness="[float]1.0" Fill="[SMSolidColorBrush]FFE0E0E0" Stroke="[SMSolidColorBrush]FF000000" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Ellipse" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Ellipse_40x40.xml" ToolTip="Ellipse" UniqueId="Ellipse" Weight="0.5" ElementId="NI.PlatformFramework:Ellipse">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Ellipse BaseName="[string]Ellipse" Width="[float]88" Height="[float]40" Stroke="[SMSolidColorBrush]FF000000" Fill="[SMSolidColorBrush]FFE0E0E0" StrokeThickness="[float]1.0" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Circle" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Circle_40x40.xml" ToolTip="Circle" UniqueId="Circle" Weight="0.5" ElementId="NI.PlatformFramework:Circle">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Ellipse BaseName="[string]Ellipse" Width="[float]88" Height="[float]88" Stroke="[SMSolidColorBrush]FF000000" Fill="[SMSolidColorBrush]FFE0E0E0" StrokeThickness="[float]1.0" IsCircle="[bool]True" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Arrow" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Arrow_40x40.xml" ToolTip="Arrow" UniqueId="Arrow" Weight="0.5" ElementId="NI.PlatformFramework:Arrow">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Path BaseName="[string]Path" Data="[PathGeometry]M0,17.559139251709L52.8823509216309,17.559139251709L52.8823509216309,0L87,35.118278503418L52.8823509216309,71L52.8823509216309,53.440860748291L0,53.440860748291L0,17.559139251709z" StrokeThickness="[float]1.0" Stroke="[SMSolidColorBrush]FF000000" Fill="[SMSolidColorBrush]FFE0E0E0" Width="[float]88" Height="[float]72" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="Triangle" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Triangle_40x40.xml" ToolTip="Triangle" UniqueId="Triangle" Weight="0.5" ElementId="NI.PlatformFramework:Triangle">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Path BaseName="[string]Path" Data="[PathGeometry]M0,87L87,87L43.5,0L0,87z" StrokeThickness="[float]1.0" Stroke="[SMSolidColorBrush]FF000000" Fill="[SMSolidColorBrush]FFE0E0E0" Width="[float]88" Height="[float]88" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="5 Point Star" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/5PtStar_40x40.xml" ToolTip="5 Point Star" UniqueId="FivePointStar" Weight="0.5" ElementId="NI.PlatformFramework:FivePointStar">
+        <pf:MergeScript>
+          <pf:MergeItem>
+            <pf:Path BaseName="[string]Path" Fill="[SMSolidColorBrush]FFE0E0E0" Data="[PathGeometry]M0,32.5151519775391L30.1153831481934,27.2424240112305L43.5,0L56.8846130371094,27.2424240112305L87,32.5151519775391L65.25,55.3636360168457L69.4326934814453,87L43.5,70.3030319213867L17.5673065185547,87L21.75,55.3636360168457L0,32.5151519775391z" StrokeThickness="[float]1.0" Stroke="[SMSolidColorBrush]FF000000" Width="[float]88" Height="[float]88" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+    </Category>
+    <Category Display="Data Placeholders" ToolTip="Data Placeholders" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.DataPlaceholders" Weight="1.1" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/DataPlaceholders_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml" ElementId="NI.Controls.LabVIEW.Design:PaletteCategory.DataPlaceholders">
+      <ExcludeIfKeywords>
+        <Keyword>Fpga</Keyword>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <Leaf Display="Control Reference" ElementId="NI.MocCommon:ControlReference" UniqueId="NI.LabVIEW.VI.ControlReference" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/ControlReferenceControl_40x40.xml" Weight="0.51">
+        <Synonyms>Control refnum</Synonyms>
+        <pf:MergeScript>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+            <moc:DataItem Id="1" Name="Control Reference" DataType=":DotNet:NationalInstruments.PanelRuntime.ControlProxy, NationalInstruments.PanelRuntime">
+              <p.DefaultValue>null</p.DefaultValue>
+            </moc:DataItem>
+          </pf:MergeItem>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+            <moc:DataAccessor DataItem="1">
+              <pf:Terminal Direction="Output" Id="Value"/>
+            </moc:DataAccessor>
+          </pf:MergeItem>
+          <pf:MergeItem Path=".">
+            <OpaqueRefnum BaseName="[string]OpaqueRefnum" Width="[float]24" Height="[float]24" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" RefnumType="[Type]:DotNet:NationalInstruments.PanelRuntime.ControlProxy, NationalInstruments.PanelRuntime"/>
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="VI Reference" ElementId="NI.MocCommon:VIReference" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/VIReferenceControl_40x40.xml" UniqueId="NI.LabVIEW.VI.VIReferenceControl">
+        <Synonyms>VI refnum</Synonyms>
+        <pf:MergeScript>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+            <moc:DataItem Id="1" Name="VI Reference" DataType=":VIRefnum:NationalInstruments.SourceModel.DataTypes.VIRefnum">
+            </moc:DataItem>
+          </pf:MergeItem>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+            <moc:DataAccessor DataItem="1">
+              <pf:Terminal Direction="Output" Id="Value"/>
+            </moc:DataAccessor>
+          </pf:MergeItem>
+          <pf:MergeItem Path=".">
+            <OpaqueRefnum BaseName="[string]VIReference" Width="[float]24" Height="[float]24" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design" RefnumType="[Type]:VIRefnum:NationalInstruments.SourceModel.DataTypes.VIRefnum"/>
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+      <Leaf Display="G Object Control" ToolTip="G Object Control" UniqueId="GObjectControl" Weight="0.91" ElementId="NI.MocCommon:GObjectControl" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/GObjectControl.xml">
+        <ExcludeIfKeywords>
+          <Keyword>Fpga</Keyword>
+          <Keyword>Hls</Keyword>
+        </ExcludeIfKeywords>
+        <pf:MergeScript>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+            <moc:DataItem Name="G Object" DataType="@GObjectControl" Id="1">
+              <p.DefaultValue>null</p.DefaultValue>
+            </moc:DataItem>
+          </pf:MergeItem>
+          <pf:MergeItem>
+            <pf:DataTypeReferenceTable>
+              <pf:p.TypeReference TypeId="GObjectControl">
+                <pf:Composite BaseType="Void" GenericTypeDefinition="Void" Name="gObject" Id="1" />
+              </pf:p.TypeReference>
+            </pf:DataTypeReferenceTable>
+          </pf:MergeItem>
+          <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+            <moc:DataAccessor DataItem="1">
+              <pf:Terminal Direction="Output" Id="Value" />
+            </moc:DataAccessor>
+          </pf:MergeItem>
+          <pf:MergeItem Path=".">
+            <ValueClassControl BaseName="[string]G Object" ValueClassControl="[Type]@GObjectControl" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/MocCommon" />
+          </pf:MergeItem>
+        </pf:MergeScript>
+      </Leaf>
+    </Category>
+    <Leaf Display="Image" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/SimpleImage_40x40.xml" ToolTip="Image Control" UniqueId="ImageControl" Weight="0.5" ElementId="NI.PlatformFramework:Image">
+      <pf:MergeScript>
+        <pf:MergeItem>
+          <pf:Image Width="[float]88" Height="[float]88" Stretch="[SMStretch]Uniform" BaseName="[string]Image" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Picture Display" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/PictureDisplay_40x40.xml" RequiredFeatureToggle="Controls.LabVIEW.Design.FeatureToggle.PictureDisplay" ToolTip="Picture Display" UniqueId="PictureDisplay" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:PictureDisplay">
+      <Synonyms>Pict ring</Synonyms>
+      <ExcludeIfKeywords>
+        <Keyword>Hls</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Picture Display" DataType="Int32" AdaptToDiagramType="False">
+            <p.DefaultValue>0</p.DefaultValue>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <pf:Terminal Direction="Input" Id="Value" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem>
+          <PictureDisplay Width="[float]88" Height="[float]88" Stretch="[SMStretch]Uniform" BaseName="[string]PictureDisplay" Value="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design"/>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Picture" CodeReadiness="Prototype" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/PictureControl_40x40.xml" ToolTip="Picture Control" UniqueId="PictureControl" Weight="0.5" ElementId="NI.Controls.LabVIEW.Design:Picture">
+      <pf:MergeScript>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner">
+          <moc:DataItem Id="1" Name="Picture" DataType="@1" AdaptToDiagramType="False">
+            <p.DefaultValue>""</p.DefaultValue>
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Picture::Picture.gtype" />
+            </p.TypeDefinitionTargets>
+          </moc:DataItem>
+        </pf:MergeItem>
+        <pf:MergeItem Path="./ancestor::SourceFile/=IDataItemOwner/=DiagramUnplacedItems">
+          <moc:DataAccessor DataItem="1">
+            <Terminal DataType="@1" Direction="Input" Id="Value" xmlns="http://www.ni.com/PlatformFramework" />
+          </moc:DataAccessor>
+        </pf:MergeItem>
+        <pf:MergeItem Path=".">
+          <PictureControl Width="[float]88" Height="[float]88" BaseName="Picture" Data="{DataItemBinding Id=1}" xmlns="http://www.ni.com/Controls.LabVIEW.Design">
+            <p.TypeDefinitionTargets xmlns="http://www.ni.com/PanelCommon">
+              <TypeDefinitionTarget TargetName="NI::G Core::Picture::Picture.gtype::ControlDefinition" />
+            </p.TypeDefinitionTargets>
+          </PictureControl>
+        </pf:MergeItem>
+        <pf:MergeItem IsPrimary="False">
+          <pf:DataTypeReferenceTable>
+            <pf:p.TypeReference TypeId="1">
+              <Attributed>
+                <AttributedType>
+                  <Typedef TypedefName="Picture.gtype" Encapsulated="True" UnderlyingType="String" />
+                </AttributedType>
+                <AttributeValues>
+                  <AttributeValue Name="NationalInstruments.NamespaceName" Value="[QualifiedName]NI::G Core::Picture" />
+                </AttributeValues>
+              </Attributed>
+            </pf:p.TypeReference>
+          </pf:DataTypeReferenceTable>
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Line" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/Line_40x40.xml" ToolTip="Line" UniqueId="Line" Weight="0.5" ElementId="NI.PlatformFramework:Line">
+      <ExcludeIfKeywords>
+        <Keyword>Replace</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem>
+          <pf:Line BaseName="[string]Line" PlacementHelper="ShapeBuilder" ShapeBuilder="Line" ArrowLocation="[ArrowLocation]None" Stroke="[SMSolidColorBrush]FFFFFFFF" StrokeThickness="[float]2.0" Fill="[SMSolidColorBrush]FF2B3033" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+    <Leaf Display="Line with Arrows" ImagePath="/NationalInstruments.PlatformFramework;component/Resources/Panel/LineArrow_40x40.xml" ToolTip="Line" UniqueId="LineArrow" Weight="0.5" ElementId="NI.PlatformFramework:LineArrow">
+      <ExcludeIfKeywords>
+        <Keyword>Replace</Keyword>
+      </ExcludeIfKeywords>
+      <pf:MergeScript>
+        <pf:MergeItem>
+          <pf:Line BaseName="[string]Line" PlacementHelper="ShapeBuilder" ShapeBuilder="Line" ArrowLocation="[ArrowLocation]End" Stroke="[SMSolidColorBrush]FFFFFFFF" StrokeThickness="[float]2.0" Fill="[SMSolidColorBrush]FF2B3033" />
+        </pf:MergeItem>
+      </pf:MergeScript>
+    </Leaf>
+  </Category>
+  <!--    <Category Display="Lines" ToolTip="Lines" UniqueId="NI.Controls.LabVIEW.Design:PaletteCategory.Lines" Weight="0.85">        <Leaf Display="Arc"ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Arc.png"
+ToolTip="Arc"UniqueId="Arc" Weight="0.5">            <sdk:MergeScript>                <controls:LVArc
+designer:DesignerNodeProperties.PlacementHelper="ShapeBuilder"shapes:ShapeBuilderBase.ShapeType="Arc"
+Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns:controls="http://schemas.ni.com/controls/2009/xaml/presentation"
+designer:DesignerNodeProperties.BaseName="Arc"StrokeThickness="1" />            </sdk:MergeScript>
+</Leaf>        <Leaf Display="Line" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Line.png"ToolTip="Line"
+UniqueId="Line" Weight="0.5">            <sdk:MergeScript>                <wpf:Path designer:DesignerNodeProperties.PlacementHelper="ShapeBuilder"shapes:ShapeBuilderBase.ShapeType="Line"
+Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Line"
+StrokeThickness="1" />            </sdk:MergeScript></Leaf>        <Leaf Display="Pen" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Pen.png"ToolTip="Pen"
+UniqueId="Pen" Weight="0.5">            <sdk:MergeScript>                <wpf:Path designer:DesignerNodeProperties.PlacementHelper="ShapeBuilder"shapes:ShapeBuilderBase.ShapeType="Pen"
+Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Pen"
+StrokeThickness="1" />            </sdk:MergeScript></Leaf>        <Leaf Display="PolyBezier" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/PolyBezier.png"ToolTip="PolyBezier"
+UniqueId="Bezier" Weight="0.5">            <sdk:MergeScript>                <wpf:Pathdesigner:DesignerNodeProperties.PlacementHelper="ShapeBuilder"
+shapes:ShapeBuilderBase.ShapeType="Bezier"Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Polybezier"
+StrokeThickness="1" />            </sdk:MergeScript></Leaf>        <Leaf Display="Polycurve" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/PolyCurve.png"ToolTip="Polycurve"
+UniqueId="PolyCurve" Weight="0.5">            <sdk:MergeScript>                <wpf:Pathdesigner:DesignerNodeProperties.PlacementHelper="ShapeBuilder"
+shapes:ShapeBuilderBase.ShapeType="PolyCurve"Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Polycurve"
+StrokeThickness="1" />            </sdk:MergeScript></Leaf>        <Leaf Display="Polyline" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Polyline.png"ToolTip="Polyline"
+UniqueId="Polyline" Weight="0.5">            <sdk:MergeScript>                <wpf:Pathdesigner:DesignerNodeProperties.PlacementHelper="ShapeBuilder"
+shapes:ShapeBuilderBase.ShapeType="Polyline"Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Polyline"
+StrokeThickness="1" />            </sdk:MergeScript></Leaf>        <Leaf Display="Polygon" ImagePath="/NationalInstruments.Controls.Design;component/Resources/FrontPanel/Polygon.png"ToolTip="Polygon"
+UniqueId="Polygon" Weight="0.5">            <sdk:MergeScript>                <wpf:Pathdesigner:DesignerNodeProperties.PlacementHelper="ShapeBuilder"
+shapes:ShapeBuilderBase.ShapeType="Polygon"Stroke="#FF000000" xmlns:designer="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+xmlns:shapes="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework"designer:DesignerNodeProperties.BaseName="Polygon"
+StrokeThickness="1">                    <wpf:Path.Fill><wpf:SolidColorBrush Color="White" />
+</wpf:Path.Fill>                </wpf:Path></sdk:MergeScript>        </Leaf>    </Category>-->
+  <!-- The Add-Ons category is used to display palette items of add-on packages(if any), so it's just an empty category here. -->
+  <Category Display="Add-ons" UniqueId="NI.Controls:PaletteCategory.Addons" ElementId="NI.LabVIEW.VI:PaletteCategory.Addons" Weight="35" ImagePath="/NationalInstruments.VI;component/Design/Resources/AddOns_40x40.xml" BackgroundImagePath="/NationalInstruments.MocCommon;component/Resources/Palette/Backgrounds/PaletteCategory_40x40.xml"/>
+</PaletteControls>

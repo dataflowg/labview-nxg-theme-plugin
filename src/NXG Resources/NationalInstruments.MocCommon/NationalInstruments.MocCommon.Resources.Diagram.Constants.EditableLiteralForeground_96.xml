@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable/>
+  <Items>
+    <NineGridPathList Height="15" Width="40">
+      <Paths>
+        <!--NOTE: While this xml is titled "Foreground", it is actually the background to the text input.-->
+        <!--Text background-->
+        <NineGridPath Color="GrayNodeInnerBorder" Data="F1 M35,14H5V1h30V14z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

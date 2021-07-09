@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList>
+      <Paths>
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 0,0L 2,0L 2,1L 1,1L 1,5L 2,5L 2,6L 0,6L 0,0 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 17,0L 17,6L 15,6L 15,5L 16,5L 16,1L 15,1L 15,0L 17,0 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 12,0L 11.5,4L 10.5,4L 10,0L 12,0 Z M 12,6L 10,6L 10,5L 12,5L 12,6 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 5.22728,0.882874L 6.43993,0L 8.5,2.82953L 5.22728,0.882874 Z " />
+        <NineGridPath X="0" Y="0" Color="#FFFFFFFF" Data="F1 M 4.02568,4L 4.10422,2.86304L 6.50003,3.1496L 4.02568,4 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!--Converted from: 
+
+<?xml version="1.0" encoding="utf-8"?>
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="17" Height="6" Clip="F1 M 0,0L 17,0L 17,6L 0,6L 0,0">
+	<Canvas x:Name="array" Width="799.999" Height="600" Canvas.Left="0" Canvas.Top="0">
+		<Path x:Name="Path" Width="2" Height="6" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 0,0L 2,0L 2,1L 1,1L 1,5L 2,5L 2,6L 0,6L 0,0 Z "/>
+		<Path x:Name="_8_points_" Width="2" Height="6" Canvas.Left="15" Canvas.Top="0" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 17,0L 17,6L 15,6L 15,5L 16,5L 16,1L 15,1L 15,0L 17,0 Z "/>
+	</Canvas>
+	<Canvas x:Name="Layer_4" Width="799.999" Height="600" Canvas.Left="0" Canvas.Top="0">
+		<Path x:Name="_2_sub_paths__8_points_" Width="2" Height="6" Canvas.Left="10" Canvas.Top="0" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 12,0L 11.5,4L 10.5,4L 10,0L 12,0 Z M 12,6L 10,6L 10,5L 12,5L 12,6 Z "/>
+		<Path x:Name="Path_0" Width="3.27272" Height="2.82953" Canvas.Left="5.22728" Canvas.Top="0" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 5.22728,0.882874L 6.43993,0L 8.5,2.82953L 5.22728,0.882874 Z "/>
+		<Path x:Name="Path_1" Width="2.47435" Height="1.13696" Canvas.Left="4.02568" Canvas.Top="2.86304" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 4.02568,4L 4.10422,2.86304L 6.50003,3.1496L 4.02568,4 Z "/>
+	</Canvas>
+</Canvas>
+-->

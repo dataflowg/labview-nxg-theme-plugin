@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NXGTheme", "NXGTheme.csproj", "{46F65BFD-06BB-4656-AB67-C0E937492B2E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x64 = Debug|x64
+		Release|Any CPU = Release|Any CPU
+		Release|x64 = Release|x64
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Debug|x64.ActiveCfg = Debug|x64
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Debug|x64.Build.0 = Debug|x64
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Release|x64.ActiveCfg = Release|x64
+		{46F65BFD-06BB-4656-AB67-C0E937492B2E}.Release|x64.Build.0 = Release|x64
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {5102114A-14DD-49CE-B2AF-B1C7D80819BD}
+	EndGlobalSection
+EndGlobal

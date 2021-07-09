@@ -1,0 +1,792 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:core="clr-namespace:NationalInstruments.Core;assembly=NationalInstruments.Core" xmlns:smDesigner="clr-namespace:NationalInstruments.Design;assembly=NationalInstruments.PlatformFramework" xmlns:coreControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core" xmlns:coreConverters="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="pack://application:,,,/NationalInstruments.PlatformFramework;component/Themes/TextAndFonts.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<coreConverters:BooleanToNotBooleanConverter
+		x:Key="BoolToNotBoolConverter" />
+	<smDesigner:DiagramZIndexEnumToIntConverter
+		x:Key="DiagramZIndexToIntConverter" />
+	<s:Double
+		x:Key="Stock_DiagramFontSize">11</s:Double>
+	<LinearGradientBrush
+		StartPoint="0.362987,-0.000259399"
+		EndPoint="0.362987,0.187241"
+		x:Key="StockNorGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.412949,0.998444"
+		EndPoint="0.412949,0.810944"
+		x:Key="StockNorGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.362987,-0.000263214"
+		EndPoint="0.362987,0.187241"
+		x:Key="StockNxorGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.412949,0.998436"
+		EndPoint="0.412949,0.810936"
+		x:Key="StockNxorGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.477597,0.995277"
+		EndPoint="0.477597,0.810379"
+		x:Key="StockNandGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.379878,0.00178528"
+		EndPoint="0.379878,0.314285"
+		x:Key="StockNandGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.389036,0.000459459"
+		EndPoint="0.389036,0.167126"
+		x:Key="StockRectGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.472369,1.00046"
+		EndPoint="0.472369,0.833793"
+		x:Key="StockRectGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.446366,0.000203451"
+		EndPoint="0.446366,0.333537"
+		x:Key="StockBulletGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.446366,1.0002"
+		EndPoint="0.446366,0.66687"
+		x:Key="StockBulletGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.498732,0.769003"
+		EndPoint="0.670662,0.769003"
+		x:Key="StockTriangleGradient1">
+		<Brush.RelativeTransform>
+			<TransformGroup>
+				<SkewTransform
+					CenterX="0"
+					CenterY="0"
+					AngleX="0"
+					AngleY="0" />
+				<RotateTransform
+					CenterX="0"
+					CenterY="0"
+					Angle="243.422" />
+			</TransformGroup>
+		</Brush.RelativeTransform>
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.0371933,0.00257154"
+		EndPoint="0.0371933,0.233222"
+		x:Key="StockTriangleGradient2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.362987,-0.000259399"
+		EndPoint="0.362987,0.187241"
+		x:Key="LogicalOrGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.412949,0.998436"
+		EndPoint="0.412949,0.810936"
+		x:Key="LogicalOrGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.362987,-0.000259399"
+		EndPoint="0.362987,0.187241"
+		x:Key="ExclusiveOrGradient1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.412949,0.998444"
+		EndPoint="0.412949,0.810944"
+		x:Key="ExclusiveOrGradient2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.387689,1.00045"
+		EndPoint="0.387689,0.885067"
+		x:Key="FeedbackEnableRightGrad1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.534331,-0.000361521"
+		EndPoint="0.534331,0.115025"
+		x:Key="FeedbackEnableRightGrad2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.61231,1.00045"
+		EndPoint="0.61231,0.885067"
+		x:Key="FeedbackEnableLeftGrad1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.465668,-0.000359173"
+		EndPoint="0.465668,0.115027"
+		x:Key="FeedbackEnableLeftGrad2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.440083,-0.00181991"
+		EndPoint="0.440083,0.2709"
+		x:Key="FeedbackNodeRightGrad1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.507556,0.999101"
+		EndPoint="0.507556,0.726383"
+		x:Key="FeedbackNodeRightGrad2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.559916,-0.00181435"
+		EndPoint="0.559916,0.270904"
+		x:Key="FeedbackNodeLeftGrad1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.507556,0.999101"
+		EndPoint="0.507556,0.726383"
+		x:Key="FeedbackNodeLeftGrad2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.389036,0.000459459"
+		EndPoint="0.389036,0.167126"
+		x:Key="GrowNodeGradientBrush1">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.472369,1.00046"
+		EndPoint="0.472369,0.833793"
+		x:Key="GrowNodeGradientBrush2">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.477597,0.995274"
+		EndPoint="0.477597,0.81038"
+		x:Key="AndShapeBlackGradientBrush">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#0D000000"
+				Offset="0" />
+			<GradientStop
+				Color="#07000000"
+				Offset="0.1875" />
+			<GradientStop
+				Color="#00000000"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		StartPoint="0.379878,0.00179289"
+		EndPoint="0.379878,0.314291"
+		x:Key="AndShapeWhiteGradientBrush">
+		<GradientBrush.GradientStops>
+			<GradientStop
+				Color="#80FFFFFF"
+				Offset="0" />
+			<GradientStop
+				Color="#00FFFFFF"
+				Offset="1" />
+		</GradientBrush.GradientStops>
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		EndPoint="0.5,1"
+		StartPoint="0.5,0"
+		x:Key="NodeBottomGradient">
+		<GradientStop
+			Color="#FFF2F2C2"
+			Offset="1" />
+		<GradientStop
+			Color="#FFFFFFD7" />
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		EndPoint="0.5,1"
+		StartPoint="0.5,0"
+		x:Key="NodeTopGradient">
+		<GradientStop
+			Color="#FFFFFFF2"
+			Offset="0" />
+		<GradientStop
+			Color="#FFFFFFD7"
+			Offset="1" />
+	</LinearGradientBrush>
+	<Style
+		TargetType="{x:Type Control}"
+		x:Key="Stock_Icon">
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Control}">
+					<Grid
+						Name="PART_LayoutRoot">
+						<core:NineGrid
+							Name="PART_Background"
+							DataSource="{Binding IconDataSource}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<LinearGradientBrush
+		EndPoint="0.5,1"
+		StartPoint="0.5,0"
+		x:Key="LightNodeBottomGradient">
+		<GradientStop
+			Color="#FFE6E6E6" />
+		<GradientStop
+			Color="#FFD9D9D9"
+			Offset="1" />
+	</LinearGradientBrush>
+	<LinearGradientBrush
+		EndPoint="0.5,1"
+		StartPoint="0.5,0"
+		x:Key="LightNodeTopGradient">
+		<GradientStop
+			Color="#FFFAFAFA" />
+		<GradientStop
+			Color="#FFE6E6E6"
+			Offset="1" />
+	</LinearGradientBrush>
+	<Style
+		TargetType="{x:Type Control}"
+		x:Key="Stock_Structure">
+		<Setter
+			Property="Panel.ZIndex"
+			Value="{Binding Source={x:Static smDesigner:DiagramZIndex.Structure}, Converter={StaticResource DiagramZIndexToIntConverter}}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Control}">
+					<Grid
+						Name="LayoutRoot"
+						Background="#00FFFFFF">
+						<smDesigner:DiagramCanvas
+							Name="NestedDiagram"
+							Background="#10FFFFFF"
+							DataContext="{Binding Path=NestedDiagram}"
+							Margin="{Binding DataContext.DiagramMargin, ElementName=LayoutRoot, Mode=OneTime}" />
+						<core:NineGrid
+							IsHitTestVisible="False"
+							Data="{Binding ForegroundImageData}"
+							Opacity="{Binding BorderOpacity}" />
+						<Border
+							BorderBrush="#00000000"
+							CornerRadius="{Binding OverlayCornerRadius, Mode=OneTime}"
+							BorderThickness="{Binding OverlayThickness, Mode=OneTime}"
+							Background="{x:Null}" />
+						<smDesigner:DiagramCanvas
+							IsHitTestVisible="True"
+							DataContext="{Binding Path=BorderNodeDiagram}"
+							Background="{x:Null}"
+							Opacity="{Binding DataContext.Opacity, ElementName=LayoutRoot}" />
+						<ContentPresenter
+							Content="{Binding Content}" />
+						<smDesigner:WatermarkTextControl
+							TextOptions.TextFormattingMode="Ideal"
+							FontSize="14"
+							Margin="0,1,22,0"
+							Text="{Binding ElementName=NestedDiagram, Path=DocumentLanguageName}" />
+						<core:NineGrid
+							DataSource="{Binding GlyphData}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Control}"
+		x:Key="Stock_MultipleDiagramStructure">
+		<Setter
+			Property="Panel.ZIndex"
+			Value="{Binding Source={x:Static smDesigner:DiagramZIndex.Structure}, Converter={StaticResource DiagramZIndexToIntConverter}}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Control}">
+					<Grid>
+						<Rectangle
+							Name="MDSRectTop"
+							Height="5"
+							VerticalAlignment="Top"
+							StrokeThickness="1.5"
+							Stroke="{Binding ViewColor}">
+							<Shape.Fill>
+								<LinearGradientBrush
+									EndPoint="16.288,3.495"
+									StartPoint="7.272,3.43"
+									SpreadMethod="Repeat"
+									MappingMode="Absolute">
+									<GradientStop
+										Offset="0"
+										Color="{Binding ViewColor}" />
+									<GradientStop
+										Color="White"
+										Offset="0.501" />
+									<GradientStop
+										Offset="0.5"
+										Color="{Binding ViewColor}" />
+								</LinearGradientBrush>
+							</Shape.Fill>
+						</Rectangle>
+						<Rectangle
+							Height="5"
+							VerticalAlignment="Bottom"
+							StrokeThickness="1.5"
+							Stroke="{Binding ViewColor}">
+							<Shape.Fill>
+								<LinearGradientBrush
+									EndPoint="16.288,3.495"
+									StartPoint="7.272,3.43"
+									SpreadMethod="Repeat"
+									MappingMode="Absolute">
+									<GradientStop
+										Offset="0"
+										Color="{Binding ViewColor}" />
+									<GradientStop
+										Color="White"
+										Offset="0.501" />
+									<GradientStop
+										Offset="0.5"
+										Color="{Binding ViewColor}" />
+								</LinearGradientBrush>
+							</Shape.Fill>
+						</Rectangle>
+						<ItemsControl
+							Name="_Frames"
+							HorizontalAlignment="Left"
+							Margin="5,0,0,0"
+							ItemsSource="{Binding Path=NestedDiagrams}">
+							<ItemsControl.ItemsPanel>
+								<ItemsPanelTemplate>
+									<StackPanel
+										Orientation="Horizontal" />
+								</ItemsPanelTemplate>
+							</ItemsControl.ItemsPanel>
+							<ItemsControl.ItemTemplate>
+								<DataTemplate>
+									<Grid
+										Background="#00FFFFFF"
+										Margin="-5,0,0,0">
+										<Rectangle
+											Name="_frame"
+											Tag="frame"
+											Margin="5,0,5,0"
+											Height="5"
+											VerticalAlignment="Top"
+											IsHitTestVisible="True" />
+										<Rectangle
+											Name="_frame2"
+											Tag="frame"
+											Margin="5,0,5,0"
+											Height="5"
+											VerticalAlignment="Bottom"
+											IsHitTestVisible="True" />
+										<Rectangle
+											Name="_between"
+											Tag="between"
+											Margin="0,5,0,5"
+											Width="5"
+											HorizontalAlignment="Left"
+											IsHitTestVisible="True"
+											Fill="{Binding Path=Stroke, ElementName=MDSRectTop}" />
+										<Rectangle
+											Name="_after"
+											Tag="after"
+											Margin="0,5,0,5"
+											Width="5"
+											HorizontalAlignment="Right"
+											IsHitTestVisible="True"
+											Fill="{Binding Path=Stroke, ElementName=MDSRectTop}" />
+										<smDesigner:DiagramCanvas
+											Name="_Diagram"
+											Background="#A0FFFFFF"
+											Margin="5,5,5,5" />
+									</Grid>
+								</DataTemplate>
+							</ItemsControl.ItemTemplate>
+						</ItemsControl>
+						<smDesigner:DiagramCanvas
+							IsHitTestVisible="True"
+							DataContext="{Binding Path=BorderNodeDiagram}"
+							Background="{x:Null}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type smDesigner:TextContentElementView}"
+		x:Key="Stock_NineGridBackgroundTextContent">
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type smDesigner:TextContentElementView}">
+					<Grid
+						Name="PART_LayoutRoot"
+						HorizontalAlignment="Stretch">
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<core:NineGrid
+								Data="{Binding BackgroundImageData}" />
+						</Grid>
+						<Grid>
+							<smDesigner:TransactedTextBox
+								Name="PART_TextContent"
+								MinHeight="14"
+								MinWidth="15"
+								VerticalAlignment="Center"
+								FontFamily="{DynamicResource DiagramFont}"
+								TextBrush="#404040"
+								RenderOptions.ClearTypeHint="Enabled"
+								FontSize="{StaticResource Stock_DiagramFontSize}"
+								Margin="{Binding TextContentMargin}"
+								TextAlignment="{Binding TextContentTextAlignment}"
+								Text="{Binding TransactedText}"
+								HorizontalAlignment="{Binding TextHorizontalAlignment}"
+								AcceptsReturn="{Binding AcceptsReturn}"
+								AcceptsTab="{Binding AcceptsTab}"
+								IsHitTestVisible="{Binding IsReadOnly, Converter={StaticResource BoolToNotBoolConverter}}" />
+						</Grid>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<core:NineGrid
+								Name="PART_Foreground"
+								IsHitTestVisible="False"
+								Data="{Binding ForegroundImageData}" />
+							<ContentPresenter
+								Content="{Binding Content}" />
+						</Grid>
+						<core:NineGrid
+							IsHitTestVisible="False"
+							DataSource="{Binding GlyphData}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Control}"
+		x:Key="Stock_NineGridContent">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Control}">
+					<Grid
+						Name="PART_LayoutRoot">
+						<core:NineGrid
+							DataSource="{Binding NineGridRenderData}" />
+						<ContentPresenter
+							Content="{Binding Content}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<DataTemplate
+		x:Key="BaseCommandParameterTemplate">
+		<StackPanel
+			Name="BaseCommandParameterTemplate_StackPanel"
+			Orientation="Horizontal">
+			<coreConverters:ImageMask
+				Name="PART_Image"
+				Margin="0,0,5,0"
+				Stretch="None"
+				Source="{Binding SmallImageSource}" />
+			<TextBlock
+				Name="PART_Text"
+				VerticalAlignment="Center"
+				Text="{Binding LabelTitle}" />
+		</StackPanel>
+		<DataTemplate.Triggers>
+			<Trigger
+				SourceName="PART_Image"
+				Property="Source"
+				Value="{x:Null}">
+				<Setter
+					TargetName="PART_Image"
+					Property="Visibility"
+					Value="Collapsed" />
+				<Setter
+					TargetName="PART_Text"
+					Property="Margin"
+					Value="8,0,0,0" />
+			</Trigger>
+			<DataTrigger
+				Value="True"
+				Binding="{Binding IsSelected, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBoxItem}}}">
+				<Setter
+					TargetName="PART_Image"
+					Property="coreControls:ImageMask.Brush"
+					Value="{Binding (coreControls:CoreControlStyling.IconFocusedBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ComboBox}}}" />
+			</DataTrigger>
+		</DataTemplate.Triggers>
+	</DataTemplate>
+</ResourceDictionary>

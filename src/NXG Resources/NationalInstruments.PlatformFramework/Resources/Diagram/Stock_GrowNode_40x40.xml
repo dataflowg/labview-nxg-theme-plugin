@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" SlicingStretchMode="Precise" Slicing="5,5,5,5">
+      <Paths>
+        <NineGridPath Color="NodeBorder" Width="40" Height="40" X="0" Y="0" Data="M0,4 C0,1.790861 1.790861,0 4,0 L36,0 C38.209139,0 40,1.790861 40,4 L40,36 C40,38.209139 38.209139,40 36,40 L4,40 C1.790861,40 0,38.209139 0,36 z" />
+        <NineGridPath Color="NodeBackground" Width="40" Height="40" X="1" Y="1" Data="M0,4 C0,1.790861 1.790861,0 4,0 L34,0 C36.209139,0 38,1.790861 38,4 L38,34 C38,36.209139 36.209139,38 34,38 L4,38 C1.790861,38 0,36.209139 0,34 z" />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas x:Name="Rectangle" Height="40" Margin="5" Width="40">
+  <Path Data="M0,4 C0,1.790861 1.790861,0 4,0 L36,0 C38.209139,0 40,1.790861 40,4 L40,36 C40,38.209139 38.209139,40 36,40 L4,40 C1.790861,40 0,38.209139 0,36 z" Fill="#FFA9A991" Width="40" Height="40" d:LayoutOverrides="Width, Height" Canvas.Left="0" Canvas.Top="0"/>
+  <Path Data="M0,4 C0,1.790861 1.790861,0 4,0 L34,0 C36.209139,0 38,1.790861 38,4 L38,34 C38,36.209139 36.209139,38 34,38 L4,38 C1.790861,38 0,36.209139 0,34 z" Fill="#FFFFFFFF" Width="40" Height="40" Canvas.Left="1" Canvas.Top="1" d:LayoutOverrides="Width, Height"/>
+  <Path Data="M0,4 C0,1.790861 1.790861,0 4,0 L32,0 C34.209139,0 36,1.790861 36,4 L36,32 C36,34.209139 34.209139,36 32,36 L4,36 C1.790861,36 0,34.209139 0,32 z" Fill="#FFFFFFD7" Width="40" Height="40" Canvas.Left="2" Canvas.Top="2" d:LayoutOverrides="Width, Height"/>
+</Canvas>-->

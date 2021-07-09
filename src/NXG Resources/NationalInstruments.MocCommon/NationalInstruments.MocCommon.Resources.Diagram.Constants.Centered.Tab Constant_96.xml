@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable/>
+  <Items>
+    <NineGridPathList Height="14.9999999999982" Width="40">
+      <Paths>
+        <NineGridPath Color="#FFF017F0" Data="F1 M12,6h7l-2-4l7,5.5L17,13l2-4h-7V6z M27,2h-3v11h3V2z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

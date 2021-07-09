@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Width="17" Height="17" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Width="16.5" Height="16.5002" Color="#FFFFFFFF" Data="F1 M 14,-7.62939e-006L 0.500016,-7.62939e-006L 17,16.5002L 17,3.00005C 17,1.00004 16,-7.62939e-006 14,-7.62939e-006 Z " />
+        <NineGridPath X="0" Y="0" Width="13" Height="13.0002" Color="#FFB51F2F" Data="F1 M 14,1C 14.9999,1.00008 16,2 16,3L 15.9996,14.0002L 3,0.999918L 14,1 Z M 15,3.13135L 13.8687,2L 11.5032,4.54305L 12.3853,5.42521L 15,3.13135 Z M 10.8705,7.26083L 11.6059,6.52547L 10.4745,5.39413L 9.73913,6.12948L 10.8705,7.26083 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="ErrorGlyph17X17" Width="17" Height="17" Clip="F1 M 0,0L 17,0L 17,17L 0,17L 0,0">
+	<Path x:Name="Path" Width="16.5" Height="16.5002" Canvas.Left="0.500016" Canvas.Top="-7.62939e-006" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 14,-7.62939e-006L 0.500016,-7.62939e-006L 17,16.5002L 17,3.00005C 17,1.00004 16,-7.62939e-006 14,-7.62939e-006 Z "/>
+	<Path x:Name="Path_0" Width="13" Height="13.0002" Canvas.Left="3" Canvas.Top="0.999918" Stretch="Fill" Fill="#FFD40B0B" Data="F1 M 14,1C 14.9999,1.00008 16,2 16,3L 15.9996,14.0002L 3,0.999918L 14,1 Z M 15,3.13135L 13.8687,2L 11.5032,4.54305L 12.3853,5.42521L 15,3.13135 Z M 10.8705,7.26083L 11.6059,6.52547L 10.4745,5.39413L 9.73913,6.12948L 10.8705,7.26083 Z "/>
+</Canvas>
+-->

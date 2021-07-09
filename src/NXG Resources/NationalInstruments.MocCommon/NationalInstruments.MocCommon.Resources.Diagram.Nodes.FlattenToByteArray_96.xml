@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable/>
+  <Items>
+    <NineGridPathList Height="40" Width="40">
+      <Paths>
+        <NineGridPath Color="NodeForeground50" Data="F1 M23,19c0,0,1-6-6-6v-1c8,0,7,7,7,7l2-1l-2.5,4L21,18L23,19z"/>
+        <NineGridPath Color="NodeForeground100" Data="F1 M8.991,12.083L8.96,18.01l-4.96-3V9.083L8.991,12.083z    M10,12.083l0.031,5.927l4.96-3V9.083L10,12.083z M9.417,5L4.006,8.057l5.411,3.026l5.463-3.026L9.417,5z M21.417,23L17,25.5   l4.5,2.5l4.458-2.5L21.417,23z M31.417,23L27,25.5l4.5,2.5l4.458-2.5L31.417,23z M26.437,27.021l-4.417,2.5l4.5,2.5l4.458-2.5   L26.437,27.021z M21.458,31l-4.417,2.5l4.5,2.5L26,33.5L21.458,31z M31.458,31l-4.417,2.5l4.5,2.5L36,33.5L31.458,31z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

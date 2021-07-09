@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <Items>
+    <NineGridPathList Key="H_0" SlicingStretchMode="Fast" Slicing="0,2,0,2" Width="1" Height="4">
+        <Paths>
+          <NineGridPath Color="#FFEBEBEB" Data="F1 M0,0 h1v4h-1v-4z"/>
+          <NineGridPath Color="#FF8ED6F5" Data="F1 M1,1H0V0h1V1z M1,3H0v1h1V3z"/>
+        </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_0" SlicingStretchMode="Fast" Slicing="2,0,2,0" Width="4" Height="1">
+      <Paths>
+        <NineGridPath Color="#FFEBEBEB" Data="F1 M0,0 h4v1h-4v-1z"/>
+        <NineGridPath Color="#FF8ED6F5" Data="F1 M1,0v1H0l0-1L1,0z M3,0v1h1V0L3,0z"/>
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="H_1" Slicing="0,2,0,2" Width="1" Height="4">
+      <Paths>
+        <NineGridPath Color="#FF8ED6F5" Data="F1 M1,2H0V0h1V2z M1,2H0v2h1V2z"/>
+      </Paths>
+    </NineGridPathList>
+    <NineGridPathList Key="V_1" Slicing="2,0,2,0" Width="4" Height="1">
+      <Paths>
+        <NineGridPath Color="#FF8ED6F5" Data="F1 M2,0v1H0l0-1L2,0z M2,0v1h2V0L2,0z"/>
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>

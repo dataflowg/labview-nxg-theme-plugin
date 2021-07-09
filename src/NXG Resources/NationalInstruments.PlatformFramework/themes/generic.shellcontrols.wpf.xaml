@@ -1,0 +1,3753 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:ni="clr-namespace:NationalInstruments" xmlns:fuseControls="clr-namespace:NationalInstruments.FuseControls;assembly=NationalInstruments.FuseControlsImplementation" xmlns:shellControls="clr-namespace:NationalInstruments.Controls.Shell" xmlns:shell="clr-namespace:NationalInstruments.Shell" xmlns:shellRestricted="clr-namespace:NationalInstruments.Restricted.Shell" xmlns:launcherView="clr-namespace:NationalInstruments.Shell.Launcher.View" xmlns:coreControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core" xmlns:core="clr-namespace:NationalInstruments.Core;assembly=NationalInstruments.Core" xmlns:coreConverters="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Core" xmlns:niControls="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls" xmlns:niBooleans="clr-namespace:NationalInstruments.Controls;assembly=NationalInstruments.Controls.Booleans" xmlns:niConvertersControls="clr-namespace:NationalInstruments.Controls.Converters;assembly=NationalInstruments.Controls" xmlns:designer="clr-namespace:NationalInstruments.Design" xmlns:system="clr-namespace:System;assembly=mscorlib" xmlns:po="http://schemas.microsoft.com/winfx/2006/xaml/presentation/options" xmlns:niLabVIEW="http://schemas.ni.com/controls/2009/xaml/presentation">
+	<ResourceDictionary.MergedDictionaries>
+		<ResourceDictionary
+			Source="/NationalInstruments.PlatformFramework;component/Themes/common.xaml" />
+		<ResourceDictionary
+			Source="/NationalInstruments.Controls.SkinProviders.MocControls;component/IDESkins/lvlinearprogressbar.ide.wpf.xaml" />
+		<ResourceDictionary
+			Source="/NationalInstruments.PlatformFramework;component/Controls/Shell/ShellDigitPicker`TData.WPF.xaml" />
+		<ResourceDictionary
+			Source="/NationalInstruments.Controls.SkinProviders.MocControls;component/IDESkins/StringControl.IDE.WPF.xaml" />
+	</ResourceDictionary.MergedDictionaries>
+	<BooleanToVisibilityConverter
+		x:Key="BooleanToVisibilityConverter" />
+	<core:SMTextTrimmingConverter
+		x:Key="SMTextTrimmingConverter" />
+	<coreConverters:InvertedBooleanToVisibilityConverter
+		x:Key="InvertedBooleanToVisibilityConverter" />
+	<shellControls:DeleteButtonVisibilityConverter
+		x:Key="DeleteButtonVisibilityConverter" />
+	<shellControls:ColumnDisplayIndexToColumnDividerVisibilityConverter
+		x:Key="ColumnDisplayIndexToColumnDividerVisibilityConverter" />
+	<launcherView:IsValueGreaterThanParameterConverter
+		x:Key="IsValueGreaterThanParameterConverter" />
+	<niConvertersControls:ColorTableColorResolverConverter
+		x:Key="ColorTableConverter" />
+	<niConvertersControls:DynamicColorTableColorResolverConverter
+		x:Key="DynamicColorTableConverter" />
+	<shellControls:IsTabStopValueToButtonIconPathDataConverter
+		x:Key="IsTabStopValueToButtonIconPathDataConverter" />
+	<shellControls:IsTabStopValueToToolTipConverter
+		x:Key="IsTabStopValueToToolTipConverter" />
+	<Style
+		TargetType="{x:Type Thumb}"
+		x:Key="DataGridColumnHeaderGripperStyle">
+		<Setter
+			Property="Width"
+			Value="8" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="SizeWE" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Thumb}">
+					<Border
+						Background="{TemplateBinding Background}"
+						Padding="{TemplateBinding Padding}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridColumnHeader}"
+		x:Key="NIDataGridColumnHeaderStyle">
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource PaneFill}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource PaneFill}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="Padding"
+			Value="2,0,2,0" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridColumnHeader}">
+					<Grid
+						SnapsToDevicePixels="True">
+						<Border
+							Name="InnerHeaderBorder"
+							Grid.Column="0"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							BorderThickness="1"
+							Height="22"
+							Background="{TemplateBinding Background}"
+							Padding="{TemplateBinding Padding}">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="*" />
+									<ColumnDefinition
+										Width="Auto" />
+								</Grid.ColumnDefinitions>
+								<ContentPresenter
+									Name="HeaderContent"
+									Grid.Column="0"
+									HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+									Margin="8,0,14,1"
+									RecognizesAccessKey="True"
+									SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+									VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+								<Path
+									Name="SortArrow"
+									Grid.Column="1"
+									Visibility="Collapsed"
+									Data="M0,0 L0.6,0 L0.3,2"
+									Stretch="Fill"
+									Width="4"
+									Height="4"
+									Margin="5"
+									VerticalAlignment="Center"
+									RenderTransformOrigin="0.5,0.4"
+									Fill="{StaticResource NIGrayBrush}" />
+							</Grid>
+						</Border>
+						<Border
+							Background="#00FFFFFF"
+							Padding="{TemplateBinding Padding}"
+							HorizontalAlignment="Right">
+							<Rectangle
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								Height="18"
+								Width="1"
+								Fill="{StaticResource NIDropDownGrayBrush}">
+								<UIElement.Visibility>
+									<MultiBinding
+										Converter="{StaticResource ColumnDisplayIndexToColumnDividerVisibilityConverter}">
+										<Binding
+											Path="Column.DisplayIndex"
+											RelativeSource="{RelativeSource TemplatedParent}" />
+										<Binding
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+										<Binding
+											Path="(shellControls:DataGridDisplayBehavior.LastVisibleColumnIndex)"
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+										<Binding
+											Path="GridLinesVisibility"
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+									</MultiBinding>
+								</UIElement.Visibility>
+							</Rectangle>
+						</Border>
+						<Thumb
+							Name="PART_LeftHeaderGripper"
+							HorizontalAlignment="Left"
+							Style="{StaticResource DataGridColumnHeaderGripperStyle}" />
+						<Thumb
+							Name="PART_RightHeaderGripper"
+							HorizontalAlignment="Right"
+							Style="{StaticResource DataGridColumnHeaderGripperStyle}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="DataGridColumnHeader.CanUserSort"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="BorderBrush"
+								Value="{StaticResource ButtonHoverBorderBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="Background"
+								Value="{StaticResource ButtonHoverBackgroundBrush}" />
+						</MultiTrigger>
+						<Trigger
+							Property="DataGridColumnHeader.CanUserSort"
+							Value="False">
+							<Setter
+								TargetName="HeaderContent"
+								Property="Margin"
+								Value="8,0,10,1" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="IsPressed"
+									Value="True" />
+								<Condition
+									Property="DataGridColumnHeader.CanUserSort"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource ButtonPressedTextBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="BorderBrush"
+								Value="{StaticResource ButtonPressedBorderBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="Background"
+								Value="{StaticResource ButtonPressedBackgroundBrush}" />
+							<Setter
+								TargetName="SortArrow"
+								Property="Fill"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</MultiTrigger>
+						<Trigger
+							Property="Height"
+							Value="Auto">
+							<Setter
+								Property="MinHeight"
+								Value="22" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+								Property="Foreground" />
+						</Trigger>
+						<Trigger
+							Property="DataGridColumnHeader.SortDirection"
+							Value="Ascending">
+							<Setter
+								TargetName="HeaderContent"
+								Property="Margin"
+								Value="8,0,0,1" />
+							<Setter
+								TargetName="SortArrow"
+								Property="Visibility"
+								Value="Visible" />
+							<Setter
+								TargetName="SortArrow"
+								Property="RenderTransform">
+								<Setter.Value>
+									<RotateTransform
+										Angle="180" />
+								</Setter.Value>
+							</Setter>
+						</Trigger>
+						<Trigger
+							Property="DataGridColumnHeader.SortDirection"
+							Value="Descending">
+							<Setter
+								TargetName="HeaderContent"
+								Property="Margin"
+								Value="8,0,0,1" />
+							<Setter
+								TargetName="SortArrow"
+								Property="Visibility"
+								Value="Visible" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridRow}"
+		x:Key="NIDataGridRowStyle">
+		<Setter
+			Property="Height"
+			Value="{Binding RowHeight, RelativeSource={RelativeSource AncestorType={x:Type shellControls:DataGrid}}}" />
+		<Setter
+			Property="MinHeight"
+			Value="19" />
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="Validation.ErrorTemplate"
+			Value="{x:Null}" />
+		<Setter
+			Property="DataGridRow.ValidationErrorTemplate">
+			<Setter.Value>
+				<ControlTemplate>
+					<TextBlock
+						Foreground="#FFFF0000"
+						Margin="2,0,0,0"
+						Text="!"
+						VerticalAlignment="Center" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridRow}">
+					<Border
+						Name="DGR_Border"
+						BorderThickness="0"
+						Background="{TemplateBinding Background}"
+						SnapsToDevicePixels="True">
+						<SelectiveScrollingGrid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="Auto" />
+								<ColumnDefinition
+									Width="*" />
+							</Grid.ColumnDefinitions>
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="Auto" />
+							</Grid.RowDefinitions>
+							<DataGridCellsPresenter
+								Name="CellPresenter"
+								Grid.Column="1"
+								ItemsPanel="{TemplateBinding ItemsPanel}"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+							<DataGridDetailsPresenter
+								Grid.Column="1"
+								Grid.Row="1"
+								Visibility="{TemplateBinding DetailsVisibility}"
+								SelectiveScrollingGrid.SelectiveScrollingOrientation="{Binding AreRowDetailsFrozen, ConverterParameter={x:Static SelectiveScrollingOrientation.Vertical}, Converter={x:Static DataGrid.RowDetailsScrollingConverter}, RelativeSource={RelativeSource AncestorType={x:Type DataGrid}}}" />
+							<DataGridRowHeader
+								Grid.Column="0"
+								Grid.Row="0"
+								Grid.RowSpan="2"
+								SelectiveScrollingGrid.SelectiveScrollingOrientation="Vertical"
+								Width="15"
+								Visibility="Collapsed" />
+							<Border
+								Name="DGR_OverlayBorder"
+								Grid.Column="0"
+								Grid.Row="0"
+								Grid.ColumnSpan="2"
+								Grid.RowSpan="2"
+								BorderThickness="1"
+								BorderBrush="#00FFFFFF"
+								Background="#00FFFFFF"
+								SnapsToDevicePixels="True"
+								IsHitTestVisible="False"
+								Margin="0,-1,0,0" />
+						</SelectiveScrollingGrid>
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="DataGridRow.IsSelected"
+							Value="True">
+							<Setter
+								TargetName="DGR_OverlayBorder"
+								Property="BorderBrush"
+								Value="{StaticResource SelectedRowBorder}" />
+							<Setter
+								TargetName="DGR_Border"
+								Property="Background"
+								Value="{StaticResource SelectedRowBackground}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="DGR_OverlayBorder"
+								Property="BorderBrush"
+								Value="{StaticResource HoverRowBorder}" />
+							<Setter
+								TargetName="DGR_Border"
+								Property="Background"
+								Value="{StaticResource HoverRowBackground}" />
+						</Trigger>
+						<Trigger
+							Property="DataGridRow.AlternationIndex"
+							Value="0">
+							<Setter
+								Property="Background"
+								Value="{Binding RowBackground, RelativeSource={RelativeSource AncestorType={x:Type shellControls:DataGrid}}}" />
+						</Trigger>
+						<Trigger
+							Property="DataGridRow.AlternationIndex"
+							Value="1">
+							<Setter
+								Property="Background"
+								Value="{Binding AlternatingRowBackground, RelativeSource={RelativeSource AncestorType={x:Type shellControls:DataGrid}}}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type DataGridCell}"
+		x:Key="NIDataGridCellStyle">
+		<Setter
+			Property="Padding"
+			Value="10,0,0,0" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type DataGridCell}">
+					<Grid
+						Background="{TemplateBinding Background}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="1" />
+						</Grid.ColumnDefinitions>
+						<ContentPresenter
+							VerticalAlignment="Center"
+							Grid.Column="0"
+							Margin="{TemplateBinding Padding}" />
+						<Border
+							Grid.Column="1"
+							Background="#00FFFFFF"
+							HorizontalAlignment="Right">
+							<Rectangle
+								Name="DGC_VerticalSeparator"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								Height="14"
+								Width="1"
+								Fill="{StaticResource NIGrayCool81Brush}">
+								<UIElement.Visibility>
+									<MultiBinding
+										Converter="{StaticResource ColumnDisplayIndexToColumnDividerVisibilityConverter}">
+										<Binding
+											Path="Column.DisplayIndex"
+											RelativeSource="{RelativeSource TemplatedParent}" />
+										<Binding
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+										<Binding
+											Path="(shellControls:DataGridDisplayBehavior.LastVisibleColumnIndex)"
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+										<Binding
+											Path="GridLinesVisibility"
+											RelativeSource="{RelativeSource AncestorType={x:Type shellControls:DataGrid}}" />
+									</MultiBinding>
+								</UIElement.Visibility>
+							</Rectangle>
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="DataGridCell.IsSelected"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{StaticResource SelectedCellBackground}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{StaticResource SelectedCellBackground}" />
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource Text}" />
+			</Trigger>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{StaticResource HoverCellBackground}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{StaticResource HoverCellBackground}" />
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource Text}" />
+			</Trigger>
+			<Trigger
+				Property="UIElement.IsFocused"
+				Value="True">
+				<Setter
+					Property="BorderBrush"
+					Value="{StaticResource HoverCellBackground}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:DataGrid}"
+		x:Key="NIDataGridStyle">
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource NICoolWhiteBrush}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="DataGrid.RowBackground"
+			Value="{StaticResource DarkRowFill}" />
+		<Setter
+			Property="DataGrid.AlternatingRowBackground"
+			Value="{StaticResource LightRowFill}" />
+		<Setter
+			Property="DataGrid.ColumnHeaderStyle"
+			Value="{StaticResource NIDataGridColumnHeaderStyle}" />
+		<Setter
+			Property="DataGrid.RowStyle"
+			Value="{StaticResource NIDataGridRowStyle}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource PaneBorder}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0,1,0,0" />
+		<Setter
+			Property="DataGrid.VerticalGridLinesBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="DataGrid.HorizontalGridLinesBrush"
+			Value="{StaticResource DataGridCellBorder}" />
+		<Setter
+			Property="DataGrid.RowDetailsVisibilityMode"
+			Value="VisibleWhenSelected" />
+		<Setter
+			Property="CanContentScroll"
+			Value="True" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="Both" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="DataGrid.RowHeight"
+			Value="19" />
+		<Setter
+			Property="DataGrid.CellStyle"
+			Value="{StaticResource NIDataGridCellStyle}" />
+		<Setter
+			Property="FontFamily"
+			Value="{DynamicResource IdeFont}" />
+		<Setter
+			Property="FontSize"
+			Value="{StaticResource IdeFontSize}" />
+		<Setter
+			Property="DataGrid.VerticalScrollBarVisibility"
+			Value="Auto" />
+		<Setter
+			Property="DataGrid.HorizontalScrollBarVisibility"
+			Value="Auto" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="shellControls:DataGridDisplayBehavior.HideLastColumnDivider"
+			Value="True" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:DataGrid}">
+					<FrameworkTemplate.Resources>
+						<ResourceDictionary>
+							<shellControls:IsGreaterThanZeroConverter
+								x:Key="IsGreaterThanZero" />
+							<shellControls:IsOddNumberConverter
+								x:Key="IsOddNumber" />
+						</ResourceDictionary>
+					</FrameworkTemplate.Resources>
+					<Border
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						Background="{TemplateBinding Background}"
+						Padding="{TemplateBinding Padding}"
+						SnapsToDevicePixels="True">
+						<ScrollViewer
+							Name="DG_ScrollViewer"
+							Focusable="False">
+							<Control.Template>
+								<ControlTemplate
+									TargetType="{x:Type ScrollViewer}">
+									<Grid
+										Name="DataGridBackground"
+										Background="{StaticResource LightRowFill}">
+										<Grid.ColumnDefinitions>
+											<ColumnDefinition
+												Width="Auto" />
+											<ColumnDefinition
+												Width="*" />
+											<ColumnDefinition
+												Width="Auto" />
+										</Grid.ColumnDefinitions>
+										<Grid.RowDefinitions>
+											<RowDefinition
+												Height="Auto" />
+											<RowDefinition
+												Height="*" />
+											<RowDefinition
+												Height="Auto" />
+										</Grid.RowDefinitions>
+										<Button
+											Command="ApplicationCommands.SelectAll"
+											Focusable="False"
+											Style="{DynamicResource {ComponentResourceKey ResourceId=DataGridSelectAllButtonStyle, TypeInTargetAssembly={x:Type DataGrid}}}"
+											Width="{Binding CellsPanelHorizontalOffset, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type DataGrid}}}">
+											<UIElement.Visibility>
+												<Binding
+													Path="HeadersVisibility"
+													RelativeSource="{RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type DataGrid}}">
+													<Binding.ConverterParameter>
+														<DataGridHeadersVisibility>All</DataGridHeadersVisibility>
+													</Binding.ConverterParameter>
+												</Binding>
+											</UIElement.Visibility>
+										</Button>
+										<Border
+											Name="PART_ColumnHeaderLowerBorder"
+											BorderThickness="0,1,0,1"
+											HorizontalAlignment="Stretch"
+											Grid.ColumnSpan="3"
+											BorderBrush="{StaticResource NIDropDownGrayBrush}">
+											<Border
+												BorderThickness="1"
+												HorizontalAlignment="Stretch"
+												BorderBrush="{StaticResource NITrueWhiteBrush}">
+												<DataGridColumnHeadersPresenter
+													Name="PART_ColumnHeadersPresenter">
+													<UIElement.Visibility>
+														<Binding
+															Path="HeadersVisibility"
+															Converter="{x:Static DataGrid.HeadersVisibilityConverter}"
+															RelativeSource="{RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type DataGrid}}">
+															<Binding.ConverterParameter>
+																<DataGridHeadersVisibility>Column</DataGridHeadersVisibility>
+															</Binding.ConverterParameter>
+														</Binding>
+													</UIElement.Visibility>
+												</DataGridColumnHeadersPresenter>
+											</Border>
+										</Border>
+										<ScrollContentPresenter
+											Name="PART_ScrollContentPresenter"
+											CanContentScroll="{TemplateBinding CanContentScroll}"
+											CanHorizontallyScroll="False"
+											Grid.ColumnSpan="2"
+											Grid.Column="0"
+											CanVerticallyScroll="False"
+											ContentTemplate="{TemplateBinding ContentTemplate}"
+											Content="{TemplateBinding Content}"
+											ContentStringFormat="{TemplateBinding ContentStringFormat}"
+											Grid.Row="1" />
+										<Border
+											Grid.Column="2"
+											Grid.Row="1"
+											BorderThickness="1,0,0,0"
+											Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+											BorderBrush="{StaticResource NIDropDownGrayBrush}">
+											<ScrollBar
+												Name="PART_VerticalScrollBar"
+												AutomationProperties.AutomationId="VerticalScrollBar"
+												Orientation="Vertical"
+												Maximum="{TemplateBinding ScrollableHeight}"
+												Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+												ViewportSize="{TemplateBinding ViewportHeight}"
+												Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+										</Border>
+										<Border
+											Grid.Column="0"
+											Grid.Row="2"
+											Grid.ColumnSpan="2"
+											BorderThickness="0,1,0,0"
+											Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+											BorderBrush="{StaticResource NIDropDownGrayBrush}">
+											<Grid>
+												<Grid.ColumnDefinitions>
+													<ColumnDefinition
+														Width="{Binding NonFrozenColumnsViewportHorizontalOffset, RelativeSource={RelativeSource FindAncestor, AncestorLevel=1, AncestorType={x:Type DataGrid}}}" />
+													<ColumnDefinition
+														Width="*" />
+												</Grid.ColumnDefinitions>
+												<ScrollBar
+													Name="PART_HorizontalScrollBar"
+													AutomationProperties.AutomationId="HorizontalScrollBar"
+													Orientation="Horizontal"
+													Grid.Column="1"
+													Maximum="{TemplateBinding ScrollableWidth}"
+													Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+													ViewportSize="{TemplateBinding ViewportWidth}"
+													Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+											</Grid>
+										</Border>
+									</Grid>
+									<ControlTemplate.Triggers>
+										<DataTrigger
+											Value="False"
+											Binding="{Binding Items.Count, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type shellControls:DataGrid}}, Converter={StaticResource IsGreaterThanZero}}">
+											<Setter
+												TargetName="PART_ColumnHeaderLowerBorder"
+												Property="BorderThickness"
+												Value="0" />
+										</DataTrigger>
+										<DataTrigger
+											Value="True"
+											Binding="{Binding Items.Count, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type shellControls:DataGrid}}, Converter={StaticResource IsOddNumber}}">
+											<Setter
+												TargetName="DataGridBackground"
+												Property="Background"
+												Value="{StaticResource DarkRowFill}" />
+										</DataTrigger>
+										<MultiDataTrigger>
+											<MultiDataTrigger.Conditions>
+												<Condition
+													Value="True"
+													Binding="{Binding IsGrouping, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type shellControls:DataGrid}}}" />
+												<Condition
+													Value="True"
+													Binding="{Binding Items.Count, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type shellControls:DataGrid}}, Converter={StaticResource IsGreaterThanZero}}" />
+											</MultiDataTrigger.Conditions>
+											<Setter
+												TargetName="PART_ColumnHeaderLowerBorder"
+												Property="BorderThickness"
+												Value="0" />
+										</MultiDataTrigger>
+									</ControlTemplate.Triggers>
+								</ControlTemplate>
+							</Control.Template>
+							<ItemsPresenter
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+						</ScrollViewer>
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="ItemsControl.IsGrouping"
+				Value="True">
+				<Setter
+					Property="CanContentScroll"
+					Value="False" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:DataGrid}"
+		BasedOn="{StaticResource NIDataGridStyle}"
+		x:Key="{x:Type shellControls:DataGrid}" />
+	<DataTemplate
+		x:Key="{ComponentResourceKey shellControls:DataGridReorderColumnReorder}">
+		<Control
+			Name="MoveGlyph"
+			Background="#00FFFFFF"
+			Width="7"
+			Height="15"
+			Focusable="False">
+			<Control.Template>
+				<ControlTemplate
+					TargetType="{x:Type Control}">
+					<Grid
+						Background="#00FFFFFF">
+						<Path
+							Name="Path"
+							Height="15"
+							Width="7"
+							Data="F1 M2,5 L2,4 L3,4 L3,5 L2,5 M3,7 L3,6 L2,6 L2,7 L3,7 M3,9 L3,8 L2,8 L2,9 L3,9 M3,11 L3,10 L2,10 L2,11 L3,11 M5,5 L5,4 L4,4 L4,5 L5,5 M5,7 L5,6 L4,6 L4,7 L5,7 M5,9 L5,8 L4,8 L4,9 L5,9 M5,11 L5,10 L4,10 L4,11 L5,11 M7,5 L7,4 L6,4 L6,5 L7,5 M7,7 L7,6 L6,6 L6,7 L7,7 M7,9 L7,8 L6,8 L6,9 L7,9 M7,11 L7,10 L6,10 L6,11 L7,11 M3,13 L3,12 L2,12 L2,13 L3,13 M3,15 L3,14 L2,14 L2,15 L3,15 M1,5 L1,4 L0,4 L0,5 L1,5 M1,7 L1,6 L0,6 L0,7 L1,7 M3,1 L3,0 L2,0 L2,1 L3,1 M3,3 L3,2 L2,2 L2,3 L3,3 M5,1 L5,0 L4,0 L4,1 L5,1 M5,3 L5,2 L4,2 L4,3 L5,3 M7,1 L7,0 L6,0 L6,1 L7,1 M7,3 L7,2 L6,2 L6,3 L7,3 M1,1 L1,0 L0,0 L0,1 L1,1 M1,3 L1,2 L0,2 L0,3 L1,3 M1,9 L1,8 L0,8 L0,9 L1,9 M1,11 L1,10 L0,10 L0,11 L1,11 M1,13 L1,12 L0,12 L0,13 L1,13 M1,15 L1,14 L0,14 L0,15 L1,15 M5,13 L5,12 L4,12 L4,13 L5,13 M5,15 L5,14 L4,14 L4,15 L5,15 M7,13 L7,12 L6,12 L6,13 L7,13 M7,15 L7,14 L6,14 L6,15 L7,15"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Fill="#00FFFFFF" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}">
+							<Setter
+								TargetName="Path"
+								Property="Fill"
+								Value="{StaticResource NIMediumGrayBrush}" />
+							<Setter
+								Property="FrameworkElement.Cursor"
+								Value="SizeNS" />
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsSelected, RelativeSource={RelativeSource AncestorType=DataGridRow}}">
+							<Setter
+								TargetName="Path"
+								Property="Fill"
+								Value="{StaticResource NIMediumGrayBrush}" />
+						</DataTrigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding Path=DataContext.AllowValueReordering, RelativeSource={RelativeSource AncestorType=shellControls:ShellDataGrid}}">
+							<Setter
+								Property="Visibility"
+								Value="Hidden" />
+							<Setter
+								Property="IsEnabled"
+								Value="False" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Control.Template>
+		</Control>
+	</DataTemplate>
+	<DataTemplate
+		x:Key="{ComponentResourceKey shellControls:DataGridDeleteColumnDelete}">
+		<Button
+			Name="DeleteButton"
+			Width="20"
+			Command="{x:Static shellControls:DataGridDeleteColumn.DeleteRow}"
+			Focusable="False"
+			CommandTarget="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type shellControls:DataGrid}}}">
+			<UIElement.Visibility>
+				<MultiBinding
+					Converter="{StaticResource DeleteButtonVisibilityConverter}">
+					<Binding
+						Path="Columns"
+						RelativeSource="{RelativeSource AncestorType=DataGrid}" />
+					<Binding
+						Path="Items.Count"
+						RelativeSource="{RelativeSource AncestorType=DataGrid}" />
+					<Binding
+						Path="IsEnabled"
+						RelativeSource="{RelativeSource Self}" />
+				</MultiBinding>
+			</UIElement.Visibility>
+			<Control.Template>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<ContentPresenter
+						Name="ButtonContent"
+						Content="{TemplateBinding Content}"
+						Visibility="Hidden" />
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}">
+							<Setter
+								TargetName="ButtonContent"
+								Property="Visibility"
+								Value="Visible" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Control.Template>
+			<ContentControl.Content>
+				<Canvas
+					Height="19"
+					Width="19">
+					<Ellipse
+						Height="12"
+						Width="12"
+						Canvas.Top="4"
+						Canvas.Left="4"
+						Fill="{StaticResource NIMediumGrayBrush}" />
+					<Path
+						Data="M7,13 L13,7 M7,7 L13,13"
+						StrokeThickness="2"
+						Stroke="{StaticResource NITrueWhiteBrush}" />
+				</Canvas>
+			</ContentControl.Content>
+		</Button>
+	</DataTemplate>
+	<DataTemplate
+		x:Key="{ComponentResourceKey shellControls:DataGridSetTabStopColumnSetTabStop}">
+		<Button
+			Name="SetTabStopButton"
+			Width="20"
+			Command="{x:Static shellControls:DataGridSetTabStopColumn.SetTabStop}"
+			Focusable="False"
+			ToolTip="{Binding Path=IsTabStop, Converter={StaticResource IsTabStopValueToToolTipConverter}}"
+			Visibility="{Binding Path=IsControl, FallbackValue=Collapsed, Converter={StaticResource BooleanToVisibility}}">
+			<Control.Template>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<ContentPresenter
+						Name="ButtonContent"
+						Content="{TemplateBinding Content}"
+						Visibility="Hidden" />
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource AncestorType=DataGridRow}}">
+							<Setter
+								TargetName="ButtonContent"
+								Property="Visibility"
+								Value="Visible" />
+						</DataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Control.Template>
+			<ContentControl.Content>
+				<Canvas
+					Height="19"
+					Width="19">
+					<Ellipse
+						Height="12"
+						Width="12"
+						Canvas.Top="4"
+						Canvas.Left="4"
+						Fill="{StaticResource NIMediumGrayBrush}" />
+					<Path
+						StrokeThickness="2"
+						Stroke="{StaticResource NITrueWhiteBrush}"
+						Data="{Binding Path=IsTabStop, Converter={StaticResource IsTabStopValueToButtonIconPathDataConverter}}" />
+				</Canvas>
+			</ContentControl.Content>
+		</Button>
+	</DataTemplate>
+	<Style
+		TargetType="{x:Type DataGridCell}"
+		BasedOn="{StaticResource NIDataGridCellStyle}"
+		x:Key="{ComponentResourceKey shellControls:DataGridNIDataGridCellNonTextStyle}">
+		<Setter
+			Property="Padding"
+			Value="0,0,0,0" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ThinTextBox}"
+		x:Key="{x:Type shellControls:ThinTextBox}">
+		<Setter
+			Property="MinWidth"
+			Value="10" />
+		<Setter
+			Property="MinHeight"
+			Value="10" />
+		<Setter
+			Property="shellControls:ThinTextBox.TextTrimming"
+			Value="CharacterEllipsis" />
+		<Setter
+			Property="Foreground"
+			Value="{Binding Path=TextBrush, RelativeSource={RelativeSource Self}}" />
+		<Setter
+			Property="coreControls:NITextBoxBehaviors.TextBoxTripleClick"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="FrameworkElement.UseLayoutRounding"
+			Value="False" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="{x:Static Cursors.IBeam}" />
+		<Setter
+			Property="shellControls:ThinTextBox.TextBrush"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="coreControls:InteractiveTemplateBehavior.InteractiveTemplate">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ThinTextBox}">
+					<Grid>
+						<ScrollViewer
+							Name="PART_ContentHost"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+							Padding="{TemplateBinding Padding}"
+							Margin="-2,0,-2,0"
+							Visibility="Hidden" />
+						<TextBlock
+							Name="PART_TextBlock"
+							Padding="{TemplateBinding Padding}"
+							Text="{TemplateBinding Text}"
+							TextWrapping="{TemplateBinding TextWrapping}"
+							FontSize="{TemplateBinding FontSize}"
+							FontFamily="{TemplateBinding FontFamily}"
+							TextDecorations="{TemplateBinding TextDecorations}"
+							TextTrimming="{TemplateBinding TextTrimming, Converter={StaticResource SMTextTrimmingConverter}}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+								Property="Foreground" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsKeyboardFocusWithin"
+							Value="True">
+							<Setter
+								TargetName="PART_ContentHost"
+								Property="Visibility"
+								Value="Visible" />
+							<Setter
+								TargetName="PART_TextBlock"
+								Property="Visibility"
+								Value="Hidden" />
+						</Trigger>
+						<Trigger
+							Property="shellControls:ThinTextBox.TextTrimming"
+							Value="None">
+							<Setter
+								TargetName="PART_ContentHost"
+								Property="Visibility"
+								Value="Visible" />
+							<Setter
+								TargetName="PART_TextBlock"
+								Property="Visibility"
+								Value="Hidden" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellTextBox}"
+		BasedOn="{StaticResource {x:Type niLabVIEW:StringControl}}"
+		x:Key="{x:Type shellControls:ShellTextBox}">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="UIElement.AllowDrop"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="ScrollViewer.PanningMode"
+			Value="VerticalFirst" />
+		<Setter
+			Property="Stylus.IsFlicksEnabled"
+			Value="False" />
+		<Setter
+			Property="FrameworkElement.UseLayoutRounding"
+			Value="True" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Top" />
+		<Setter
+			Property="shellControls:ControlWatermarkBehavior.WatermarkTextPadding"
+			Value="4, 0, 0, 1" />
+		<Setter
+			Property="Visibility"
+			Value="{Binding Path=CommandParameter.Visible, RelativeSource={RelativeSource Self}, Converter={StaticResource BooleanToVisibilityConverter}}" />
+		<Setter
+			Property="FrameworkElement.ContextMenu">
+			<Setter.Value>
+				<ContextMenu
+					Visibility="Hidden" />
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="shellControls:ShellTextBox.State"
+				Value="Warning">
+				<Setter
+					Property="core:RenderHelpers.ColorResolver"
+					Value="{Binding ConverterParameter=Warning, RelativeSource={RelativeSource Self}, Converter={StaticResource DynamicColorTableConverter}}" />
+			</Trigger>
+			<Trigger
+				Property="shellControls:ShellTextBox.State"
+				Value="Error">
+				<Setter
+					Property="core:RenderHelpers.ColorResolver"
+					Value="{Binding ConverterParameter=Error, RelativeSource={RelativeSource Self}, Converter={StaticResource DynamicColorTableConverter}}" />
+			</Trigger>
+			<MultiTrigger>
+				<MultiTrigger.Conditions>
+					<Condition
+						Property="TextBoxBase.IsInactiveSelectionHighlightEnabled"
+						Value="True" />
+					<Condition
+						Property="TextBoxBase.IsSelectionActive"
+						Value="False" />
+				</MultiTrigger.Conditions>
+				<Setter
+					Property="TextBoxBase.SelectionBrush"
+					Value="{DynamicResource SystemColors.InactiveSelectionHighlightBrushKey}" />
+			</MultiTrigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type designer:WatermarkTextControl}"
+		x:Key="{x:Type designer:WatermarkTextControl}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type designer:WatermarkTextControl}">
+					<TextBlock
+						Opacity="0.25"
+						FontFamily="{DynamicResource DiagramFont}"
+						FontWeight="Bold"
+						Padding="0,5,8,0"
+						IsHitTestVisible="False"
+						HorizontalAlignment="Right"
+						VerticalAlignment="Top"
+						Foreground="{StaticResource NITrueBlackBrush}"
+						Text="{Binding Path=Text, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}"
+						FontSize="{Binding Path=FontSize, RelativeSource={RelativeSource TemplatedParent}}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ButtonBase}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="ToolLauncherButtonStyle">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+	</Style>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="DockableWindowCloseButtonStyle">
+		<Setter
+			Property="FrameworkElement.ToolTip"
+			Value="{core:Localizer AssemblyName=NationalInstruments.PlatformFramework, ResourcesClassName=NationalInstruments.PlatformFramework.Resources.LocalizedStrings, Key=DockableWindows_Tooltip_Close}" />
+		<Setter
+			Property="Foreground"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Right" />
+		<Setter
+			Property="Width"
+			Value="12" />
+		<Setter
+			Property="Height"
+			Value="12" />
+		<Setter
+			Property="Margin"
+			Value="2,1,3,1" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Top" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Border
+						Name="CloseButtonBorder"
+						Background="#00FFFFFF"
+						BorderBrush="#00FFFFFF"
+						BorderThickness="1"
+						Height="{TemplateBinding Height}"
+						Width="{TemplateBinding Width}">
+						<Path
+							Name="X"
+							Width="6"
+							Height="6"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Stretch="Fill"
+							Fill="{TemplateBinding Foreground}"
+							Data="F1 M7.07144,0.00012207 L8.48566,1.41443 L5.65674,4.24353 L8.48535,7.07214 L7.07111,8.48621 L4.24243,5.65759 L1.41455,8.48547 L0.000305176,7.07141 L2.82828,4.24353 L0,1.41516 L1.41422,0.000854492 L4.24243,2.82922 L7.07144,0.00012207" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="X"
+								Property="Fill"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="CloseButtonBorder"
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="CloseButtonBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellButton}"
+		BasedOn="{StaticResource {x:Type fuseControls:FuseShellButton}}"
+		x:Key="{x:Type shellControls:ShellButton}" />
+	<Style
+		TargetType="{x:Type shell:ShellToolBarButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="{x:Type shell:ShellToolBarButton}">
+		<Setter
+			Property="Padding"
+			Value="0" />
+	</Style>
+	<Style
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FastFuseButtonStyle}}"
+		TargetType="{x:Type shellControls:ShellButton}"
+		x:Key="ToolWindowPopupButtonStyle">
+		<Setter
+			Property="Margin"
+			Value="10,1,10,1" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellToggleButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FastFuseShellToggleButtonStyle}}"
+		x:Key="ToggleForConfigurationPaneStyle">
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIButtonFillBrush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIGrayNeutral68Brush}" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellRestricted:SourceFileMessageShellToggleButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FastFuseShellToggleButtonStyle}}"
+		x:Key="{x:Type shellRestricted:SourceFileMessageShellToggleButton}" />
+	<Style
+		TargetType="{x:Type shellControls:ChoiceToggleButtonGroup}"
+		BasedOn="{StaticResource {x:Type shellControls:ChoiceToggleButtonGroup}}"
+		x:Key="ChoiceToggleButtonGroupForToolBarStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NICoolWhiteBrush}" />
+		<Setter
+			Property="coreControls:ColorTable.OverridePalette">
+			<Setter.Value>
+				<coreConverters:ColorTable>
+					<coreConverters:ColorTable.Brushes>
+						<coreConverters:BrushDictionary>
+							<SolidColorBrush
+								x:Key="border_dynamic"
+								Color="{StaticResource NIHighlight}" />
+							<SolidColorBrush
+								x:Key="border_mouseOver"
+								Color="{StaticResource NIHighlight}" />
+							<SolidColorBrush
+								x:Key="border_pressed"
+								Color="{StaticResource NIHighlight}" />
+							<SolidColorBrush
+								x:Key="background_trans_dynamic"
+								Color="{StaticResource NICoolWhite}" />
+							<SolidColorBrush
+								x:Key="background_trans_pressed"
+								Color="{StaticResource NIHighlight}" />
+						</coreConverters:BrushDictionary>
+					</coreConverters:ColorTable.Brushes>
+				</coreConverters:ColorTable>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ChoiceToggleButtonGroup}"
+		x:Key="ChoiceToggleButtonGroupForHorizontallyExpandableChoiceButtonGroupStyle">
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIGrayCool92Brush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIGrayCool92Brush}" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ChoiceToggleButtonGroup}">
+					<Border
+						Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}">
+						<Grid
+							Name="PART_Root"
+							Background="#00FFFFFF"
+							IsItemsHost="True" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Property="UIElement.Opacity"
+								Value="0.5" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<system:Double
+		x:Key="MultiRangeSlider_ComboBoxHeight">20</system:Double>
+	<Thickness
+		x:Key="MultiRangeSlider_MinimumLabelMargin">5 0 0 0</Thickness>
+	<Thickness
+		x:Key="MultiRangeSlider_SliderMargin">5 0 17 0</Thickness>
+	<Thickness
+		x:Key="MultiRangeSlider_MaximumLabelMargin">0 0 17 0</Thickness>
+	<shellControls:RangeOptionsToDropDownVisibilityConverter
+		x:Key="MultiRangeSlider_DropDownVisibilityConverter" />
+	<shellControls:RangeOptionsToLabelVisibilityConverter
+		x:Key="MultiRangeSlider_LabelVisibilityConverter" />
+	<shellControls:SelectedRangeOptionToValueConverter
+		x:Key="MultiRangeSlider_SelectedItemConverter" />
+	<Style
+		TargetType="{x:Type Label}"
+		x:Key="MultiRangeSlider_MinimumLabel">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="Margin"
+			Value="{StaticResource MultiRangeSlider_MinimumLabelMargin}" />
+	</Style>
+	<Style
+		TargetType="{x:Type ComboBox}"
+		x:Key="MultiRangeSlider_ComboBox">
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Height"
+			Value="{StaticResource MultiRangeSlider_ComboBoxHeight}" />
+		<Setter
+			Property="Width"
+			Value="Auto" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Right" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Right" />
+	</Style>
+	<Style
+		TargetType="{x:Type TextBlock}"
+		x:Key="MultiRangeSlider_SelectedLabel">
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Right" />
+		<Setter
+			Property="TextBlock.TextAlignment"
+			Value="Right" />
+	</Style>
+	<DataTemplate
+		x:Key="MultiRangeSlider_SelectedTemplate">
+		<TextBlock
+			Padding="10,0,0,0"
+			Style="{StaticResource MultiRangeSlider_SelectedLabel}"
+			Text="{Binding SelectedItem.SelectedMaximumCaption, Mode=OneWay, ElementName=RangeSelector}" />
+	</DataTemplate>
+	<DataTemplate
+		x:Key="MultiRangeSlider_DropDownTemplate">
+		<TextBlock
+			Padding="10,0,0,0"
+			Text="{Binding}" />
+	</DataTemplate>
+	<Style
+		TargetType="{x:Type Label}"
+		x:Key="MultiRangeSlider_MaximumLabel">
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Center" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Right" />
+		<Setter
+			Property="Margin"
+			Value="{StaticResource MultiRangeSlider_MaximumLabelMargin}" />
+	</Style>
+	<shellControls:ComboBoxItemTemplateSelector
+		SelectedTemplate="{StaticResource MultiRangeSlider_SelectedTemplate}"
+		DropDownTemplate="{StaticResource MultiRangeSlider_DropDownTemplate}"
+		x:Key="MultiRangeSlider_ItemTemplateSelector" />
+	<Style
+		TargetType="{x:Type ToggleButton}"
+		x:Key="RangeSliderToggleButton">
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="ButtonBase.ClickMode"
+			Value="Press" />
+		<Setter
+			Property="FrameworkElement.FocusVisualStyle"
+			Value="{x:Null}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ToggleButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Border
+							Name="FocusedBorder"
+							Grid.ColumnSpan="2"
+							BorderThickness="1"
+							Background="#00FFFFFF"
+							BorderBrush="#00FFFFFF">
+							<Border
+								Name="ButtonRect"
+								BorderThickness="2"
+								Background="#00FFFFFF"
+								BorderBrush="#00FFFFFF"
+								Margin="1,1,1,1" />
+						</Border>
+						<Path
+							Name="Arrow"
+							Grid.Column="1"
+							Stretch="Fill"
+							HorizontalAlignment="Right"
+							Height="7"
+							Width="9"
+							Margin="2,0,10,0"
+							Data="{StaticResource DownArrowGeometry}"
+							Fill="{StaticResource Text}" />
+						<ContentPresenter
+							Grid.Column="0"
+							Margin="10,0,0,0" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxDownBackground}"
+								Property="Background" />
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxHighlightColorBrush}"
+								Property="BorderBrush" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="UIElement.IsMouseOver"
+									Value="True" />
+								<Condition
+									Property="ToggleButton.IsChecked"
+									Value="False" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxHoverBackground}"
+								Property="Background" />
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxHighlightColorBrush}"
+								Property="BorderBrush" />
+							<Setter
+								TargetName="Arrow"
+								Value="{DynamicResource ComboBoxHighlightColorBrush}"
+								Property="Fill" />
+						</MultiTrigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxDisabledBackground}"
+								Property="Background" />
+							<Setter
+								TargetName="ButtonRect"
+								Value="{DynamicResource ComboBoxDisabledBackground}"
+								Property="BorderBrush" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:RangeSlider}"
+		x:Key="{x:Type shellControls:RangeSlider}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:RangeSlider}">
+					<Grid
+						DataContext="{RelativeSource TemplatedParent}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Label
+							Grid.Column="0"
+							Style="{StaticResource MultiRangeSlider_MinimumLabel}"
+							Content="{Binding SelectedItem.SelectedMinimumCaption, ElementName=RangeSelector, Mode=OneWay}" />
+						<Slider
+							Name="PART_Slider"
+							IsMoveToPointEnabled="True"
+							Focusable="True"
+							Grid.Column="1"
+							Margin="{StaticResource MultiRangeSlider_SliderMargin}"
+							IsSnapToTickEnabled="{Binding Path=SnapToTick, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+							Value="{Binding Path=SliderValue, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+							Minimum="{Binding Path=SelectedItem.Minimum, Mode=OneWay, ElementName=RangeSelector}"
+							Maximum="{Binding Path=SelectedItem.Maximum, Mode=OneWay, ElementName=RangeSelector}"
+							IsEnabled="{Binding Path=IsEnabled, Mode=TwoWay, RelativeSource={RelativeSource TemplatedParent}}"
+							TickFrequency="{Binding Path=SelectedItem.Interval, Mode=OneWay, ElementName=RangeSelector}"
+							Ticks="{Binding Path=SelectedItem.Ticks, Mode=OneWay, ElementName=RangeSelector}" />
+						<shellControls:ShellComboBox
+							Name="RangeSelector"
+							Grid.Column="2"
+							Style="{StaticResource MultiRangeSlider_ComboBox}"
+							ItemsSource="{Binding Path=RangeOptions, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}"
+							Visibility="{Binding Path=RangeOptions, Mode=OneWay, Converter={StaticResource MultiRangeSlider_DropDownVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}">
+							<Selector.SelectedItem>
+								<MultiBinding
+									Mode="TwoWay"
+									Converter="{StaticResource MultiRangeSlider_SelectedItemConverter}">
+									<Binding
+										Path="SelectedRangeOption"
+										RelativeSource="{RelativeSource TemplatedParent}" />
+									<Binding
+										Path="SliderValue"
+										RelativeSource="{RelativeSource TemplatedParent}" />
+								</MultiBinding>
+							</Selector.SelectedItem>
+							<ItemsControl.ItemTemplateSelector>
+								<shellControls:ComboBoxItemTemplateSelector
+									SelectedTemplate="{StaticResource MultiRangeSlider_SelectedTemplate}"
+									DropDownTemplate="{StaticResource MultiRangeSlider_DropDownTemplate}" />
+							</ItemsControl.ItemTemplateSelector>
+						</shellControls:ShellComboBox>
+						<Label
+							Name="maximumLabel"
+							Grid.Column="2"
+							Style="{StaticResource MultiRangeSlider_MaximumLabel}"
+							Content="{Binding SelectedItem.SelectedMaximumCaption, ElementName=RangeSelector, Mode=OneWay}"
+							Visibility="{Binding Path=RangeOptions, Mode=OneWay, Converter={StaticResource MultiRangeSlider_LabelVisibilityConverter}, RelativeSource={RelativeSource TemplatedParent}}" />
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<CornerRadius
+		x:Key="Banner_ErrorBannerCornerRadius">0 0 3 3</CornerRadius>
+	<Style
+		TargetType="{x:Type shellControls:ExpandableContentControl}"
+		x:Key="Banner_ExpandableContentControlStyle">
+		<Setter
+			Property="IsEnabled"
+			Value="True" />
+		<Setter
+			Property="FrameworkElement.Cursor"
+			Value="Arrow" />
+		<Setter
+			Property="IsTabStop"
+			Value="False" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Top" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ExpandableContentControl}">
+					<ContentPresenter
+						Name="ContentSite"
+						Cursor="{TemplateBinding Cursor}"
+						HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+						VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+						Margin="0"
+						ContentTemplate="{TemplateBinding ContentTemplate}" />
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type Thumb}"
+		x:Key="GridViewColumnHeaderGripper">
+		<Setter
+			Property="Canvas.Right"
+			Value="-9" />
+		<Setter
+			Property="Width"
+			Value="18" />
+		<Setter
+			Property="Height"
+			Value="{Binding ActualHeight, RelativeSource={RelativeSource TemplatedParent}}" />
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Thumb}">
+					<Border
+						Background="#00FFFFFF"
+						Padding="{TemplateBinding Padding}">
+						<Rectangle
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Margin="0,-1,0,0"
+							Height="18"
+							Width="1"
+							Fill="{StaticResource NIBackDropGrayBrush}" />
+					</Border>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type GridViewColumnHeader}"
+		x:Key="GridViewColumnHeaderStyle">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource PaneFill}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource PaneFill}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.MouseOverBackgroundBrush"
+			Value="{Binding Path=Background, RelativeSource={RelativeSource Self}}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.MouseOverBorderBrush"
+			Value="{Binding Path=BorderBrush, RelativeSource={RelativeSource Self}}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.MouseOverForegroundBrush"
+			Value="{Binding Path=Foreground, RelativeSource={RelativeSource Self}}" />
+		<Setter
+			Property="BorderThickness"
+			Value="0" />
+		<Setter
+			Property="Padding"
+			Value="2,0,2,0" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type GridViewColumnHeader}">
+					<Grid
+						SnapsToDevicePixels="True">
+						<Border
+							BorderThickness="0,0,0,1"
+							Background="{TemplateBinding Background}"
+							Height="23"
+							BorderBrush="{StaticResource NITrueWhiteBrush}">
+							<Border
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="1,0,1,0"
+								Height="22"
+								Margin="1,0,2,0"
+								Background="{TemplateBinding Background}">
+								<Border
+									Name="InnerHeaderBorder"
+									BorderThickness="1"
+									Height="22"
+									Padding="{TemplateBinding Padding}"
+									BorderBrush="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBorderBrush), RelativeSource={RelativeSource TemplatedParent}}"
+									Background="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBackgroundBrush), RelativeSource={RelativeSource TemplatedParent}}">
+									<ContentPresenter
+										Name="HeaderContent"
+										HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+										Margin="8,0,14,1"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+								</Border>
+							</Border>
+						</Border>
+						<Canvas>
+							<Thumb
+								Name="PART_HeaderGripper"
+								Style="{StaticResource GridViewColumnHeaderGripper}" />
+						</Canvas>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="Height"
+							Value="Auto">
+							<Setter
+								Property="MinHeight"
+								Value="22" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="GridViewColumnHeader.Role"
+				Value="Floating">
+				<Setter
+					Property="UIElement.Opacity"
+					Value="0.4082" />
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type GridViewColumnHeader}">
+							<Canvas
+								Name="PART_FloatingHeaderCanvas">
+								<Rectangle
+									Height="{TemplateBinding ActualHeight}"
+									Opacity="0.4697"
+									Width="{TemplateBinding ActualWidth}"
+									Fill="{StaticResource NITrueBlackBrush}" />
+							</Canvas>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+			<Trigger
+				Property="GridViewColumnHeader.Role"
+				Value="Padding">
+				<Setter
+					Property="Template">
+					<Setter.Value>
+						<ControlTemplate
+							TargetType="{x:Type GridViewColumnHeader}">
+							<Border
+								BorderThickness="0,0,0,1"
+								Height="23"
+								Background="{TemplateBinding Background}"
+								BorderBrush="{StaticResource NITrueWhiteBrush}">
+								<Border
+									BorderBrush="{TemplateBinding BorderBrush}"
+									BorderThickness="1,0,1,0"
+									Height="22"
+									Margin="0,0,1,0"
+									Background="{TemplateBinding Background}" />
+							</Border>
+							<ControlTemplate.Triggers>
+								<Trigger
+									Property="Height"
+									Value="Auto">
+									<Setter
+										Property="MinHeight"
+										Value="20" />
+								</Trigger>
+							</ControlTemplate.Triggers>
+						</ControlTemplate>
+					</Setter.Value>
+				</Setter>
+			</Trigger>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBackgroundBrush"
+					Value="{StaticResource ButtonHoverBackgroundBrush}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBorderBrush"
+					Value="{StaticResource ButtonHoverBorderBrush}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource ButtonPressedTextBrush}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBorderBrush"
+					Value="{StaticResource ButtonPressedBorderBrush}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBackgroundBrush"
+					Value="{StaticResource ButtonPressedBackgroundBrush}" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+					Property="Foreground"
+					Value="{DynamicResource SystemColors.GrayTextBrushKey}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type GridViewColumnHeader}"
+		BasedOn="{StaticResource GridViewColumnHeaderStyle}"
+		x:Key="GridViewNonInteractiveColumnHeaderStyle">
+		<Style.Triggers>
+			<Trigger
+				Property="UIElement.IsMouseOver"
+				Value="True">
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBackgroundBrush"
+					Value="{Binding Path=Background, RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBorderBrush"
+					Value="{Binding Path=BorderBrush, RelativeSource={RelativeSource Self}}" />
+			</Trigger>
+			<Trigger
+				Property="IsPressed"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{StaticResource Text}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBorderBrush"
+					Value="{Binding Path=BorderBrush, RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="fuseControls:FuseControlStyling.MouseOverBackgroundBrush"
+					Value="{Binding Path=Background, RelativeSource={RelativeSource Self}}" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type GridViewColumnHeader}"
+		BasedOn="{StaticResource GridViewColumnHeaderStyle}"
+		x:Key="GridViewLastColumnHeaderStyle">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type GridViewColumnHeader}">
+					<Grid
+						SnapsToDevicePixels="True">
+						<Border
+							BorderThickness="0,0,0,1"
+							Background="{TemplateBinding Background}"
+							Height="23"
+							BorderBrush="{StaticResource NITrueWhiteBrush}">
+							<Border
+								BorderBrush="{TemplateBinding BorderBrush}"
+								BorderThickness="1,0,1,0"
+								Height="22"
+								Margin="1,0,2,0"
+								Background="{TemplateBinding Background}">
+								<Border
+									Name="InnerHeaderBorder"
+									BorderBrush="{TemplateBinding BorderBrush}"
+									BorderThickness="1"
+									Height="22"
+									Background="{TemplateBinding Background}"
+									Padding="{TemplateBinding Padding}">
+									<ContentPresenter
+										Name="HeaderContent"
+										HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+										Margin="8,0,14,1"
+										RecognizesAccessKey="True"
+										SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+										VerticalAlignment="{TemplateBinding VerticalContentAlignment}" />
+								</Border>
+							</Border>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="BorderBrush"
+								Value="{StaticResource ButtonHoverBorderBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="Background"
+								Value="{StaticResource ButtonHoverBackgroundBrush}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource ButtonPressedTextBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="BorderBrush"
+								Value="{StaticResource ButtonPressedBorderBrush}" />
+							<Setter
+								TargetName="InnerHeaderBorder"
+								Property="Background"
+								Value="{StaticResource ButtonPressedBackgroundBrush}" />
+						</Trigger>
+						<Trigger
+							Property="Height"
+							Value="Auto">
+							<Setter
+								Property="MinHeight"
+								Value="22" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Value="{DynamicResource SystemColors.GrayTextBrushKey}"
+								Property="Foreground" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type ScrollViewer}"
+		x:Key="GridViewScrollViewerStyle">
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ScrollViewer}">
+					<Grid
+						SnapsToDevicePixels="True"
+						Background="{StaticResource LightRowFill}">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="*" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Grid.RowDefinitions>
+							<RowDefinition
+								Height="Auto" />
+							<RowDefinition
+								Height="*" />
+							<RowDefinition
+								Height="Auto" />
+						</Grid.RowDefinitions>
+						<Border
+							Grid.Row="0"
+							Grid.Column="0"
+							Grid.ColumnSpan="2"
+							BorderThickness="1,0,1,0"
+							BorderBrush="{StaticResource NITrueWhiteBrush}">
+							<GridViewHeaderRowPresenter
+								Name="gridViewHeaderRowPresenter"
+								SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+								AllowsColumnReorder="{Binding TemplatedParent.View.AllowsColumnReorder, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderContainerStyle="{Binding TemplatedParent.View.ColumnHeaderContainerStyle, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderToolTip="{Binding TemplatedParent.View.ColumnHeaderToolTip, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderStringFormat="{Binding TemplatedParent.View.ColumnHeaderStringFormat, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderContextMenu="{Binding TemplatedParent.View.ColumnHeaderContextMenu, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderTemplate="{Binding TemplatedParent.View.ColumnHeaderTemplate, RelativeSource={RelativeSource TemplatedParent}}"
+								Columns="{Binding TemplatedParent.View.Columns, RelativeSource={RelativeSource TemplatedParent}}"
+								ColumnHeaderTemplateSelector="{Binding TemplatedParent.View.ColumnHeaderTemplateSelector, RelativeSource={RelativeSource TemplatedParent}}" />
+						</Border>
+						<ScrollContentPresenter
+							Name="PART_ScrollContentPresenter"
+							Grid.Row="1"
+							Grid.Column="0"
+							CanContentScroll="{TemplateBinding CanContentScroll}"
+							ContentTemplate="{TemplateBinding ContentTemplate}"
+							Content="{TemplateBinding Content}"
+							ContentStringFormat="{TemplateBinding ContentStringFormat}"
+							KeyboardNavigation.DirectionalNavigation="Local"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+						<Border
+							Grid.Row="2"
+							Grid.Column="0"
+							BorderThickness="0,1,0,0"
+							Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+							BorderBrush="{StaticResource NIDropDownGrayBrush}">
+							<ScrollBar
+								Name="PART_HorizontalScrollBar"
+								Cursor="Arrow"
+								Maximum="{TemplateBinding ScrollableWidth}"
+								Minimum="0.0"
+								Orientation="Horizontal"
+								AutomationProperties.AutomationId="HorizontalScrollBar"
+								Visibility="{TemplateBinding ComputedHorizontalScrollBarVisibility}"
+								ViewportSize="{TemplateBinding ViewportWidth}"
+								Value="{Binding HorizontalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+						</Border>
+						<Border
+							Grid.Row="1"
+							Grid.Column="1"
+							BorderThickness="1,1,0,0"
+							Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+							BorderBrush="{StaticResource NIDropDownGrayBrush}">
+							<ScrollBar
+								Name="PART_VerticalScrollBar"
+								Cursor="Arrow"
+								Maximum="{TemplateBinding ScrollableHeight}"
+								Minimum="0.0"
+								Orientation="Vertical"
+								AutomationProperties.AutomationId="VerticalScrollBar"
+								Visibility="{TemplateBinding ComputedVerticalScrollBarVisibility}"
+								ViewportSize="{TemplateBinding ViewportHeight}"
+								Value="{Binding VerticalOffset, Mode=OneWay, RelativeSource={RelativeSource TemplatedParent}}" />
+						</Border>
+					</Grid>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellDropDownButton}"
+		x:Key="{ComponentResourceKey ResourceId=DropDownForConfigurationPaneStyle, TypeInTargetAssembly={x:Type shellControls:ShellDropDownButton}}">
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIButtonFillBrush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIGrayNeutral68Brush}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.FocusedForegroundBrush"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.MouseOverForegroundBrush"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.PressedForegroundBrush"
+			Value="{StaticResource NITrueWhiteBrush}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ShellDropDownButton}">
+					<FrameworkTemplate.Resources>
+						<ResourceDictionary>
+							<Style
+								TargetType="{x:Type MenuItem}"
+								x:Key="{x:Type MenuItem}">
+								<Setter
+									Property="MenuItem.StaysOpenOnClick"
+									Value="{Binding Path=StaysOpen, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type ContextMenu}}}" />
+								<Setter
+									Property="Template">
+									<Setter.Value>
+										<ControlTemplate
+											TargetType="{x:Type MenuItem}">
+											<ContentPresenter
+												Content="{TemplateBinding Header}"
+												Margin="2,0" />
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+							<Style
+								TargetType="{x:Type Separator}"
+								x:Key="{x:Static MenuItem.SeparatorStyleKey}">
+								<Setter
+									Property="Focusable"
+									Value="False" />
+								<Setter
+									Property="Template">
+									<Setter.Value>
+										<ControlTemplate
+											TargetType="{x:Type Separator}">
+											<Grid
+												SnapsToDevicePixels="True"
+												UseLayoutRounding="False">
+												<Rectangle
+													Height="1"
+													Margin="2,0"
+													Fill="{StaticResource SeparatorTextBorderBrush}" />
+											</Grid>
+										</ControlTemplate>
+									</Setter.Value>
+								</Setter>
+							</Style>
+							<ControlTemplate
+								x:Key="StretchContentAlignedButtonTemplate"
+								TargetType="{x:Type ContentControl}">
+								<Grid
+									Name="Grid">
+									<Border
+										Name="Border"
+										Background="{TemplateBinding Background}"
+										BorderBrush="{TemplateBinding BorderBrush}"
+										BorderThickness="{TemplateBinding BorderThickness}" />
+									<Border
+										Name="ContentContainer"
+										Padding="{TemplateBinding Padding}">
+										<ContentPresenter
+											Name="PART_ContentPresenter"
+											HorizontalAlignment="Stretch"
+											VerticalAlignment="Center"
+											RecognizesAccessKey="True" />
+									</Border>
+								</Grid>
+							</ControlTemplate>
+						</ResourceDictionary>
+					</FrameworkTemplate.Resources>
+					<shellControls:ShellToggleButton
+						Name="PART_MenuToggleButton">
+						<FrameworkElement.Style>
+							<Style
+								TargetType="{x:Type shellControls:ShellToggleButton}"
+								BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}">
+								<Setter
+									Property="Background"
+									Value="{Binding Background, RelativeSource={RelativeSource TemplatedParent}}" />
+								<Setter
+									Property="BorderBrush"
+									Value="{Binding BorderBrush, RelativeSource={RelativeSource TemplatedParent}}" />
+								<Setter
+									Property="ToggleButton.IsChecked"
+									Value="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}" />
+								<Setter
+									Property="VerticalContentAlignment"
+									Value="Center" />
+								<Setter
+									Property="Padding"
+									Value="5,2,0,2" />
+								<Setter
+									Property="Template"
+									Value="{StaticResource StretchContentAlignedButtonTemplate}" />
+								<Setter
+									Property="niControls:CommonRenderProperties.ControlDesign"
+									Value="{x:Null}" />
+								<Setter
+									Property="coreControls:InteractiveTemplateBehavior.InteractiveTemplate"
+									Value="{x:Null}" />
+							</Style>
+						</FrameworkElement.Style>
+						<Grid>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="*" />
+								<ColumnDefinition
+									Width="Auto" />
+							</Grid.ColumnDefinitions>
+							<ContentPresenter
+								Grid.Column="0"
+								HorizontalAlignment="Left"
+								VerticalAlignment="Center"
+								RecognizesAccessKey="True" />
+							<Path
+								Name="Arrow"
+								Grid.Column="1"
+								HorizontalAlignment="Right"
+								VerticalAlignment="Center"
+								Stretch="Fill"
+								Height="5"
+								Width="7"
+								Margin="7,0"
+								Data="{StaticResource DownArrowGeometry}"
+								Fill="{Binding Path=(coreControls:CoreControlStyling.IconBrush), RelativeSource={RelativeSource TemplatedParent}}" />
+						</Grid>
+					</shellControls:ShellToggleButton>
+					<ControlTemplate.Triggers>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="Warning"
+									Binding="{Binding Path=CommandParameter.State, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsDropDownPressed, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" />
+							</MultiDataTrigger.Conditions>
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{StaticResource NIWarningBrush}" />
+						</MultiDataTrigger>
+						<MultiDataTrigger>
+							<MultiDataTrigger.Conditions>
+								<Condition
+									Value="Error"
+									Binding="{Binding Path=CommandParameter.State, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsDropDownOpen, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsDropDownPressed, RelativeSource={RelativeSource Self}}" />
+								<Condition
+									Value="False"
+									Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Self}}" />
+							</MultiDataTrigger.Conditions>
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{StaticResource NIErrorBrush}" />
+						</MultiDataTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="coreControls:CoreControlStyling.IconBrush"
+					Value="{StaticResource NITrueWhiteBrush}" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+					Property="UIElement.Opacity"
+					Value="1" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellDropDownButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellDropDownButtonStyle}}"
+		x:Key="{ComponentResourceKey ResourceId=DropDownForToolBarStyle, TypeInTargetAssembly={x:Type shellControls:ShellDropDownButton}}">
+		<Style.Resources>
+			<ResourceDictionary>
+				<Style
+					TargetType="{x:Type coreControls:ImageMask}"
+					BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.ImageMaskOnButtonStyle}}"
+					x:Key="{x:Type coreControls:ImageMask}">
+					<Setter
+						Property="coreControls:ImageMask.Brush"
+						Value="{Binding Path=(coreControls:CoreControlStyling.IconBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type shellControls:ShellDropDownButton}}}" />
+				</Style>
+			</ResourceDictionary>
+		</Style.Resources>
+		<Setter
+			Property="coreControls:CoreControlStyling.IconBrush"
+			Value="{x:Null}" />
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellDropDownButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellDropDownButtonStyle}}"
+		x:Key="{ComponentResourceKey ResourceId=DropDownForExpanderHeaderControlStyle, TypeInTargetAssembly={x:Type shellControls:ShellDropDownButton}}">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellDropDownButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellDropDownButtonStyle}}"
+		x:Key="{ComponentResourceKey ResourceId=DropDownForTitleBarStyle, TypeInTargetAssembly={x:Type shellControls:ShellDropDownButton}}">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIWhiteBrush}" />
+		<Setter
+			Property="coreControls:CoreControlStyling.IconBrush"
+			Value="{StaticResource NITrueWhiteBrush}" />
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellSplitButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="{ComponentResourceKey ResourceId=SplitButtonForConfigurationPaneStyle, TypeInTargetAssembly={x:Type shellControls:ShellSplitButton}}">
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIButtonFillBrush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIGrayNeutral68Brush}" />
+		<Setter
+			Property="coreControls:CoreControlStyling.IconFocusedBrush"
+			Value="{StaticResource NIIconGrayBrush}" />
+		<Setter
+			Property="fuseControls:FuseControlStyling.MouseOverForegroundBrush"
+			Value="{StaticResource Text}" />
+		<Setter
+			Property="FrameworkElement.OverridesDefaultStyle"
+			Value="True" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ShellSplitButton}">
+					<Grid
+						Name="Grid">
+						<FrameworkElement.Resources>
+							<ResourceDictionary>
+								<Style
+									TargetType="{x:Type shellControls:ShellToggleButton}"
+									BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+									x:Key="{x:Type shellControls:ShellToggleButton}">
+									<Setter
+										Property="Background"
+										Value="{StaticResource NIButtonFillBrush}" />
+									<Setter
+										Property="BorderBrush"
+										Value="{StaticResource NIGrayNeutral68Brush}" />
+									<Setter
+										Property="niControls:CommonRenderProperties.ControlDesign"
+										Value="{x:Null}" />
+									<Setter
+										Property="fuseControls:FuseControlStyling.FocusedBackgroundBrush"
+										Value="{StaticResource NIButtonFillBrush}" />
+									<Setter
+										Property="fuseControls:FuseControlStyling.FocusedBorderBrush"
+										Value="{StaticResource NIGrayNeutral68Brush}" />
+									<Setter
+										Property="fuseControls:FuseControlStyling.FocusedForegroundBrush"
+										Value="{StaticResource Text}" />
+								</Style>
+								<DataTemplate
+									DataType="{x:Type system:String}"
+									x:Key="{DataTemplateKey {x:Type system:String}}">
+									<TextBlock
+										Margin="10,0,0,0"
+										Text="{Binding}" />
+								</DataTemplate>
+							</ResourceDictionary>
+						</FrameworkElement.Resources>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<shellControls:ShellToggleButton
+							Name="PART_ContentButton"
+							Grid.Column="0"
+							HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+							Padding="3,3,3,3"
+							fuseControls:FuseControlStyling.MouseOverForegroundBrush="{TemplateBinding fuseControls:MouseOverForegroundBrush}"
+							VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+							ToolTipService.ToolTip="{x:Null}">
+							<ContentPresenter
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								RecognizesAccessKey="True" />
+						</shellControls:ShellToggleButton>
+						<shellControls:ShellToggleButton
+							Name="PART_MenuToggleButton"
+							Grid.Column="1"
+							coreConverters:CoreControlStyling.IconFocusedBrush="{TemplateBinding coreControls:IconFocusedBrush}"
+							Margin="0,0,0,0"
+							Padding="6,0,6,0"
+							VerticalContentAlignment="Center"
+							IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}">
+							<Path
+								Name="Arrow"
+								Height="6"
+								Stretch="Fill"
+								Width="9"
+								Data="{StaticResource DownArrowGeometry}"
+								Fill="{Binding Path=(coreControls:CoreControlStyling.IconBrush), ElementName=PART_MenuToggleButton}" />
+						</shellControls:ShellToggleButton>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							Property="fuseControls:FuseShellDropDownButton.IsDropDownOpen"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Background"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Foreground"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="coreControls:CoreControlStyling.IconBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+						<Trigger
+							Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+							Value="True">
+							<Setter
+								TargetName="PART_ContentButton"
+								Property="Background"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_ContentButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+				Value="True">
+				<Setter
+					Property="Foreground"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+					Property="UIElement.Opacity"
+					Value="1" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellSplitButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="{x:Type shellControls:ShellSplitButton}">
+		<Style.Resources>
+			<ResourceDictionary>
+				<Style
+					TargetType="{x:Type coreControls:ImageMask}"
+					BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.ImageMaskOnButtonStyle}}"
+					x:Key="{x:Type coreControls:ImageMask}">
+					<Setter
+						Property="coreControls:ImageMask.Brush"
+						Value="{Binding Path=(coreControls:CoreControlStyling.IconBrush), RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type shellControls:ShellSplitButton}}}" />
+				</Style>
+			</ResourceDictionary>
+		</Style.Resources>
+		<Setter
+			Property="coreControls:CoreControlStyling.IconBrush"
+			Value="{x:Null}" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Left" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ShellSplitButton}">
+					<Grid
+						Name="Grid">
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="Auto" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<shellControls:ShellToggleButton
+							Name="PART_ContentButton"
+							Grid.Column="0"
+							HorizontalContentAlignment="{TemplateBinding HorizontalContentAlignment}"
+							VerticalContentAlignment="{TemplateBinding VerticalContentAlignment}"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							MinHeight="{TemplateBinding MinHeight}"
+							Padding="4,0,4,0"
+							Style="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+							IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}"
+							ToolTipService.ToolTip="{x:Null}"
+							niControls:CommonRenderProperties.ControlDesign="{x:Null}">
+							<ContentPresenter
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								RecognizesAccessKey="True" />
+						</shellControls:ShellToggleButton>
+						<shellControls:ShellToggleButton
+							Name="PART_MenuToggleButton"
+							Grid.Column="1"
+							Margin="-1,0,0,0"
+							Padding="3,0,3,0"
+							VerticalContentAlignment="Center"
+							Style="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+							IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}"
+							Visibility="{Binding DropDownArrowVisibility, RelativeSource={RelativeSource AncestorType={x:Type shellControls:ShellSplitButton}}}"
+							niControls:CommonRenderProperties.ControlDesign="{x:Null}">
+							<Path
+								Name="Arrow"
+								Stretch="Fill"
+								Height="5"
+								Width="7"
+								Data="{StaticResource DownArrowGeometry}"
+								Fill="{Binding Path=(coreControls:CoreControlStyling.IconBrush), ElementName=PART_MenuToggleButton}" />
+						</shellControls:ShellToggleButton>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Property="UIElement.Opacity"
+								Value="{StaticResource InactiveOpacity}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBorderBrush), RelativeSource={RelativeSource Self}}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="PART_ContentButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBorderBrush), RelativeSource={RelativeSource Self}}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							Property="fuseControls:FuseShellDropDownButton.IsDropDownOpen"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Background"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Foreground"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="coreControls:CoreControlStyling.IconBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="Foreground"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="coreControls:CoreControlStyling.IconBrush"
+					Value="{StaticResource NITrueWhiteBrush}" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+					Property="UIElement.Opacity"
+					Value="1" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellSplitToggleButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="{x:Type shellControls:ShellSplitToggleButton}">
+		<Setter
+			Property="shellControls:ShellSplitToggleButton.IsChecked"
+			Value="{Binding Path=CommandParameter.IsChecked, Mode=TwoWay, RelativeSource={RelativeSource Self}}" />
+		<Setter
+			Property="Width"
+			Value="36" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ShellSplitToggleButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<shellControls:ShellToggleButton
+							Name="PART_ContentButton"
+							Grid.Column="0"
+							HorizontalContentAlignment="Center"
+							VerticalContentAlignment="Center"
+							Background="{TemplateBinding Background}"
+							BorderBrush="{TemplateBinding BorderBrush}"
+							Padding="2,0"
+							Style="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+							IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+							ToolTipService.ToolTip="{x:Null}"
+							niControls:CommonRenderProperties.ControlDesign="{x:Null}">
+							<ContentPresenter
+								RecognizesAccessKey="True" />
+						</shellControls:ShellToggleButton>
+						<shellControls:ShellToggleButton
+							Name="PART_MenuToggleButton"
+							Grid.Column="1"
+							Margin="-1,0,0,0"
+							Padding="3,0"
+							VerticalContentAlignment="Center"
+							Style="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+							IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}"
+							niControls:CommonRenderProperties.ControlDesign="{x:Null}">
+							<Path
+								Name="Arrow"
+								Stretch="Fill"
+								Height="5"
+								Width="7"
+								Data="{StaticResource DownArrowGeometry}"
+								Fill="{Binding Path=(coreControls:CoreControlStyling.IconBrush), ElementName=PART_MenuToggleButton}" />
+						</shellControls:ShellToggleButton>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Property="UIElement.Opacity"
+								Value="{StaticResource InactiveOpacity}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBorderBrush), RelativeSource={RelativeSource Self}}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="PART_ContentButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.MouseOverBorderBrush), RelativeSource={RelativeSource Self}}" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_ContentButton"
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+						</Trigger>
+						<Trigger
+							SourceName="PART_MenuToggleButton"
+							Property="ToggleButton.IsChecked"
+							Value="True">
+							<Setter
+								Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+								Value="True" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Background"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="BorderBrush"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="Foreground"
+								Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+							<Setter
+								TargetName="PART_MenuToggleButton"
+								Property="coreControls:CoreControlStyling.IconBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+		<Style.Triggers>
+			<Trigger
+				Property="fuseControls:FuseShellDropDownButton.IsDropDownPressed"
+				Value="True">
+				<Setter
+					Property="Background"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBackgroundBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="BorderBrush"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedBorderBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="Foreground"
+					Value="{Binding Path=(fuseControls:FuseControlStyling.PressedForegroundBrush), RelativeSource={RelativeSource Self}}" />
+				<Setter
+					Property="coreControls:CoreControlStyling.IconBrush"
+					Value="{StaticResource NITrueWhiteBrush}" />
+			</Trigger>
+			<Trigger
+				Property="IsEnabled"
+				Value="False">
+				<Setter
+					Property="UIElement.Opacity"
+					Value="1" />
+			</Trigger>
+		</Style.Triggers>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellProgressBar}"
+		BasedOn="{StaticResource {x:Type niLabVIEW:LVLinearProgressBar}}"
+		x:Key="{x:Type shellControls:ShellProgressBar}" />
+	<Style
+		TargetType="{x:Type shellControls:ClearFiltersButton}"
+		x:Key="{x:Type shellControls:ClearFiltersButton}">
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIHighlightBrush}" />
+		<Setter
+			Property="ToolTipService.IsEnabled"
+			Value="False" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ClearFiltersButton}">
+					<Grid>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition
+								Width="19" />
+							<ColumnDefinition
+								Width="Auto" />
+						</Grid.ColumnDefinitions>
+						<Path
+							StrokeThickness="2"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Margin="6,2,2,0"
+							Grid.Column="0"
+							Stroke="{Binding Foreground, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type shellControls:ClearFiltersButton}}}">
+							<Path.Data>
+								<GeometryGroup>
+									<LineGeometry
+										StartPoint="0,0"
+										EndPoint="9,9" />
+									<LineGeometry
+										StartPoint="9,0"
+										EndPoint="0,9" />
+								</GeometryGroup>
+							</Path.Data>
+						</Path>
+						<TextBlock
+							Grid.Column="1"
+							VerticalAlignment="Center"
+							Text="{core:Localizer AssemblyName=NationalInstruments.PlatformFramework, ResourcesClassName=NationalInstruments.PlatformFramework.Resources.LocalizedStrings, Key=ShellFilterDropDownButton_Clear}" />
+					</Grid>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsKeyboardFocused"
+							Value="True">
+							<Setter
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="Background"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								Property="BorderBrush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								Property="Foreground"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellFilterDropDownButton}"
+		BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellButtonStyle}}"
+		x:Key="{x:Type shellControls:ShellFilterDropDownButton}">
+		<Style.Resources>
+			<ResourceDictionary>
+				<Style
+					TargetType="{x:Type ContextMenu}"
+					x:Key="{x:Type ContextMenu}">
+					<Setter
+						Property="UIElement.SnapsToDevicePixels"
+						Value="True" />
+					<Setter
+						Property="Grid.IsSharedSizeScope"
+						Value="True" />
+					<Setter
+						Property="ContextMenu.HasDropShadow"
+						Value="True" />
+					<Setter
+						Property="ContextMenu.Placement"
+						Value="Bottom" />
+					<Setter
+						Property="Focusable"
+						Value="False" />
+					<Setter
+						Property="ContextMenu.StaysOpen"
+						Value="True" />
+					<Setter
+						Property="ContextMenu.HorizontalOffset"
+						Value="0" />
+					<Setter
+						Property="ContextMenu.VerticalOffset"
+						Value="-4" />
+					<Setter
+						Property="Template">
+						<Setter.Value>
+							<ControlTemplate
+								TargetType="{x:Type ContextMenu}">
+								<FrameworkTemplate.Resources>
+									<ResourceDictionary>
+										<Style
+											TargetType="{x:Type coreControls:PopupMenuItem}"
+											x:Key="{x:Type coreControls:PopupMenuItem}">
+											<Setter
+												Property="Template">
+												<Setter.Value>
+													<ControlTemplate
+														TargetType="{x:Type coreControls:PopupMenuItem}">
+														<Grid
+															SnapsToDevicePixels="True"
+															Margin="5,0,5,0">
+															<shellControls:ShellFilterCheckBox
+																Command="{TemplateBinding Command}"
+																Height="22"
+																VerticalAlignment="Center"
+																VerticalContentAlignment="Center"
+																HorizontalContentAlignment="Stretch"
+																TextBlock.Foreground="{StaticResource NIBlackBrush}"
+																Width="{Binding Path=ActualWidth, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Grid}}}" />
+														</Grid>
+													</ControlTemplate>
+												</Setter.Value>
+											</Setter>
+										</Style>
+									</ResourceDictionary>
+								</FrameworkTemplate.Resources>
+								<Border
+									Name="MenuBorder"
+									BorderThickness="1"
+									Margin="2,4"
+									BorderBrush="{StaticResource DropDownMenuPopupBorderBrush}"
+									Background="{StaticResource NITrueWhiteBrush}"
+									Effect="{StaticResource PopupDropShadowEffect}">
+									<Grid>
+										<ScrollViewer
+											Name="PART_SubMenuScrollViewer"
+											Style="{DynamicResource {ComponentResourceKey ResourceId=MenuScrollViewer, TypeInTargetAssembly={x:Type FrameworkElement}}}">
+											<Grid
+												RenderOptions.ClearTypeHint="Enabled">
+												<Grid.RowDefinitions>
+													<RowDefinition
+														Height="Auto" />
+													<RowDefinition
+														Height="Auto" />
+													<RowDefinition
+														Height="Auto" />
+												</Grid.RowDefinitions>
+												<Canvas
+													Name="BackgroundCanvas"
+													HorizontalAlignment="Left"
+													Height="0"
+													VerticalAlignment="Top"
+													Width="0">
+													<Rectangle
+														Name="OpaqueRect"
+														RadiusY="2"
+														RadiusX="2"
+														Fill="{Binding Background, ElementName=MenuBorder}"
+														Height="{Binding ActualHeight, ElementName=MenuBorder}"
+														Width="{Binding ActualWidth, ElementName=MenuBorder}" />
+													<Rectangle
+														Name="OverlayRect"
+														RadiusY="2"
+														RadiusX="2" />
+												</Canvas>
+												<shellControls:ClearFiltersButton
+													Name="PART_ClearFiltersButton"
+													Grid.Row="0"
+													Height="22"
+													CommandParameter="{Binding CommandParameter}" />
+												<coreConverters:NISeparator
+													Grid.Row="1"
+													Margin="20,0,5,0" />
+												<ItemsPresenter
+													Grid.Row="2" />
+											</Grid>
+										</ScrollViewer>
+									</Grid>
+								</Border>
+								<ControlTemplate.Triggers>
+									<DataTrigger
+										Binding="{Binding Command, RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type shellControls:ShellFilterDropDownButton}}}"
+										Value="{x:Null}">
+										<Setter
+											TargetName="PART_ClearFiltersButton"
+											Property="Visibility"
+											Value="Collapsed" />
+									</DataTrigger>
+								</ControlTemplate.Triggers>
+							</ControlTemplate>
+						</Setter.Value>
+					</Setter>
+				</Style>
+			</ResourceDictionary>
+		</Style.Resources>
+		<Setter
+			Property="Background"
+			Value="{StaticResource NIButtonFillBrush}" />
+		<Setter
+			Property="BorderBrush"
+			Value="{StaticResource NIBlackBrush}" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shellControls:ShellFilterDropDownButton}">
+					<Grid>
+						<Border
+							Name="OuterBorder"
+							Height="22"
+							BorderThickness=".5"
+							BorderBrush="{StaticResource NIGrayNeutral68Brush}"
+							Background="{StaticResource NIButtonFillBrush}">
+							<shellControls:ShellToggleButton
+								Name="PART_MenuToggleButton"
+								VerticalContentAlignment="Center"
+								HorizontalContentAlignment="Stretch"
+								Padding="0"
+								Style="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+								IsChecked="{Binding IsDropDownOpen, Mode=TwoWay, NotifyOnSourceUpdated=True, NotifyOnTargetUpdated=True, RelativeSource={RelativeSource TemplatedParent}}"
+								Background="{Binding ElementName=OuterBorder, Path=Background}"
+								BorderBrush="{Binding ElementName=OuterBorder, Path=BorderBrush}"
+								niControls:CommonRenderProperties.ControlDesign="{x:Null}"
+								coreConverters:InteractiveTemplateBehavior.InteractiveTemplate="{x:Null}">
+								<Grid
+									VerticalAlignment="Center">
+									<Grid.ColumnDefinitions>
+										<ColumnDefinition
+											Width="*" />
+										<ColumnDefinition
+											Width="Auto" />
+									</Grid.ColumnDefinitions>
+									<TextBlock
+										Name="Caption"
+										Grid.Column="0"
+										Margin="10,0,0,0"
+										Text="{Binding Path=CommandParameter.Caption, RelativeSource={RelativeSource TemplatedParent}}" />
+									<Path
+										Name="Arrow"
+										Grid.Column="1"
+										Stretch="Fill"
+										Height="7"
+										Width="9"
+										HorizontalAlignment="Center"
+										VerticalAlignment="Center"
+										Margin="10,0,10,0"
+										Data="{StaticResource DownArrowGeometry}"
+										Fill="{Binding Foreground, ElementName=PART_MenuToggleButton}" />
+								</Grid>
+								<FrameworkElement.Resources>
+									<ResourceDictionary>
+										<Style
+											TargetType="{x:Type shellControls:ShellToggleButton}"
+											x:Key="{x:Type shellControls:ShellToggleButton}">
+											<Style.Triggers>
+												<Trigger
+													Property="UIElement.IsMouseOver"
+													Value="True">
+													<Setter
+														Property="Foreground"
+														Value="{StaticResource NIMediumGrayBrush}" />
+												</Trigger>
+												<Trigger
+													Property="UIElement.IsKeyboardFocused"
+													Value="True">
+													<Setter
+														Property="Foreground"
+														Value="{StaticResource NIMediumGrayBrush}" />
+												</Trigger>
+												<Trigger
+													Property="ToggleButton.IsChecked"
+													Value="True">
+													<Setter
+														Property="Foreground"
+														Value="{StaticResource NITrueWhiteBrush}" />
+												</Trigger>
+											</Style.Triggers>
+										</Style>
+									</ResourceDictionary>
+								</FrameworkElement.Resources>
+							</shellControls:ShellToggleButton>
+						</Border>
+					</Grid>
+					<ControlTemplate.Triggers>
+						<DataTrigger
+							Value="0"
+							Binding="{Binding Path=CommandParameter.NumberOfSelectedItems, RelativeSource={RelativeSource Self}}">
+							<Setter
+								TargetName="Caption"
+								Property="Margin"
+								Value="10,0,17,0" />
+						</DataTrigger>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="OuterBorder"
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="OuterBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="UIElement.IsKeyboardFocused"
+							Value="True">
+							<Setter
+								TargetName="OuterBorder"
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="OuterBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="fuseControls:FuseShellDropDownButton.IsDropDownOpen"
+							Value="True">
+							<Setter
+								TargetName="OuterBorder"
+								Property="Background"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="OuterBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellSplitButton}"
+		BasedOn="{StaticResource {x:Type shellControls:ShellSplitButton}}"
+		x:Key="StartRecordingButtonStyle">
+		<Setter
+			Property="Height"
+			Value="22" />
+	</Style>
+	<Style
+		TargetType="{x:Type shell:ShellToolBarButton}"
+		BasedOn="{StaticResource {x:Type shell:ShellToolBarButton}}"
+		x:Key="{ComponentResourceKey ni:PlatformFrameworkResourceKeyStopRecordingButtonStyle}">
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="Height"
+			Value="22" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type shell:ShellToolBarButton}">
+					<shell:ShellToolBarButton
+						Name="PART_MainButton"
+						Padding="0"
+						Command="{TemplateBinding Command}"
+						BorderThickness="1"
+						BorderBrush="{StaticResource NIErrorBrush}"
+						Background="{StaticResource NIButtonFillBrush}">
+						<Grid
+							Name="PART_MainContentGrid">
+							<Grid.RowDefinitions>
+								<RowDefinition
+									Height="*" />
+								<RowDefinition
+									Height="6" />
+							</Grid.RowDefinitions>
+							<Grid.ColumnDefinitions>
+								<ColumnDefinition
+									Width="28" />
+								<ColumnDefinition
+									Width="122" />
+							</Grid.ColumnDefinitions>
+							<Image
+								Name="PART_Image"
+								Grid.Row="0"
+								Grid.RowSpan="2"
+								Grid.Column="0"
+								Width="16"
+								Height="16"
+								HorizontalAlignment="Center"
+								VerticalAlignment="Center"
+								Source="{Binding Path=CommandParameter.SmallImageSource, Mode=OneTime, RelativeSource={RelativeSource TemplatedParent}}">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{x:Type Image}">
+										<Style.Triggers>
+											<DataTrigger
+												Value="True"
+												Binding="{Binding IsTimedRecording}">
+												<Setter
+													Property="Margin"
+													Value="0,1,0,0" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Image>
+							<Label
+								Name="PART_Timer"
+								Grid.Row="0"
+								Grid.Column="1"
+								HorizontalAlignment="Center"
+								Padding="0"
+								Foreground="{StaticResource NIBlackBrush}"
+								Content="{Binding StringToDisplay, Mode=OneWay}">
+								<FrameworkElement.Style>
+									<Style
+										BasedOn="{StaticResource {x:Type Label}}"
+										TargetType="{x:Type Label}">
+										<Style.Triggers>
+											<DataTrigger
+												Binding="{Binding TimeLeft}"
+												Value="{x:Null}">
+												<Setter
+													Property="Margin"
+													Value="0,3,0,0" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+							</Label>
+							<Canvas
+								Name="PART_ProgressBar"
+								Grid.Row="1"
+								Grid.Column="1"
+								VerticalAlignment="Bottom"
+								Margin="20,0,20,6"
+								HorizontalAlignment="Left">
+								<FrameworkElement.Style>
+									<Style
+										TargetType="{x:Type Canvas}">
+										<Style.Triggers>
+											<DataTrigger
+												Binding="{Binding TimeLeft}"
+												Value="{x:Null}">
+												<Setter
+													Property="Visibility"
+													Value="Collapsed" />
+											</DataTrigger>
+										</Style.Triggers>
+									</Style>
+								</FrameworkElement.Style>
+								<Rectangle
+									Height="3"
+									StrokeThickness="0"
+									Margin="0,1,0,0"
+									Fill="{StaticResource NIBlackBrush}"
+									Width="{Binding RecordedWidth, Mode=OneWay}" />
+								<Rectangle
+									Height="3"
+									StrokeThickness="0"
+									Margin="0,1,0,0"
+									Fill="{StaticResource NICoolBlue98Brush}"
+									Canvas.Left="{Binding RecordedWidth, Mode=OneWay}"
+									Width="{Binding UnrecordedWidth, Mode=OneWay}" />
+							</Canvas>
+						</Grid>
+					</shell:ShellToolBarButton>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type shellControls:ShellContentControl}"
+		x:Key="FontEditorStyle">
+		<Style.Resources>
+			<ResourceDictionary>
+				<Style
+					TargetType="{x:Type shellControls:ShellToggleButton}"
+					BasedOn="{StaticResource {x:Static fuseControls:FuseControlsResourceKeys.FuseShellToggleButtonStyle}}"
+					x:Key="{x:Type shellControls:ShellToggleButton}">
+					<Setter
+						Property="BorderBrush"
+						Value="{StaticResource NIGrayNeutral68Brush}" />
+					<Setter
+						Property="BorderThickness"
+						Value="1" />
+					<Setter
+						Property="Margin"
+						Value="-1,0,0,0" />
+					<Setter
+						Property="Padding"
+						Value="4" />
+					<Setter
+						Property="niControls:CommonRenderProperties.ControlDesign"
+						Value="{x:Null}" />
+					<Setter
+						Property="coreControls:InteractiveTemplateBehavior.InteractiveTemplate"
+						Value="{x:Null}" />
+				</Style>
+			</ResourceDictionary>
+		</Style.Resources>
+	</Style>
+	<DataTemplate
+		x:Key="FontEditorItemTemplate">
+		<FrameworkTemplate.Resources>
+			<ResourceDictionary>
+				<shellControls:FilterSymbolFontsConverter
+					x:Key="FilterSymbolFontsConverter" />
+			</ResourceDictionary>
+		</FrameworkTemplate.Resources>
+		<TextBlock
+			Margin="10,0,0,0"
+			Text="{Binding}"
+			FontFamily="{Binding Converter={StaticResource FilterSymbolFontsConverter}}" />
+	</DataTemplate>
+	<DataTemplate
+		x:Key="TypePickerItemTemplate">
+		<FrameworkTemplate.Resources>
+			<ResourceDictionary>
+				<designer:NumericDataTypeToBrushConverter
+					x:Key="NumericDataTypeToBrushConverter" />
+			</ResourceDictionary>
+		</FrameworkTemplate.Resources>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition
+					Width="Auto" />
+				<ColumnDefinition
+					Width="*" />
+			</Grid.ColumnDefinitions>
+			<Border
+				Name="ColorIndicator"
+				BorderThickness="1"
+				Margin="1,0"
+				Width="16"
+				Height="16"
+				VerticalAlignment="Center"
+				BorderBrush="{StaticResource NIGrayNeutral68Brush}"
+				Background="{Binding Value, Converter={StaticResource NumericDataTypeToBrushConverter}}" />
+			<TextBlock
+				Grid.Column="1"
+				Margin="3,0"
+				VerticalAlignment="Center"
+				Text="{Binding Label}" />
+		</Grid>
+	</DataTemplate>
+	<DataTemplate
+		x:Key="TargetPickerSelectedTargetItemTemplate">
+		<TextBlock
+			Margin="8,0,0,0"
+			VerticalAlignment="Center"
+			TextTrimming="CharacterEllipsis"
+			Text="{Binding Label}" />
+	</DataTemplate>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="TargetPickerLocateButtonStyle">
+		<Setter
+			Property="Background"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderBrush"
+			Value="#00FFFFFF" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="VerticalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="HorizontalContentAlignment"
+			Value="Center" />
+		<Setter
+			Property="ContentTemplate">
+			<Setter.Value>
+				<DataTemplate>
+					<coreConverters:ImageMask
+						Name="FindIcon"
+						Width="10"
+						Height="15"
+						Source="/NationalInstruments.PlatformFramework;component/Shell/Images/LocationPin.png" />
+					<DataTemplate.Triggers>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}}">
+							<Setter
+								TargetName="FindIcon"
+								Property="coreControls:ImageMask.Brush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</DataTrigger>
+						<DataTrigger
+							Value="False"
+							Binding="{Binding IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}}">
+							<Setter
+								TargetName="FindIcon"
+								Property="coreControls:ImageMask.Brush"
+								Value="{StaticResource NIIconGrayBrush}" />
+						</DataTrigger>
+						<DataTrigger
+							Value="True"
+							Binding="{Binding IsPressed, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type Button}}}">
+							<Setter
+								TargetName="FindIcon"
+								Property="coreControls:ImageMask.Brush"
+								Value="{StaticResource NITrueWhiteBrush}" />
+						</DataTrigger>
+					</DataTemplate.Triggers>
+				</DataTemplate>
+			</Setter.Value>
+		</Setter>
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Border
+						Name="findButtonBorder"
+						HorizontalAlignment="{TemplateBinding HorizontalAlignment}"
+						VerticalAlignment="{TemplateBinding VerticalAlignment}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						Background="{TemplateBinding Background}"
+						Margin="{TemplateBinding Margin}">
+						<ContentPresenter
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="findButtonBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+						<Trigger
+							Property="IsPressed"
+							Value="True">
+							<Setter
+								Property="Background"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<DataTemplate
+		x:Key="TargetPickerTargetItemTemplate">
+		<Grid
+			Margin="-1"
+			Height="24"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch"
+			ToolTip="{Binding TargetToolTip}">
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition />
+				<ColumnDefinition
+					Width="24" />
+			</Grid.ColumnDefinitions>
+			<TextBlock
+				Margin="17,0,10,0"
+				VerticalAlignment="Center"
+				Text="{Binding Label}" />
+			<Button
+				Name="LocateButton"
+				Grid.Column="1"
+				Visibility="Hidden"
+				Style="{StaticResource TargetPickerLocateButtonStyle}"
+				Command="{Binding ShowTargetCommand}"
+				ToolTip="{Binding ShowTargetToolTip}" />
+		</Grid>
+		<DataTemplate.Triggers>
+			<DataTrigger
+				Value="True"
+				Binding="{Binding Path=IsMouseOver, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType={x:Type ComboBoxItem}}}">
+				<Setter
+					TargetName="LocateButton"
+					Property="Visibility"
+					Value="{Binding ShowLocateButton, Converter={StaticResource BooleanToVisibilityConverter}}" />
+			</DataTrigger>
+		</DataTemplate.Triggers>
+	</DataTemplate>
+	<DataTemplate
+		x:Key="TargetPickerSectionItemTemplate">
+		<TextBlock
+			Margin="7,0,0,0"
+			VerticalAlignment="Center"
+			Text="{Binding Label}" />
+	</DataTemplate>
+	<DataTemplate
+		x:Key="TargetPickerSelectedSectionItemTemplate" />
+	<Style
+		TargetType="{x:Type ComboBoxItem}"
+		x:Key="TargetSelectorItemContainerStyle">
+		<Setter
+			Property="Padding"
+			Value="0" />
+		<Setter
+			Property="Margin"
+			Value="1,0" />
+		<Setter
+			Property="BorderThickness"
+			Value="1" />
+		<Setter
+			Property="Background"
+			Value="{StaticResource NITrueWhiteBrush}" />
+		<Setter
+			Property="Height"
+			Value="24" />
+		<Setter
+			Property="UIElement.SnapsToDevicePixels"
+			Value="True" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type ComboBoxItem}">
+					<Border
+						Name="Bd"
+						SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+						Height="{TemplateBinding Height}"
+						Background="{TemplateBinding Background}"
+						BorderBrush="{TemplateBinding BorderBrush}"
+						BorderThickness="{TemplateBinding BorderThickness}"
+						Padding="{TemplateBinding Padding}">
+						<ContentPresenter
+							HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+							VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+							SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="ListBoxItem.IsSelected"
+							Value="True">
+							<Setter
+								TargetName="Bd"
+								Property="Background"
+								Value="{StaticResource NIHighlightSelectedBrush}" />
+							<Setter
+								TargetName="Bd"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightSelectedBrush}" />
+						</Trigger>
+						<Trigger
+							Property="IsEnabled"
+							Value="False">
+							<Setter
+								Property="UIElement.Opacity"
+								Value="0.5" />
+						</Trigger>
+						<MultiTrigger>
+							<MultiTrigger.Conditions>
+								<Condition
+									Property="ComboBoxItem.IsHighlighted"
+									Value="True" />
+								<Condition
+									Property="IsEnabled"
+									Value="True" />
+							</MultiTrigger.Conditions>
+							<Setter
+								TargetName="Bd"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</MultiTrigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<shell:TargetSelectorItemTemplateSelector
+		SelectedTargetItemTemplate="{StaticResource TargetPickerSelectedTargetItemTemplate}"
+		SelectedSectionItemTemplate="{StaticResource TargetPickerSelectedSectionItemTemplate}"
+		TargetItemTemplate="{StaticResource TargetPickerTargetItemTemplate}"
+		SectionItemTemplate="{StaticResource TargetPickerSectionItemTemplate}"
+		x:Key="TargetSelectorItemTemplateSelector" />
+	<Style
+		TargetType="{x:Type shellControls:ShellComboBox}"
+		x:Key="{x:Static shell:TargetSelectorFactory.TargetSelectorComboBoxStyleKey}">
+		<Setter
+			Property="ItemTemplateSelector"
+			Value="{StaticResource TargetSelectorItemTemplateSelector}" />
+		<Setter
+			Property="ItemContainerStyle"
+			Value="{StaticResource TargetSelectorItemContainerStyle}" />
+		<Setter
+			Property="fuseControls:FuseShellComboBox.PopupMinWidth"
+			Value="150" />
+	</Style>
+	<Style
+		TargetType="{x:Type Button}"
+		x:Key="WorkbookCaptureScreenshotAdornerCloseButtonStyle">
+		<Setter
+			Property="FrameworkElement.ToolTip"
+			Value="{core:Localizer AssemblyName=NationalInstruments.PlatformFramework, ResourcesClassName=NationalInstruments.PlatformFramework.Resources.LocalizedStrings, Key=CaptureScreenshotAdorner_Tooltip_Close}" />
+		<Setter
+			Property="Foreground"
+			Value="{StaticResource NITrueWhiteBrush}" />
+		<Setter
+			Property="HorizontalAlignment"
+			Value="Right" />
+		<Setter
+			Property="Width"
+			Value="25" />
+		<Setter
+			Property="Height"
+			Value="25" />
+		<Setter
+			Property="Margin"
+			Value="2,1,3,1" />
+		<Setter
+			Property="VerticalAlignment"
+			Value="Stretch" />
+		<Setter
+			Property="Focusable"
+			Value="False" />
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate
+					TargetType="{x:Type Button}">
+					<Border
+						Name="CloseButtonBorder"
+						Background="#00FFFFFF"
+						BorderBrush="#00FFFFFF"
+						BorderThickness="1"
+						Height="{TemplateBinding Height}"
+						Width="{TemplateBinding Width}">
+						<Path
+							Name="X"
+							Width="9"
+							Height="9"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Stretch="Fill"
+							Fill="{TemplateBinding Foreground}"
+							Data="F1 M7.07144,0.00012207 L8.48566,1.41443 L5.65674,4.24353 L8.48535,7.07214 L7.07111,8.48621 L4.24243,5.65759 L1.41455,8.48547 L0.000305176,7.07141 L2.82828,4.24353 L0,1.41516 L1.41422,0.000854492 L4.24243,2.82922 L7.07144,0.00012207" />
+					</Border>
+					<ControlTemplate.Triggers>
+						<Trigger
+							Property="UIElement.IsMouseOver"
+							Value="True">
+							<Setter
+								TargetName="X"
+								Property="Fill"
+								Value="{StaticResource NIHighlightBrush}" />
+							<Setter
+								TargetName="CloseButtonBorder"
+								Property="Background"
+								Value="{StaticResource NITrueWhiteBrush}" />
+							<Setter
+								TargetName="CloseButtonBorder"
+								Property="BorderBrush"
+								Value="{StaticResource NIHighlightBrush}" />
+						</Trigger>
+					</ControlTemplate.Triggers>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+	<Style
+		TargetType="{x:Type designer:LanguageSelectionControl}"
+		x:Key="{x:Type designer:LanguageSelectionControl}">
+		<Setter
+			Property="Template">
+			<Setter.Value>
+				<ControlTemplate>
+					<StackPanel
+						Name="PART_LanguageSelection"
+						Margin="0,20,0,0">
+						<TextBlock
+							Margin="20,0,0,0"
+							Text="{core:Localizer AssemblyName=NationalInstruments.PlatformFramework, ResourcesClassName=NationalInstruments.PlatformFramework.Resources.LocalizedStrings, Key=LanguageSelectionControl_Language}" />
+						<shellControls:ShellComboBox
+							Name="PART_LanguageList"
+							Margin="30,10,0,0"
+							Width="512"
+							HorizontalAlignment="Left" />
+						<StackPanel
+							Margin="20,10,0,0">
+							<Grid>
+								<Grid.ColumnDefinitions>
+									<ColumnDefinition
+										Width="Auto" />
+									<ColumnDefinition
+										Width="*" />
+								</Grid.ColumnDefinitions>
+								<TextBlock
+									Margin="10,0,0,0"
+									Grid.Column="0"
+									Text="{core:Localizer AssemblyName=NationalInstruments.PlatformFramework, ResourcesClassName=NationalInstruments.PlatformFramework.Resources.LocalizedStrings, Key=LanguageSelectionControl_CurrentLanguageLabel}" />
+								<TextBlock
+									Name="PART_CurrentEditorLanguage"
+									Margin="10,0,0,0"
+									Grid.Column="1" />
+							</Grid>
+						</StackPanel>
+					</StackPanel>
+				</ControlTemplate>
+			</Setter.Value>
+		</Setter>
+	</Style>
+</ResourceDictionary>

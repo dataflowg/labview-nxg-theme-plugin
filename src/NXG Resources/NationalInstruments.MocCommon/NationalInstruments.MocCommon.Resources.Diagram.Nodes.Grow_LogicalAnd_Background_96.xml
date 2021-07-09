@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<NineGridDictionary>
+  <ColorTable />
+  <Items>
+    <NineGridPathList Width="25" Height="15" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+      <Paths>
+        <NineGridPath X="0" Y="0" Width="25" Height="15" Color="NodeBorder" Data="F1 M 25,0.0001L 25,5C 25,10.5229 20.5229,15 15,15L 4,15C 1.79086,15 0,13.2092 0,11L 0,0.0001L 25,0.0001 Z " />
+        <NineGridPath X="0" Y="0" Width="23" Height="14" Color="GrayNodeFill" Data="F1 M 24,0.0001L 24,5.0001C 24,9.9706 19.9706,14.0001 15,14.0001L 4,14.0002C 2.34314,14.0002 1,12.657 1,11.0002L 1,0.0001L 24,0.0001 Z " />
+      </Paths>
+    </NineGridPathList>
+  </Items>
+</NineGridDictionary>
+<!-- ORIGINAL XAML SNIPPET
+<Canvas xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" x:Name="Document" Width="25" Height="25" Clip="F1 M 0,0L 25,0L 25,25L 0,25L 0,0">
+	<Path x:Name="OuterBorder" Width="25" Height="14.9999" Canvas.Left="0" Canvas.Top="10.0001" Stretch="Fill" Fill="#FF999999" Data="F1 M 25,10.0001L 25,15C 25,20.5229 20.5229,25 15,25L 4,25C 1.79086,25 0,23.2092 0,21L 0,10.0001L 25,10.0001 Z "/>
+	<Path x:Name="InnerBorder" Width="23" Height="14.0001" Canvas.Left="1" Canvas.Top="10.0001" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 24,10.0001L 24,15.0001C 24,19.9706 19.9706,24.0001 15,24.0001L 4,24.0002C 2.34314,24.0002 1,22.657 1,21.0002L 1,10.0001L 24,10.0001 Z "/>
+	<Path x:Name="Background" Width="21" Height="13.0001" Canvas.Left="2" Canvas.Top="10.0001" Stretch="Fill" Fill="GrayNodeFill" Data="F1 M 23,10.0001L 23,15.0001C 23,19.4184 19.4183,23.0001 15,23.0001L 4,23.0002C 2.89542,23.0002 2,22.1047 2,21.0002L 2,10.0001L 23,10.0001 Z "/>
+	<Path x:Name="OuterBorder_0" Width="25" Height="20" Canvas.Left="0" Canvas.Top="0" Stretch="Fill" Fill="#FFA6A68D" Data="F1 M 4,0L 15,0C 20.5228,0 25,4.47723 25,10C 25,15.5229 20.5229,20 15,20L 4,20C 1.79086,20 0,18.2092 0,16L 0,4.00006C 0,1.79095 1.79086,0 4,0 Z "/>
+	<Path x:Name="InnerBorder_1" Width="23" Height="18.0001" Canvas.Left="1" Canvas.Top="1.00006" Stretch="Fill" Fill="#FFFFFFFF" Data="F1 M 4,1.00018L 15,1.00006C 19.9705,1.00006 24,5.0296 24,10.0001C 24,14.9706 19.9706,19.0001 15,19.0001L 4,19.0002C 2.34314,19.0002 1,17.657 1,16.0002L 1,4.00018C 1,2.34332 2.34314,1.00018 4,1.00018 Z "/>
+	<Path x:Name="Background_2" Width="21" Height="16.0001" Canvas.Left="2" Canvas.Top="2.00006" Stretch="Fill" Fill="#FFFFFFD7" Data="F1 M 4,2.00018L 15,2.00006C 19.4182,2.00006 23,5.58185 23,10.0001C 23,14.4184 19.4183,18.0001 15,18.0001L 4,18.0002C 2.89542,18.0002 2,17.1047 2,16.0002L 2,4.00018C 2,2.89557 2.89542,2.00018 4,2.00018 Z "/>
+	<Path x:Name="BlckGradient" Width="21" Height="16.0001" Canvas.Left="2" Canvas.Top="2.00006" Stretch="Fill" Data="F1 M 4,2.00018L 15,2.00006C 19.4182,2.00006 23,5.58185 23,10.0001C 23,14.4184 19.4183,18.0001 15,18.0001L 4,18.0002C 2.89542,18.0002 2,17.1047 2,16.0002L 2,4.00018C 2,2.89557 2.89542,2.00018 4,2.00018 Z ">
+		<Path.Fill>
+			<LinearGradientBrush StartPoint="0.477597,0.995274" EndPoint="0.477597,0.81038">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#0D000000" Offset="0"/>
+					<GradientStop Color="#07000000" Offset="0.1875"/>
+					<GradientStop Color="#00000000" Offset="1"/>
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</Path.Fill>
+	</Path>
+	<Path x:Name="WhtGradient" Width="21" Height="16.0001" Canvas.Left="2" Canvas.Top="2.00006" Stretch="Fill" Data="F1 M 4,2.00018L 15,2.00006C 19.4182,2.00006 23,5.58185 23,10.0001C 23,14.4184 19.4183,18.0001 15,18.0001L 4,18.0002C 2.89542,18.0002 2,17.1047 2,16.0002L 2,4.00018C 2,2.89557 2.89542,2.00018 4,2.00018 Z ">
+		<Path.Fill>
+			<LinearGradientBrush StartPoint="0.379878,0.00179289" EndPoint="0.379878,0.314291">
+				<LinearGradientBrush.GradientStops>
+					<GradientStop Color="#80FFFFFF" Offset="0"/>
+					<GradientStop Color="#00FFFFFF" Offset="1"/>
+				</LinearGradientBrush.GradientStops>
+			</LinearGradientBrush>
+		</Path.Fill>
+	</Path>
+</Canvas>
+-->
